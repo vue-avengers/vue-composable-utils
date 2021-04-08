@@ -1,16 +1,35 @@
 {
   "name": "vue-composable-utils",
+  "description": "Vue Composable Utils",
+  "author": "Abdulnasır olcan",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs",
+    "lint:eslint": "eslint --ext .js,.vue --ignore-path .gitignore --ignore-path .eslintignore .",
+    "lint:eslint:fix": "eslint --fix --ext .js,.vue --ignore-path .gitignore --ignore-path .eslintignore .",
+    "prettier": "prettier --config ./.prettierrc.js --ignore-path ./.prettierignore --write \"**/*.{js,json,css,scss,vue,html}\"",
+    "test": "vue-cli-service test:unit",
+    "test:cover": "jest --coverage",
+    "test:watch": "jest --coverage --watch",
+    "test:prod": "npm run lint:eslint && npm run test -- --no-cache",
+    "publish": "npm run build",
+    "snapshot:update:all": "yarn test -u",
+    "snapshot:update:one": "yarn test -i"
   },
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+  "lint-staged": {
+    "*.{js,vue}": [
+      "yarn lint:eslint",
+      "yarn prettier",
+      "jest --maxWorkers=1 --bail --findRelatedTests"
+    ],
+    "*.{json}": [
+      "yarn lint",
+      "yarn prettier"
+    ]
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -20,12 +39,21 @@
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/test-utils": "^1.0.3",
     "babel-eslint": "^10.1.0",
+    "core-js": "^3.6.5",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^6.2.2",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
     "node-sass": "^4.12.0",
     "prettier": "^2.2.1",
     "sass-loader": "^8.0.2",
+    "vitepress": "^0.12.2",
+    "vue": "^2.6.11",
+    "vue-router": "^3.5.1",
     "vue-template-compiler": "^2.6.11"
+  },
+  "peerDependencies": {
+    "@vue/composition-api": "^1.0.0-rc.6"
   }
 }

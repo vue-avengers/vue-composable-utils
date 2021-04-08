@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useDebounce should get value when changed input with debounce 1`] = `
+<div>
+  <p>deb : Set value</p> <input type="text" placeholder="search here">
+  <p>debounceVal : </p>
+</div>
+`;
+
+exports[`useDebounce should set value when changed input with debounce time 1`] = `
+<div>
+  <p>deb : 1</p> <input type="text" placeholder="search here">
+  <p>debounceVal : </p>
+</div>
+`;

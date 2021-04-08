@@ -1,0 +1,46 @@
+body.dark-mode {
+  background: #0c1117;
+}
+body.dark-mode header,
+body.dark-mode aside,
+body.dark-mode ul li,
+body.dark-mode a,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p {
+  color: #f0f6fc !important;
+}
+body.dark-mode header.nav-bar,
+body.dark-mode aside {
+  background-color: #161b22 !important;
+  color: #f0f6fc !important;
+}
+
+body.dark-mode h2 code {
+  background-color: #0c1117 !important;
+}
+
+body.dark-mode pre code {
+  background-color: transparent !important;
+}
+
+body.dark-mode .highlight-lines .highlighted {
+  background-color: rgba(240, 246, 252, 0.15) !important;
+}
+
+body.dark-mode button,
+body.dark-mode input {
+  color: #f0f6fc !important;
+  /* background-color: rgba(240, 246, 252, 0.15) !important;
+  border: 2px solid #6e7681 !important; */
+  box-shadow: none !important;
+}
+
+img.logo {
+  height: 2.2rem !important;
+  min-width: 2.2rem !important;
+  margin-right: .8rem !important;
+  vertical-align: top !important;
+  margin-top: -2px;
+}

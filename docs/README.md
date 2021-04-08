@@ -1,6 +1,28 @@
-# vue-composable-utils
+---
+title: Vue Composable Utils
+lang: en-US
+home: true
+heroImage: .vitepress/assets/img/vue-composable-utils-logo.svg
+actionText: Get Started →
+actionLink: ./vue-composable-utils/
+features:
+  - title: Composable functions
+    details: Composable functions that have been brought together for you to use in all your components.
+  - title: Reactive
+    details: Every time your component's render function changes, we have the full reactivity system.
+footer: MIT Licensed | Copyright © 2021-present Abdulnasır olcan
+description: Vue Composable Utils implemented as vue composition functions
+meta:
+  - name: og:title
+    content: composableUtils
+  - name: og:description
+    content: Vue Composable Utils implemented as vue composition functions
+---
+
+# Introduction
 
 Vue Composable Utils implemented as vue composition functions. currently usable with the `@vue/composition-api`.
+
 ## Installation
 
 ```bash
@@ -10,18 +32,14 @@ yarn add @vue/composition-api vue-composable-utils
 npm install @vue/composition-api vue-composable-utils
 ```
 
-## Documentation
-
-Check our [documentation](https://abdulnasirolcan.me/vue-composable-utils/)
-
 ## Composable Utils
 
 | Name                                                     | Arguments                          | Returns                                                      |
 | -------------------------------------------------------- | ---------------------------------- | ------------------------------------------------------------ |
-| [`UseBind`](#useBind)                                    | initial                            | value, changed, reset                                        |
-| [`UseEmbed`](#useEmbed)                                  | f                                  | -                                                            |
-| [`UseState`](#useState)                                  | initial                            | value, set                                                   |
-| [`UseList`](#UseList)                                    | initial                            | list, set, reduce, sort, first, deleteFirst, deleteLast, last,filter, push, reset| 
+| [`UseBind`](/vue-composable-utils/bind.md)               | initial                            | value, changed, reset                                        |
+| [`UseEmbed`](./vue-composable-utils/embed.md)            | f                                  | -                                                            |
+| [`UseState`](./vue-composable-utils/state.md)            | initial                            | value, set                                                   |
+| [`UseList`](./vue-composable-utils/list.md)              | initial                            | list, set, reduce, sort, first, deleteFirst, deleteLast, last, filter, push, reset| 
 
 
 - [UseBind](./vue-composable-utils/bind.md).
@@ -90,15 +108,5 @@ export default {
 };
 </script>
 ```
-
-## Contributors
-
-<table>
-  <tr>
-    <td align="center"><a href="#"><img src="#" width="100px;" alt=""/><br /><sub><b>Abdulnasır Olcan</b></sub></a></td>
-  </tr>
-</table>
-
-## License
-
-MIT
+<ToggleDarkMode/>
+<!-- TODO: Dark mode -->
