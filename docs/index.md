@@ -2,9 +2,9 @@
 title: Vue Composable Utils
 lang: en-US
 home: true
-heroImage: .vitepress/assets/img/vue-composable-utils-logo.svg
+heroImage: assets/img/vue-composable-utils-logo.svg
 actionText: Get Started →
-actionLink: ./vue-composable-utils/
+actionLink: /vue-composable-utils/
 features:
   - title: Composable functions
     details: Composable functions that have been brought together for you to use in all your components.

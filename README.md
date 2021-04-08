@@ -12,7 +12,7 @@ npm install @vue/composition-api vue-composable-utils
 
 ## Documentation
 
-Check our [documentation](https://abdulnasirolcan.me/vue-composable-utils/)
+Check our [documentation](https://vue-composable-utils.netlify.app/)
 
 ## Composable Utils
 

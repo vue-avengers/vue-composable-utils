@@ -11,10 +11,10 @@ module.exports = {
     { name: "viewport", content: "width=device-width, initial-scale=1" },
   ],
   ['meta', { name: 'author', content: 'Abdulnasır olcan' }],
-  ["meta", { property: "og:image", content: ".vitepress/assets/img/vue-composable-utils-logo-32.png" }],
-  ['link', { rel: 'icon', type: 'image/svg+xml', href: '.vitepress/assets/img/vue-composable-utils-logo-32.png' }],
-  ['link', { rel: 'icon', href: '.vitepress/assets/img/vue-composable-utils-logo-32.png', type: 'image/png' }],
-  ['link', { rel: 'icon', href: '.vitepress/assets/img/vue-composable-utils-logo-32.png', type: 'image/svg+xml' }],
+  ["meta", { property: "og:image", content: "assets/img/vue-composable-utils-logo-32.png" }],
+  ['link', { rel: 'icon', type: 'image/svg+xml', href: 'assets/img/vue-composable-utils-logo-32.png' }],
+  ['link', { rel: 'icon', href: 'assets/img/vue-composable-utils-logo-32.png', type: 'image/png' }],
+  ['link', { rel: 'icon', href: 'assets/img/vue-composable-utils-logo-32.png', type: 'image/svg+xml' }],
   ],
   locales: {
     "/": {
@@ -32,7 +32,7 @@ module.exports = {
     repo: 'test/vue-composable-utils',
     docsRepo: "test/vue-composable-utils",
     docsDir: 'docs',
-    logo: '.vitepress/assets/img/vue-composable-utils-logo-72.png',
+    logo: 'assets/img/vue-composable-utils-logo-72.png',
     editLinks: true,
     locales: {
       '/': {
