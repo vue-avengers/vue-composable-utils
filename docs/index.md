@@ -19,7 +19,7 @@ meta:
     content: Vue Composable Utils implemented as vue composition functions.
 ---
 
-# :sunflower: Introduction
+## :sunflower: Introduction
 
 Vue Composable Utils implemented as vue composition functions. currently usable with the `@vue/composition-api`.
 Vue composition function is just a regular JS factory function that returns a bunch of Vue specifically stuff like refs, etc.
@@ -37,16 +37,16 @@ npm install @vue/composition-api vue-composable-utils
 
 | Name                                                     | Arguments                          | Returns                                                      |
 | -------------------------------------------------------- | ---------------------------------- | ------------------------------------------------------------ |
-| [`UseBind`](./vue-composable-utils/bind.md)               | initial                            | value, changed, reset                                        |
-| [`UseEmbed`](./vue-composable-utils/embed.md)            | f                                  | -                                                            |
-| [`UseState`](./vue-composable-utils/state.md)            | initial                            | value, set                                                   |
-| [`UseList`](./vue-composable-utils/list.md)              | initial                            | list, set, reduce, sort, first, deleteFirst, deleteLast, last,   filter,push, reset| 
+| [`UseBind`](./composable-utils/bind.md)               | initial                            | value, changed, reset                                        |
+| [`UseEmbed`](./composable-utils/embed.md)            | f                                  | -                                                            |
+| [`UseState`](./composable-utils/state.md)            | initial                            | value, set                                                   |
+| [`UseList`](./composable-utils/list.md)              | initial                            | list, set, reduce, sort, first, deleteFirst, deleteLast, last,   filter,push, reset| 
 
 
-- [UseBind](./vue-composable-utils/bind.md).
-- [UseEmbed](./vue-composable-utils/embed.md).
-- [UseState](./vue-composable-utils/state.md).
-- [UseList](./vue-composable-utils/list.md).
+- [UseBind](./composable-utils/bind.md).
+- [UseEmbed](./composable-utils/embed.md).
+- [UseState](./composable-utils/state.md).
+- [UseList](./composable-utils/list.md).
 
 ## :computer: Usage
 
@@ -111,5 +111,20 @@ export default {
 };
 </script>
 ```
+## :man: :woman: Contributors
+
+<table>
+  <tr>
+    <td align="center"><a href="#"><img src="/contributors/logo-1.png" width="100px;" alt=""/><br /><sub><b>Abdulnasır Olcan</b></sub></a></td>
+    <td align="center"><a href="#"><img src="/contributors/logo-2.png" width="100px;" alt=""/><br /><sub><b>Büşra Şanlıbayrak</b></sub></a></td>
+    <td align="center"><a href="#"><img src="/contributors/logo-3.png" width="100px;" alt=""/><br /><sub><b>Mehmet Varol</b></sub></a></td>
+    <td align="center"><a href="#"><img src="/contributors/logo-2.png" width="100px;" alt=""/><br /><sub><b>Rukiye Demir</b></sub></a></td>
+    <td align="center"><a href="#"><img src="/contributors/logo-4.png" width="100px;" alt=""/><br /><sub><b>İlker İsmailoğlu</b></sub></a></td>
+    <td align="center"><a href="#"><img src="/contributors/logo-1.png" width="100px;" alt=""/><br /><sub><b>Güvenç Terzierol</b></sub></a></td>
+    <td align="center"><a href="#"><img src="/contributors/logo-3.png" width="100px;" alt=""/><br /><sub><b>Burak Küçükali</b></sub></a></td>
+  </tr>
+</table>
+
 <ToggleDarkMode/>
 <!-- TODO: DArk mode -->
+

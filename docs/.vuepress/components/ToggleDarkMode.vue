@@ -47,7 +47,7 @@ export default {
   height: 46px;
   width: 46px;
   position: fixed;
-  bottom: 1rem;
+  bottom: 3rem;
   right: 1rem;
   padding: 1rem;
   margin: 1px;

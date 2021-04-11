@@ -1,7 +1,8 @@
-# vue-composable-utils
-
 <p align="center"><a href="https://vue-composable-utils.netlify.app" target="_blank" rel="noopener noreferrer"><img width="250" src="https://vue-composable-utils.netlify.app/assets/vue-composable-utils-logo.svg" alt="Vue Composable Utils logo"></a></p>
+<h1 align="center">Vue Composable Utils</h1>
+<p align="center">Reusability and Composition functions.</p>
 
+## :sunflower: Introduction
 Vue Composable Utils implemented as vue composition functions. currently usable with the `@vue/composition-api`.
 ## :package: Installation
 
@@ -26,10 +27,10 @@ Check our [documentation](https://vue-composable-utils.netlify.app/)
 | [`UseList`](#UseList)                                    | initial                            | list, set, reduce, sort, first, deleteFirst, deleteLast, last,filter, push, reset| 
 
 
-- [UseBind](./vue-composable-utils/bind.md).
-- [UseEmbed](./vue-composable-utils/embed.md).
-- [UseState](./vue-composable-utils/state.md).
-- [UseList](./vue-composable-utils/list.md).
+- [UseBind](./composable-utils/bind.md).
+- [UseEmbed](./composable-utils/embed.md).
+- [UseState](./composable-utils/state.md).
+- [UseList](./composable-utils/list.md).
 
 ## :computer: Usage
 
@@ -93,11 +94,17 @@ export default {
 </script>
 ```
 
-## :person_red_hair: Contributors
+## :man: :woman: Contributors
 
 <table>
   <tr>
-    <td align="center"><a href="#"><img src="#" width="100px;" alt=""/><br /><sub><b>Abdulnasır Olcan</b></sub></a></td>
+    <td align="center"><a href="#"><img src="/contributors/logo-1.png" width="100px;" alt=""/><br /><sub><b>Abdulnasır Olcan</b></sub></a></td>
+    <td align="center"><a href="#"><img src="/contributors/logo-2.png" width="100px;" alt=""/><br /><sub><b>Büşra Şanlıbayrak</b></sub></a></td>
+    <td align="center"><a href="#"><img src="/contributors/logo-3.png" width="100px;" alt=""/><br /><sub><b>Mehmet Varol</b></sub></a></td>
+    <td align="center"><a href="#"><img src="/contributors/logo-2.png" width="100px;" alt=""/><br /><sub><b>Rukiye Demir</b></sub></a></td>
+    <td align="center"><a href="#"><img src="/contributors/logo-4.png" width="100px;" alt=""/><br /><sub><b>İlker İsmailoğlu</b></sub></a></td>
+    <td align="center"><a href="#"><img src="/contributors/logo-1.png" width="100px;" alt=""/><br /><sub><b>Güvenç Terzierol</b></sub></a></td>
+    <td align="center"><a href="#"><img src="/contributors/logo-3.png" width="100px;" alt=""/><br /><sub><b>Burak Küçükali</b></sub></a></td>
   </tr>
 </table>
 

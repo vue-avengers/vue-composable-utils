@@ -19,7 +19,7 @@ meta:
     content: Vue Composable Utils, Vue.js composition fonksiyon olarak uygulanır.
 ---
 
-# :sunflower: Başlangıç
+## :sunflower: Başlangıç
 
 Vue Composable Utils kullanmak için öncelikli olarak `@vue/composition-api` yüklemeniz gerekiyor.
 
@@ -34,11 +34,11 @@ npm install @vue/composition-api vue-composable-utils
 
 ## :rocket: Composable Utils
 
-- [UseList](./vue-composable-utils/list.md).
-- [UseDebounce](./vue-composable-utils/list.md).
-- [UseState](./vue-composable-utils/list.md).
-- [UseBind](./vue-composable-utils/list.md).
-- [UseRouter](./vue-composable-utils/list.md).
+- [UseList](./composable-utils/list.md).
+- [UseDebounce](./composable-utils/list.md).
+- [UseState](./composable-utils/list.md).
+- [UseBind](./composable-utils/list.md).
+- [UseRouter](./composable-utils/list.md).
 
 ## :computer: Uygulama
 
@@ -103,5 +103,20 @@ export default {
 };
 </script>
 ```
+
+## :man: :woman: Contributors
+
+<table>
+  <tr>
+    <td align="center"><a href="#"><img src="/contributors/logo-1.png" width="100px;" alt=""/><br /><sub><b>Abdulnasır Olcan</b></sub></a></td>
+    <td align="center"><a href="#"><img src="/contributors/logo-2.png" width="100px;" alt=""/><br /><sub><b>Büşra Şanlıbayrak</b></sub></a></td>
+    <td align="center"><a href="#"><img src="/contributors/logo-3.png" width="100px;" alt=""/><br /><sub><b>Mehmet Varol</b></sub></a></td>
+    <td align="center"><a href="#"><img src="/contributors/logo-2.png" width="100px;" alt=""/><br /><sub><b>Rukiye Demir</b></sub></a></td>
+    <td align="center"><a href="#"><img src="/contributors/logo-4.png" width="100px;" alt=""/><br /><sub><b>İlker İsmailoğlu</b></sub></a></td>
+    <td align="center"><a href="#"><img src="/contributors/logo-1.png" width="100px;" alt=""/><br /><sub><b>Güvenç Terzierol</b></sub></a></td>
+    <td align="center"><a href="#"><img src="/contributors/logo-3.png" width="100px;" alt=""/><br /><sub><b>Burak Küçükali</b></sub></a></td>
+  </tr>
+</table>
+
 <ToggleDarkMode/>
 <!-- TODO: Dark mode-->
