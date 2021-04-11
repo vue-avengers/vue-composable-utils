@@ -1,4 +1,6 @@
-# :bulb: vue-composable-utils
+# vue-composable-utils
+
+<p align="center"><a href="https://vue-composable-utils.netlify.app" target="_blank" rel="noopener noreferrer"><img width="250" src="https://vue-composable-utils.netlify.app/assets/vue-composable-utils-logo.svg" alt="Vue Composable Utils logo"></a></p>
 
 Vue Composable Utils implemented as vue composition functions. currently usable with the `@vue/composition-api`.
 ## :package: Installation
@@ -99,6 +101,6 @@ export default {
   </tr>
 </table>
 
-## :papepage_facing_uprclip: License
+## License
 
 MIT
