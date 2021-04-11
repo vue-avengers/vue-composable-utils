@@ -14,7 +14,7 @@ footer: MIT Licensed | Copyright © 2021-present Abdulnasır olcan
 description: Reusability and Composition functions.
 meta:
   - name: og:title
-    content: composableUtils
+    content: VueComposableUtils
   - name: og:description
     content: Vue Composable Utils implemented as vue composition functions.
 ---

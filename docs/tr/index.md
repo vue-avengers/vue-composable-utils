@@ -14,7 +14,7 @@ footer: MIT Lisanslı | Telif hakkı © 2021-present Abdulnasır olcan
 description: Vue Composable Utils, Vue.js composition fonksiyon olarak uygulanır.
 meta:
   - name: og:title
-    content: vueComposableUtils
+    content: VueComposableUtils
   - name: og:description
     content: Vue Composable Utils, Vue.js composition fonksiyon olarak uygulanır.
 ---

@@ -103,6 +103,10 @@ function getSidebar() {
           path: '/composable-utils/bind',
         },
         {
+          title: 'Debounce',
+          path: '/composable-utils/debounce',
+        },
+        {
           title: 'Embed',
           path: '/composable-utils/embed',
         },
@@ -128,6 +132,10 @@ function getSidebarTR() {
         {
           title: 'Bind',
           path: '/tr/composable-utils/bind',
+        },
+        {
+          title: 'Debounce',
+          path: '/tr/composable-utils/debounce',
         },
         {
           title: 'Embed',
