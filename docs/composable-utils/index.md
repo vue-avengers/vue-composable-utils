@@ -1,13 +1,13 @@
-# Introduction
+# :sunflower: Introduction
 
 `vue-composable-utils` and [@vue/composition-api](https://github.com/vuejs/composition-api)
 
-## Features
+## :rocket: Features
 
 - Reactivity system with Vue.js.
 - Written in Javascript.
 
-## Installation
+## :package: Installation
 
 ```bash
 # install with yarn
@@ -16,7 +16,7 @@ yarn add @vue/composition-api vue-composable-utils
 npm install @vue/composition-api vue-composable-utils
 ```
 
-## Composable Utils
+## :bulb: Composable Utils
 
 | Name                                                     | Arguments                          | Returns                                                      |
 | -------------------------------------------------------- | ---------------------------------- | ------------------------------------------------------------ |

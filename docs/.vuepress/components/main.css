@@ -10,8 +10,31 @@ body.dark-mode h2,
 body.dark-mode h3,
 body.dark-mode p {
   color: #f0f6fc !important;
+  background-color: #0c1117 !important;
 }
-body.dark-mode header.nav-bar,
+
+body.dark-mode header.navbar > a > span {
+  color: #f0f6fc !important;
+}
+
+body.dark-mode header.navbar > div.links {
+  color: #f0f6fc !important;
+  background-color: #0c1117 !important;
+}
+
+body.dark-mode .dropdown-wrapper > button {
+  color: #f0f6fc !important;
+  background-color: #0c1117 !important;
+  border: none !important;
+}
+
+body.dark-mode header.navbar
+body.dark-mode aside {
+  background-color: #161b22 !important;
+  color: #f0f6fc !important;
+}
+
+body.dark-mode header.navbar
 body.dark-mode aside {
   background-color: #161b22 !important;
   color: #f0f6fc !important;
@@ -29,11 +52,15 @@ body.dark-mode .highlight-lines .highlighted {
   background-color: rgba(240, 246, 252, 0.15) !important;
 }
 
-body.dark-mode button,
-body.dark-mode input {
+/* body.dark-mode input {
   color: #f0f6fc !important;
-  /* background-color: rgba(240, 246, 252, 0.15) !important;
-  border: 2px solid #6e7681 !important; */
+  box-shadow: none !important;
+} */
+
+body.dark-mode button {
+  color: #f0f6fc !important;
+  background-color: rgba(240, 246, 252, 0.15) !important;
+  border: 1px solid #6e7681 !important;
   box-shadow: none !important;
 }
 

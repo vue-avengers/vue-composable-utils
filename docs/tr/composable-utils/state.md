@@ -1,7 +1,7 @@
-# UseState
+# :sparkles: UseState
 > `useState` fonksiyon bileşenlerde state değişkenlerine sahip olmanızı sağlayan bir fonksiyondur. Başlangıç statetinizi bu fonksiyona geçirirsiniz ve mevcut state değerine sahip bir değişken (başlangıç state olması gerekmez) ve bu değeri güncellemek için başka bir fonksiyon döndürür.
 
-## State
+## :convenience_store: State
 
 `useState` fonsiyonu aşağıdaki reaktif state olarak kullanılır:
 
@@ -12,13 +12,13 @@ const [count, setCount] = useState();
 
 `import { useState } from "vue-composable-utils"` içe aktarın Örnek () {`count` olarak adlandıracağımız yeni bir state değişkeni bildirmek `const [count, setCount] = useState(0);`  We count adında bir state değişkeni tanımlayın ve 0 olarak ayarlayın.
 
-## Özellikleri
+## :rocket: Özellikleri
 
 `useState`, size `reactive` `@vue/composition-api` ve reaktif olarak kullanılan özellikleri sağlayan fonksiyonlardır.
 
 - useState: `@vue/composition-api` den `ref` and `readonly` kullanıldı.
 
-## Uygulama
+## :computer: Uygulama
 
 Aşağıdaki örneği kullanarak reactive olarak nasıl değiştiğini görebilirsiniz.
 

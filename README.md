@@ -1,7 +1,7 @@
-# vue-composable-utils
+# :bulb: vue-composable-utils
 
 Vue Composable Utils implemented as vue composition functions. currently usable with the `@vue/composition-api`.
-## Installation
+## :package: Installation
 
 ```bash
 # install with yarn
@@ -10,11 +10,11 @@ yarn add @vue/composition-api vue-composable-utils
 npm install @vue/composition-api vue-composable-utils
 ```
 
-## Documentation
+## :books: Documentation
 
 Check our [documentation](https://vue-composable-utils.netlify.app/)
 
-## Composable Utils
+## :rocket: Composable Utils
 
 | Name                                                     | Arguments                          | Returns                                                      |
 | -------------------------------------------------------- | ---------------------------------- | ------------------------------------------------------------ |
@@ -29,7 +29,7 @@ Check our [documentation](https://vue-composable-utils.netlify.app/)
 - [UseState](./vue-composable-utils/state.md).
 - [UseList](./vue-composable-utils/list.md).
 
-## Usage
+## :computer: Usage
 
 ```vue
 <template>
@@ -41,8 +41,8 @@ Check our [documentation](https://vue-composable-utils.netlify.app/)
     <button @click="reduce((t, n) => Math.max(t, n))">Max list</button>
     <button @click="reduce((t, n) => (t.includes(n) ? t : [...t, n]))">Unique List</button>
     <button @click="reduce((t, n) => [n, ...t])">Reverse List</button>
+    <button @click="set([[...list], [11, [12], 13], [14, [15], 16, 17],[ 18, [19], 20]])">Set Multi Array</button>
     <button @click="reduce((t, n) => t.concat(n))">Flatten List</button>
-    <button @click="reduce((t, {id, ...attrs}) => ({...t, [id]: attrs }))">Convert array to object</button>
     <button @click="reduce((t, n) => {t.push(n * 2); return t})">Map List</button>
     <button @click="deleteFirst">Delete First</button>
     <button @click="deleteLast">Delete Last</button>
@@ -91,7 +91,7 @@ export default {
 </script>
 ```
 
-## Contributors
+## :person_red_hair: Contributors
 
 <table>
   <tr>
@@ -99,6 +99,6 @@ export default {
   </tr>
 </table>
 
-## License
+## :papepage_facing_uprclip: License
 
 MIT

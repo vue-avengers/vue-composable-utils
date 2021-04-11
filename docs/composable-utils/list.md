@@ -1,9 +1,9 @@
-# UseList
-> `useList` fonksiyon bileşenlerde durum değişkenlerine sahip olmanızı sağlayan bir işlevdir..
+# :sparkles: UseList
+> `useList` is a function that allows you to have state variables in functional components.
 
-## State
+## :convenience_store: State
 
-`useList` fonksiyon aşağıdaki reaktif durum olarak kullanılır:
+The `useList` function is used as the following reactive state:
 
 ```js
 import { useList } from "vue-composable-utils";
@@ -22,15 +22,16 @@ import { useList } from "vue-composable-utils";
     } = useList([5,1,4,7,10,4,9,6,2,5,8,3]);
 ```
 
-## Özellikleri
 
-`useList`, size `reactive` `@vue/composition-api` ve reaktif olarak kullanılan özellikleri sağlayan fonksiyonlardır.
+## :rocket: Features
 
-- useList: `@vue/composition-api` den `list`,`set` ,`reduce`,`sort`,`first`,`deleteFirst`,`deleteLast`,`last`,`filter`,`push` ve `reset`
+`useList` are functions that provide you with `"reactive"` `@vue/composition-api` and properties used as reactive.
 
-## Uygulama
+- useList: use `list`,`set` ,`reduce`,`sort`,`first`,`deleteFirst`,`deleteLast`,`last`,`filter`,`push` and `reset`, from `@vue/composition-api`
 
-Aşağıdaki örneği kullanarak reactive olarak nasıl değiştiğini görebilirsiniz.
+## :computer: Example
+
+You can see how it changes reactively using the example below.
 
 ```vue
 <template>
@@ -42,8 +43,8 @@ Aşağıdaki örneği kullanarak reactive olarak nasıl değiştiğini görebili
     <button @click="reduce((t, n) => Math.max(t, n))">Max list</button>
     <button @click="reduce((t, n) => (t.includes(n) ? t : [...t, n]))">Unique List</button>
     <button @click="reduce((t, n) => [n, ...t])">Reverse List</button>
+    <button @click="set([[...list], [11, [12], 13], [14, [15], 16, 17],[ 18, [19], 20]])">Set Multi Array</button>
     <button @click="reduce((t, n) => t.concat(n))">Flatten List</button>
-    <button @click="reduce((t, {id, ...attrs}) => ({...t, [id]: attrs }))">Convert array to object</button>
     <button @click="reduce((t, n) => {t.push(n * 2); return t})">Map List</button>
     <button @click="deleteFirst">Delete First</button>
     <button @click="deleteLast">Delete Last</button>
@@ -145,4 +146,5 @@ export default {
   },
 };
 </script>
+```
 <ToggleDarkMode/>

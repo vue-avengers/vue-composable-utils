@@ -2,16 +2,16 @@
 title: Vue Composable Utils
 lang: en-US
 home: true
-heroImage: assets/img/vue-composable-utils-logo.svg
+heroImage: assets/vue-composable-utils-logo.svg
 actionText: Get Started →
-actionLink: /vue-composable-utils/
+actionLink: /composable-utils/
 features:
   - title: Composable functions
     details: Composable functions that have been brought together for you to use in all your components.
   - title: Reactive
     details: Every time your component's render function changes, we have the full reactivity system.
 footer: MIT Licensed | Copyright © 2021-present Abdulnasır olcan
-description: Vue Composable Utils implemented as vue composition functions.
+description: Reusability and Composition functions.
 meta:
   - name: og:title
     content: composableUtils
@@ -19,11 +19,12 @@ meta:
     content: Vue Composable Utils implemented as vue composition functions.
 ---
 
-# Introduction
+# :sunflower: Introduction
 
 Vue Composable Utils implemented as vue composition functions. currently usable with the `@vue/composition-api`.
+Vue composition function is just a regular JS factory function that returns a bunch of Vue specifically stuff like refs, etc.
 
-## Installation
+ ## :package: Installation
 
 ```bash
 # install with yarn
@@ -32,7 +33,7 @@ yarn add @vue/composition-api vue-composable-utils
 npm install @vue/composition-api vue-composable-utils
 ```
 
-## Composable Utils
+## :rocket: Composable Utils
 
 | Name                                                     | Arguments                          | Returns                                                      |
 | -------------------------------------------------------- | ---------------------------------- | ------------------------------------------------------------ |
@@ -47,7 +48,9 @@ npm install @vue/composition-api vue-composable-utils
 - [UseState](./vue-composable-utils/state.md).
 - [UseList](./vue-composable-utils/list.md).
 
-## Usage
+## :computer: Usage
+
+<List />
 
 ```vue
 <template>
@@ -59,8 +62,8 @@ npm install @vue/composition-api vue-composable-utils
     <button @click="reduce((t, n) => Math.max(t, n))">Max list</button>
     <button @click="reduce((t, n) => (t.includes(n) ? t : [...t, n]))">Unique List</button>
     <button @click="reduce((t, n) => [n, ...t])">Reverse List</button>
+    <button @click="set([[...list], [11, [12], 13], [14, [15], 16, 17],[ 18, [19], 20]])">Set Multi Array</button>
     <button @click="reduce((t, n) => t.concat(n))">Flatten List</button>
-    <button @click="reduce((t, {id, ...attrs}) => ({...t, [id]: attrs }))">Convert array to object</button>
     <button @click="reduce((t, n) => {t.push(n * 2); return t})">Map List</button>
     <button @click="deleteFirst">Delete First</button>
     <button @click="deleteLast">Delete Last</button>

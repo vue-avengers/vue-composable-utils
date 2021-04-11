@@ -1,7 +1,7 @@
-# UseState
+# :sparkles: UseState
 > `useState` is a function that allows you to have state variables in functional components. You pass the initial state to this function and it returns a variable with the current state value (not necessarily the initial state) and another function to update this value.
 
-## State
+## :convenience_store: State
 
 The `useState` function is used as the following reactive state:
 
@@ -13,13 +13,13 @@ const [count, setCount] = useState();
 `import { useState } from "vue-composable-utils"` function Example() { // Declare a new state variable, which we'll call `count` `const [count, setCount] = useState(0);` We declare a state variable called count , and set it to 0 .
 
 
-## Features
+## :rocket: Features
 
 `useState` are functions that provide you with `"reactive"` `@vue/composition-api` and properties used as reactive.
 
 - useState: use `ref` and `readonly` from `@vue/composition-api`
 
-## Example
+## :computer: Example
 
 You can see how it changes reactively using the example below.
 

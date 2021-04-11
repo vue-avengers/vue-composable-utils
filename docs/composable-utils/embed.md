@@ -1,7 +1,7 @@
-# UseEmbed
+# :sparkles: UseEmbed
 > `useEmbed` is a function that allows you to have state variables in functional components.
 
-## State
+## :convenience_store: State
 
 The `useEmbed` function is used as the following reactive state:
 
@@ -12,13 +12,13 @@ const { getEmbedScriptSrc, injectScript, isEmbedBlock, clearScript } = useEmbed(
 ```
 
 
-## Features
+## :rocket: Features
 
 `useEmbed` are functions that provide you with `"reactive"` `@vue/composition-api` and properties used as reactive.
 
 - useEmbed: use `isEmbedBlock`, `code`  and `clear` from `@vue/composition-api`
 
-## Example
+## :computer: Example
 
 You can see how it changes reactively using the example below.
 

@@ -1,50 +1,3 @@
----
-title: Vue Composable Utils
-lang: tr-TR
-home: true
-heroImage: /assets/vue-composable-utils-logo.svg
-actionText: Hemen Başla →
-actionLink: ./composable-utils/
-features:
-  - title: Composable fonksiyonlar
-    details: Tüm bileşenlerinizde kullanmanız için bir araya getirilmiş composable fonksiyonlar.
-  - title: Reaktif
-    details: Bileşenleriniz render fonksiyonu her değiştiğinde, tamamen reaktif sistemine sahibiz.
-footer: MIT Lisanslı | Telif hakkı © 2021-present Abdulnasır olcan
-description: Vue Composable Utils, Vue.js composition fonksiyon olarak uygulanır.
-meta:
-  - name: og:title
-    content: vueComposableUtils
-  - name: og:description
-    content: Vue Composable Utils, Vue.js composition fonksiyon olarak uygulanır.
----
-
-# :sunflower: Başlangıç
-
-Vue Composable Utils kullanmak için öncelikli olarak `@vue/composition-api` yüklemeniz gerekiyor.
-
-## :package: Kurulum
-
-```bash
-# yarn ile kurmak
-yarn add @vue/composition-api vue-composable-utils
-# npm ile kurmak
-npm install @vue/composition-api vue-composable-utils
-```
-
-## :rocket: Composable Utils
-
-- [UseList](./vue-composable-utils/list.md).
-- [UseDebounce](./vue-composable-utils/list.md).
-- [UseState](./vue-composable-utils/list.md).
-- [UseBind](./vue-composable-utils/list.md).
-- [UseRouter](./vue-composable-utils/list.md).
-
-## :computer: Uygulama
-
-<List />
-
-```vue
 <template>
   <div>
     <p>list: {{ JSON.stringify(list) }}</p>
@@ -68,9 +21,10 @@ npm install @vue/composition-api vue-composable-utils
 </template>
 
 <script>
-import { useList } from "vue-composable-utils";
+import { useList } from "../../../src";
 
 export default {
+  name: 'List',
   setup() {
     const {
       list,
@@ -102,6 +56,3 @@ export default {
   },
 };
 </script>
-```
-<ToggleDarkMode/>
-<!-- TODO: Dark mode-->

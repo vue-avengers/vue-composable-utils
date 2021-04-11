@@ -1,7 +1,7 @@
-# UseBind
+# :sparkles: UseBind
 > `useBind` fonksiyon bileşenlerde durum değişkenlerine sahip olmanızı sağlayan bir işlevdir..
 
-## State
+## :convenience_store: State
 
 `useBind` fonksiyon aşağıdaki reaktif durum olarak kullanılır:
 
@@ -11,13 +11,13 @@ const { value, changed, reset } = useBind('Type a here....');
 ```
 
 
-## Features
+## :rocket: Özellikleri
 
 `useBind`, size `reactive` `@vue/composition-api` ve reaktif olarak kullanılan özellikleri sağlayan fonksiyonlardır.
 
 - useBind: `@vue/composition-api` den `value`, `changed`  ve `reset`
 
-## Example
+## :computer: Uygulama
 
 Aşağıdaki örneği kullanarak reactive olarak nasıl değiştiğini görebilirsiniz.
 
