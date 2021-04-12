@@ -33,6 +33,8 @@ import { useList } from "vue-composable-utils";
 
 You can see how it changes reactively using the example below.
 
+<List />
+
 ```vue
 <template>
   <div>

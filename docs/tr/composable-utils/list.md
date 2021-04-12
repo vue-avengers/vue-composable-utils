@@ -32,6 +32,8 @@ import { useList } from "vue-composable-utils";
 
 Aşağıdaki örneği kullanarak reactive olarak nasıl değiştiğini görebilirsiniz.
 
+<List />
+
 ```vue
 <template>
   <div>
