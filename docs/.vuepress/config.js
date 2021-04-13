@@ -115,6 +115,10 @@ function getSidebar() {
           path: '/composable-utils/list',
         },
         {
+          title: 'LocalStorage',
+          path: '/composable-utils/localStorage',
+        },
+        {
           title: 'State',
           path: '/composable-utils/state',
         },
@@ -142,12 +146,16 @@ function getSidebarTR() {
           path: '/tr/composable-utils/embed',
         },
         {
-          title: 'State',
-          path: '/tr/composable-utils/state',
-        },
-        {
           title: 'List',
           path: '/tr/composable-utils/list',
+        },
+        {
+          title: 'LocalStorage',
+          path: '/tr/composable-utils/localStorage',
+        },
+        {
+          title: 'State',
+          path: '/tr/composable-utils/state',
         },
       ],
     },

@@ -1,4 +1,4 @@
-# :sparkles: UseState
+# :sparkles: useState
 > `useState` fonksiyon bileşenlerde state değişkenlerine sahip olmanızı sağlayan bir fonksiyondur. Başlangıç statetinizi bu fonksiyona geçirirsiniz ve mevcut state değerine sahip bir değişken (başlangıç state olması gerekmez) ve bu değeri güncellemek için başka bir fonksiyon döndürür.
 
 ## :convenience_store: State

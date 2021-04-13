@@ -1,4 +1,4 @@
-# :sparkles: UseEmbed
+# :sparkles: useEmbed
 > `useEmbed` is a function that allows you to have state variables in functional components.
 
 ## :convenience_store: State

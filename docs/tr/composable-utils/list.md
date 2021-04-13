@@ -1,4 +1,4 @@
-# :sparkles: UseList
+# :sparkles: useList
 > `useList` fonksiyon bileşenlerde durum değişkenlerine sahip olmanızı sağlayan bir işlevdir..
 
 ## State

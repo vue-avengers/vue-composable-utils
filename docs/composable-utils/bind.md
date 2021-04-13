@@ -1,4 +1,4 @@
-# :sparkles: UseBind
+# :sparkles: useBind
 > `useBind` is a function that allows you to have state variables in functional components.
 
 ## :convenience_store: State

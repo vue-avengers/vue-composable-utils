@@ -1,4 +1,4 @@
-# :sparkles: UseBind
+# :sparkles: useBind
 > `useBind` fonksiyon bileşenlerde durum değişkenlerine sahip olmanızı sağlayan bir işlevdir..
 
 ## :convenience_store: State
