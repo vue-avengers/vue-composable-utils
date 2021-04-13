@@ -1,112 +1,115 @@
 import Vue from 'vue';
-import VueCompositionAPI from '@vue/composition-api';
-import { mount } from '@vue/test-utils';
-import { mountComposition } from './utils';
-import { useEmbed } from '@/';
+import VueCompositionAPI, { ref } from '@vue/composition-api';
+import { mount, createLocalVue } from '@vue/test-utils';
+import { useEmbed } from './useEmbed';
 
 Vue.use(VueCompositionAPI);
 
-// const localVue = createLocalVue();
-// localVue.component('embed-component', {
-//   template: `
-//     <div>
-//       <textarea v-model="embed"></textarea>
-//       <div v-if="useEmbed(embed).isEmbedBlock.value" id="embed-preview" v-html="embed"></div>
-//     </div>
-//   `,
-// });
+const localVue = createLocalVue();
+localVue.component('test-component', {
+  template: `
+    <div>
+      <textarea v-model="embed"></textarea>
+      <div v-if="useEmbed(embed).isEmbedBlock.value" id="embed-preview" v-html="embed"></div>
+    </div>
+  `
+});
 
-// const Component = localVue.component('embed-component');
+const Component = localVue.component('test-component');
 
 describe('use embed composable tests', () => {
-  it('should be defined useEmbed', () => {
-    mount(
-      mountComposition(() => {
-        useEmbed();
+  test('embed preview have to be rendered if embed block computed is true', () => {
+    const wrapper = mount(Component, {
+      data: () => ({
+        embed: ref('<blockquote class="twitter-tweet"></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8">')
       }),
-    );
-    expect(useEmbed).toBeDefined();
+      mocks: {
+        useEmbed
+      }
+    });
+
+    expect(wrapper.find('#embed-preview').exists()).toBe(true);
   });
-  // test('embed preview have to be rendered if embed block computed is true', () => {
-  //   const wrapper = mount(Component, {
-  //     data: () => ({
-  //       embed:
-  //         '<blockquote class="twitter-tweet"></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8">',
-  //     }),
-  //     mocks: {
-  //       useEmbed,
-  //     },
-  //   });
 
-  //   expect(wrapper.find('#embed-preview').exists()).toBe(true);
-  // });
+  test('embed preview have to be not rendered if embed block computed is false', () => {
+    const wrapper = mount(Component, {
+      data: () => ({
+        embed: ''
+      }),
+      mocks: {
+        useEmbed
+      }
+    });
 
-  // test('embed preview have to be not rendered if embed block computed is false', () => {
-  //   const wrapper = mount(Component, {
-  //     data: () => ({
-  //       embed: '',
-  //     }),
-  //     mocks: {
-  //       useEmbed,
-  //     },
-  //   });
+    expect(wrapper.find('#embed-preview').exists()).toBe(false);
+  });
 
-  //   expect(wrapper.find('#embed-preview').exists()).toBe(false);
-  // });
+  test('getEmbedScriptSrc should return the src attribute of script tag in embed code', () => {
+    const wrapper = mount(Component, {
+      data: () => ({
+        embed: ref('<blockquote class="twitter-tweet"></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8">')
+      }),
+      mocks: {
+        useEmbed
+      }
+    });
 
-  // test('getEmbedScriptSrc should return the src attribute of script tag in embed code', () => {
-  //   const wrapper = mount(Component, {
-  //     data: () => ({
-  //       embed:
-  //         '<blockquote class="twitter-tweet"></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8">',
-  //     }),
-  //     mocks: {
-  //       useEmbed,
-  //     },
-  //   });
+    const { getEmbedScriptSrc } = useEmbed(wrapper.vm.embed);
+    const scriptSrc = getEmbedScriptSrc();
 
-  //   const umbed = useEmbed(wrapper.vm.embed);
-  //   const scriptSrc = umbed.isEmbedBlock.value;
+    expect(scriptSrc).toBe('https://platform.twitter.com/widgets.js');
+  });
 
-  //   expect(scriptSrc).toBe(true);
-  //   expect(wrapper.html()).toMatchSnapshot();
-  // });
+  test('injectScript should mount script to the DOM', () => {
+    const { injectScript } = useEmbed();
+    injectScript({ id: 'twitter-embed', src: 'https://platform.twitter.com/widgets.js' });
 
-  //   test('injectScript should mount script to the DOM', () => {
-  //     const wrapper = mount(Component, {
-  //       data: () => ({
-  //         embed: 'https://platform.twitter.com/widgets.js',
-  //       }),
-  //       mocks: {
-  //         useEmbed,
-  //       },
-  //     });
+    const script = document.getElementById('twitter-embed');
 
-  //     const umbed = useEmbed();
-  //     console.log('umbed:', umbed);
-  //     umbed.injectScript({ id: 'twitter-embed', src: 'https://platform.twitter.com/widgets.js' });
+    expect(script).toBeTruthy();
+  });
 
-  //     const script = document.getElementById('twitter-embed');
+  test('clearScript should remove script tag that passed as argument', () => {
+    const { injectScript, clearScript } = useEmbed();
+    injectScript({ id: 'twitter-embed', src: 'https://platform.twitter.com/widgets.js' });
 
-  //     expect(script).toBeTruthy();
-  //     expect(wrapper.html()).toMatchSnapshot();
-  //   });
+    clearScript(document.getElementById('twitter-embed'));
 
-  //   test('clearScript should remove script tag that passed as argument', () => {
-  //     mount(Component, {
-  //       data: () => ({
-  //         embed: 'https://platform.twitter.com/widgets.js',
-  //       }),
-  //       mocks: {
-  //         useEmbed,
-  //       },
-  //     });
+    expect(document.getElementById('twitter-embed')).toBeFalsy();
+  });
 
-  //     const umbed = useEmbed();
-  //     umbed.injectScript({ id: 'twitter-embed', src: 'https://platform.twitter.com/widgets.js' });
+  test('clear method should remove all embed scripts', () => {
+    const { injectScript, clear } = useEmbed();
+    injectScript({ id: 'twitter-embed', src: 'https://platform.twitter.com/widgets.js' });
+    injectScript({ id: 'instagram-embed', src: '//platform.instagram.com/en_US/embeds.js' });
 
-  //     embed.clearScript(document.getElementById('twitter-embed'));
+    clear();
 
-  //     expect(document.getElementById('twitter-embed')).toBeFalsy();
-  //   });
+    expect(document.getElementById('twitter-embed')).toBeFalsy();
+    expect(document.getElementById('instagram-embed')).toBeFalsy();
+  });
+
+  test('registerWatcher method should add watch with a given callback function', () => {
+    const wrapper = mount(Component, {
+      data: () => ({
+        embed: ref('<blockquote class="twitter-tweet"></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8">')
+      }),
+      mocks: {
+        useEmbed
+      }
+    });
+
+    const { registerWatcher, getEmbedScriptSrc, injectScript } = useEmbed(wrapper.vm.embed);
+
+    registerWatcher(newValue => {
+      if (newValue) {
+        const src = getEmbedScriptSrc(newValue);
+        injectScript({ id: 'instagram-embed', src });
+      }
+    });
+
+    wrapper.vm.embed.value = '<script async src="//platform.instagram.com/en_US/embeds.js" charset="utf-8">'
+
+    expect(wrapper.find('#instagram-embed').exists()).toBe(true);
+  });
 });

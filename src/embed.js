@@ -18,14 +18,16 @@ import { ref, computed, watch } from '@vue/composition-api';
  * }
  */
 
-export function useEmbed(code = null) {
-  const embedCode = ref(code);
+import { ref, computed, watch } from '@vue/composition-api';
 
-  const isEmbedBlock = computed(
-    () =>
-      /(?:<iframe[^>]*)(?:(?:\/>)|(?:>.*?<\/iframe>))/.test(embedCode.value) ||
-      /(?:<blockquote[^>]*)(?:(?:\/>)|(?:>.*?<\/blockquote>))/.test(embedCode.value),
-  );
+const useEmbed = (code = ref(null)) => {
+  const embedCode = ref(code.value);
+  const injectedScripts = ref([]);
+
+  const isEmbedBlock = computed(() => (
+    /(?:<iframe[^>]*)(?:(?:\/>)|(?:>.*?<\/iframe>))/.test(embedCode.value)
+    || /(?:<blockquote[^>]*)(?:(?:\/>)|(?:>.*?<\/blockquote>))/.test(embedCode.value)
+  ));
 
   const getEmbedScriptSrc = (embedString = embedCode.value) => {
     const parser = new DOMParser();
@@ -40,7 +42,7 @@ export function useEmbed(code = null) {
     }
 
     return null;
-  };
+  }
 
   const clearScript = scriptEl => scriptEl.remove();
 
@@ -56,29 +58,31 @@ export function useEmbed(code = null) {
     script.src = src;
     script.async = async;
     script.defer = defer;
-    script.addEventListener('load', () => {
-      if (window.instgrm) {
-        window.instgrm.Embeds.process();
-      }
-    });
     document.body.insertAdjacentElement('afterend', script);
+    injectedScripts.value = [...injectedScripts.value, script];
   };
 
   const clear = () => {
-    code.value = null;
-    const script = document.getElementById('id');
-    clearScript(script);
-  };
+    embedCode.value = null;
+    injectedScripts.value.map(script => clearScript(script));
+    injectedScripts.value = [];
+  }
 
-  watch(code, newValue => {
-    if (newValue) {
-      const src = getEmbedScriptSrc(newValue);
-      injectScript({ id: 'id', src });
-    }
-  });
+  const registerWatcher = callback => {
+    console.log(callback);
+    watch(code, callback);
+  }
 
   return {
     isEmbedBlock,
+    injectScript,
+    getEmbedScriptSrc,
+    clearScript,
     clear,
+    registerWatcher,
   };
-}
+};
+
+export {
+  useEmbed
+};
