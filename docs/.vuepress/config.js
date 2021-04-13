@@ -122,6 +122,10 @@ function getSidebar() {
           title: 'State',
           path: '/composable-utils/state',
         },
+        {
+          title: 'Date',
+          path: '/composable-utils/date',
+        },
       ],
     },
   ];
@@ -156,6 +160,10 @@ function getSidebarTR() {
         {
           title: 'State',
           path: '/tr/composable-utils/state',
+        },
+        {
+          title: 'Date',
+          path: '/tr/composable-utils/date',
         },
       ],
     },

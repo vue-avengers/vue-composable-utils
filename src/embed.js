@@ -18,16 +18,15 @@ import { ref, computed, watch } from '@vue/composition-api';
  * }
  */
 
-import { ref, computed, watch } from '@vue/composition-api';
-
 const useEmbed = (code = ref(null)) => {
   const embedCode = ref(code.value);
   const injectedScripts = ref([]);
 
-  const isEmbedBlock = computed(() => (
-    /(?:<iframe[^>]*)(?:(?:\/>)|(?:>.*?<\/iframe>))/.test(embedCode.value)
-    || /(?:<blockquote[^>]*)(?:(?:\/>)|(?:>.*?<\/blockquote>))/.test(embedCode.value)
-  ));
+  const isEmbedBlock = computed(
+    () =>
+      /(?:<iframe[^>]*)(?:(?:\/>)|(?:>.*?<\/iframe>))/.test(embedCode.value) ||
+      /(?:<blockquote[^>]*)(?:(?:\/>)|(?:>.*?<\/blockquote>))/.test(embedCode.value),
+  );
 
   const getEmbedScriptSrc = (embedString = embedCode.value) => {
     const parser = new DOMParser();
@@ -42,7 +41,7 @@ const useEmbed = (code = ref(null)) => {
     }
 
     return null;
-  }
+  };
 
   const clearScript = scriptEl => scriptEl.remove();
 
@@ -66,12 +65,11 @@ const useEmbed = (code = ref(null)) => {
     embedCode.value = null;
     injectedScripts.value.map(script => clearScript(script));
     injectedScripts.value = [];
-  }
+  };
 
   const registerWatcher = callback => {
-    console.log(callback);
     watch(code, callback);
-  }
+  };
 
   return {
     isEmbedBlock,
@@ -83,6 +81,4 @@ const useEmbed = (code = ref(null)) => {
   };
 };
 
-export {
-  useEmbed
-};
+export { useEmbed };

@@ -6,3 +6,4 @@ export * from './list';
 export * from './embed';
 export * from './debounceFn';
 export * from './localStorage';
+export * from './date';
