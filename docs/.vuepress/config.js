@@ -106,6 +106,10 @@ function getSidebar() {
           path: '/composable-utils/useBind',
         },
         {
+          title: 'useDebounce',
+          path: '/composable-utils/useDebounce',
+        },
+        {
           title: 'useDebounceFn',
           path: '/composable-utils/useDebounceFn',
         },
@@ -143,6 +147,10 @@ function getSidebarTR() {
         {
           title: 'useBind',
           path: '/tr/composable-utils/useBind',
+        },
+        {
+          title: 'useDebounce',
+          path: '/tr/composable-utils/useDebounce',
         },
         {
           title: 'useDebounceFn',
