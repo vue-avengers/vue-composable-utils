@@ -22,13 +22,12 @@ npm install @vue/composition-api vue-composable-utils
 
 ## :bulb: Composable Utils
 
-| Name                                                     | Arguments                          | Returns                                                      |
-| -------------------------------------------------------- | ---------------------------------- | ------------------------------------------------------------ |
-| [`UseBind`](/vue-composable-utils/bind.md)               | initial                            | value, changed, reset                                        |
-| [`UseEmbed`](/vue-composable-utils/embed.md)            | f                                  | -                                                            |
-| [`UseState`](/vue-composable-utils/state.md)            | initial                            | value, set                                                   |
-| [`UseList`](/vue-composable-utils/list.md)              | initial                            | list, set, reduce, sort, first, deleteFirst, deleteLast, last,  filter, push, reset| 
-
+| Name                                         | Arguments | Returns                                                                            |
+| -------------------------------------------- | --------- | ---------------------------------------------------------------------------------- |
+| [`UseBind`](/vue-composable-utils/bind.md)   | initial   | value, changed, reset                                                              |
+| [`UseEmbed`](/vue-composable-utils/embed.md) | f         | -                                                                                  |
+| [`UseState`](/vue-composable-utils/state.md) | initial   | value, set                                                                         |
+| [`UseList`](/vue-composable-utils/list.md)   | initial   | list, set, reduce, sort, first, deleteFirst, deleteLast, last, filter, push, reset |
 
 - [UseBind](./vue-composable-utils/bind.md).
 - [UseEmbed](./vue-composable-utils/embed.md).
