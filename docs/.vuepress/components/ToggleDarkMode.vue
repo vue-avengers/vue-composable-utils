@@ -1,16 +1,16 @@
 <template>
   <div class="headerButtonDKM">
-  <label for="theme-toggle" class="firsLabelDKM colored">
-    <input type="checkbox" id="theme-toggle" @click="toggleDarkTheme" />
-    <label>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
+    <label for="theme-toggle" class="firsLabelDKM colored">
+      <input type="checkbox" id="theme-toggle" @click="toggleDarkTheme" />
+      <label>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
     </label>
-  </label>
-</div>
+  </div>
 </template>
 
 <script>
@@ -62,7 +62,7 @@ export default {
   justify-content: center;
   align-items: center;
 
-  input[type="checkbox"] {
+  input[type='checkbox'] {
     visibility: hidden;
     opacity: 0;
     position: absolute;
@@ -138,7 +138,7 @@ export default {
   }
 
   &.colored {
-    input[type="checkbox"] {
+    input[type='checkbox'] {
       ~ label {
         background: radial-gradient(#36495e, #36495e);
         span {

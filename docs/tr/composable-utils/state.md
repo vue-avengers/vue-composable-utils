@@ -1,4 +1,5 @@
 # :sparkles: useState
+
 > `useState` fonksiyon bileşenlerde state değişkenlerine sahip olmanızı sağlayan bir fonksiyondur. Başlangıç statetinizi bu fonksiyona geçirirsiniz ve mevcut state değerine sahip bir değişken (başlangıç state olması gerekmez) ve bu değeri güncellemek için başka bir fonksiyon döndürür.
 
 ## :convenience_store: State
@@ -6,11 +7,11 @@
 `useState` fonsiyonu aşağıdaki reaktif state olarak kullanılır:
 
 ```js
-import { useState } from "vue-composable-utils";
+import { useState } from 'vue-composable-utils';
 const [count, setCount] = useState();
 ```
 
-`import { useState } from "vue-composable-utils"` içe aktarın Örnek () {`count` olarak adlandıracağımız yeni bir state değişkeni bildirmek `const [count, setCount] = useState(0);`  We count adında bir state değişkeni tanımlayın ve 0 olarak ayarlayın.
+`import { useState } from "vue-composable-utils"` içe aktarın Örnek () {`count` olarak adlandıracağımız yeni bir state değişkeni bildirmek `const [count, setCount] = useState(0);` We count adında bir state değişkeni tanımlayın ve 0 olarak ayarlayın.
 
 ## :rocket: Özellikleri
 
@@ -30,7 +31,7 @@ Aşağıdaki örneği kullanarak reactive olarak nasıl değiştiğini görebili
 </template>
 
 <script>
-import { useState } from "vue-composable-utils";
+import { useState } from 'vue-composable-utils';
 
 export default {
   setup() {
@@ -44,4 +45,5 @@ export default {
 };
 </script>
 ```
+
 <ToggleDarkMode/>

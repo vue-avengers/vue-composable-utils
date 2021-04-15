@@ -1,31 +1,33 @@
 import Vue from 'vue';
 import VueCompositionAPI, { ref } from '@vue/composition-api';
 import { mount, createLocalVue } from '@vue/test-utils';
-import { useEmbed } from './useEmbed';
+import { useEmbed } from '@/';
 
 Vue.use(VueCompositionAPI);
 
 const localVue = createLocalVue();
-localVue.component('test-component', {
+localVue.component('embed-component', {
   template: `
     <div>
       <textarea v-model="embed"></textarea>
       <div v-if="useEmbed(embed).isEmbedBlock.value" id="embed-preview" v-html="embed"></div>
     </div>
-  `
+  `,
 });
 
-const Component = localVue.component('test-component');
+const Component = localVue.component('embed-component');
 
 describe('use embed composable tests', () => {
   test('embed preview have to be rendered if embed block computed is true', () => {
     const wrapper = mount(Component, {
       data: () => ({
-        embed: ref('<blockquote class="twitter-tweet"></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8">')
+        embed: ref(
+          '<blockquote class="twitter-tweet"></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8">',
+        ),
       }),
       mocks: {
-        useEmbed
-      }
+        useEmbed,
+      },
     });
 
     expect(wrapper.find('#embed-preview').exists()).toBe(true);
@@ -34,11 +36,11 @@ describe('use embed composable tests', () => {
   test('embed preview have to be not rendered if embed block computed is false', () => {
     const wrapper = mount(Component, {
       data: () => ({
-        embed: ''
+        embed: '',
       }),
       mocks: {
-        useEmbed
-      }
+        useEmbed,
+      },
     });
 
     expect(wrapper.find('#embed-preview').exists()).toBe(false);
@@ -47,11 +49,13 @@ describe('use embed composable tests', () => {
   test('getEmbedScriptSrc should return the src attribute of script tag in embed code', () => {
     const wrapper = mount(Component, {
       data: () => ({
-        embed: ref('<blockquote class="twitter-tweet"></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8">')
+        embed: ref(
+          '<blockquote class="twitter-tweet"></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8">',
+        ),
       }),
       mocks: {
-        useEmbed
-      }
+        useEmbed,
+      },
     });
 
     const { getEmbedScriptSrc } = useEmbed(wrapper.vm.embed);
@@ -92,11 +96,13 @@ describe('use embed composable tests', () => {
   test('registerWatcher method should add watch with a given callback function', () => {
     const wrapper = mount(Component, {
       data: () => ({
-        embed: ref('<blockquote class="twitter-tweet"></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8">')
+        embed: ref(
+          '<blockquote class="twitter-tweet"></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8">',
+        ),
       }),
       mocks: {
-        useEmbed
-      }
+        useEmbed,
+      },
     });
 
     const { registerWatcher, getEmbedScriptSrc, injectScript } = useEmbed(wrapper.vm.embed);
@@ -108,8 +114,9 @@ describe('use embed composable tests', () => {
       }
     });
 
-    wrapper.vm.embed.value = '<script async src="//platform.instagram.com/en_US/embeds.js" charset="utf-8">'
+    wrapper.vm.embed.value = '<script async src="//platform.instagram.com/en_US/embeds.js" charset="utf-8">';
+    const embed = wrapper.find('#instagram-embed');
 
-    expect(wrapper.find('#instagram-embed').exists()).toBe(true);
+    expect(embed).toEqual(expect.objectContaining({ selector: '#instagram-embed' }));
   });
 });

@@ -1,4 +1,5 @@
 # :sparkles: useState
+
 > `useState` is a function that allows you to have state variables in functional components. You pass the initial state to this function and it returns a variable with the current state value (not necessarily the initial state) and another function to update this value.
 
 ## :convenience_store: State
@@ -6,12 +7,11 @@
 The `useState` function is used as the following reactive state:
 
 ```js
-import { useState } from "vue-composable-utils";
+import { useState } from 'vue-composable-utils';
 const [count, setCount] = useState();
 ```
 
 `import { useState } from "vue-composable-utils"` function Example() { // Declare a new state variable, which we'll call `count` `const [count, setCount] = useState(0);` We declare a state variable called count , and set it to 0 .
-
 
 ## :rocket: Features
 
@@ -31,7 +31,7 @@ You can see how it changes reactively using the example below.
 </template>
 
 <script>
-import { useState } from "vue-composable-utils";
+import { useState } from 'vue-composable-utils';
 
 export default {
   setup() {
@@ -45,4 +45,5 @@ export default {
 };
 </script>
 ```
+
 <ToggleDarkMode/>

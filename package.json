@@ -19,7 +19,7 @@
     "serve": "vuepress serve docs",
     "lint:eslint": "eslint --ext .js,.vue --ignore-path .gitignore --ignore-path .eslintignore .",
     "lint:eslint:fix": "eslint --fix --ext .js,.vue --ignore-path .gitignore --ignore-path .eslintignore .",
-    "prettier": "prettier --config ./.prettierrc.js --ignore-path ./.prettierignore --write \"**/*.{js,json,css,scss,vue,html}\"",
+    "prettier": "prettier --config ./.prettierrc.js --ignore-path ./.prettierignore --write \"**/*.{js,json,css,scss,vue,html,md}\"",
     "test": "vue-cli-service test:unit",
     "test:cover": "jest --coverage",
     "test:watch": "jest --coverage --watch",

@@ -1,17 +1,17 @@
 <template>
   <div>
-     <p>Value is: {{ value }}</p>
+    <p>Value is: {{ value }}</p>
     <button class="fourth" @click="value = '2'">Change</button>
   </div>
 </template>
 
 <script>
-import { useLocalStorage } from "../../../src";
+import { useLocalStorage } from '../../../src';
 
 export default {
-  name: "LocalStorage",
+  name: 'LocalStorage',
   setup() {
-    const { value } = useLocalStorage("test", 1);
+    const { value } = useLocalStorage('test', 1);
 
     return { value };
   },
@@ -19,7 +19,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 $green: #2ecc71;
 $red: #e74c3c;
 $blue: #3498db;
@@ -28,24 +27,24 @@ $purple: #8e44ad;
 $turquoise: #1abc9c;
 
 p {
-    margin: 10px;
-    padding: 0.8em 0.8em;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #8e44ad;
+  margin: 10px;
+  padding: 0.8em 0.8em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #8e44ad;
 }
 
 input {
-    border: 2px solid #8e44ad;
-    margin: 10px;
-    padding: 0.8em 0.8em;
-    text-decoration: none;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #8e44ad;
+  border: 2px solid #8e44ad;
+  margin: 10px;
+  padding: 0.8em 0.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #8e44ad;
 }
-button{
+button {
   box-sizing: border-box;
   appearance: none;
   background-color: transparent;
@@ -75,14 +74,14 @@ button{
   border-color: $yellow;
   color: #000;
   background: {
-    image: linear-gradient(45deg,$yellow 50%, transparent 50%);
+    image: linear-gradient(45deg, $yellow 50%, transparent 50%);
     position: 100%;
     size: 400%;
   }
   transition: background 300ms ease-in-out;
 
   &:hover {
-        color: #fff;
+    color: #fff;
     background-position: 0;
   }
 }

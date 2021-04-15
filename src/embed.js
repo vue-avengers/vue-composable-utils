@@ -18,7 +18,7 @@ import { ref, computed, watch } from '@vue/composition-api';
  * }
  */
 
-const useEmbed = (code = ref(null)) => {
+export function useEmbed(code = ref(null)) {
   const embedCode = ref(code.value);
   const injectedScripts = ref([]);
 
@@ -79,6 +79,4 @@ const useEmbed = (code = ref(null)) => {
     clear,
     registerWatcher,
   };
-};
-
-export { useEmbed };
+}

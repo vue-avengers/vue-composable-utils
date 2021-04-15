@@ -29,30 +29,33 @@ module.exports = {
     ['link', { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/icons/android-icon-192x192.png' }],
     ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/icons/favicon-32x32.png' }],
     ['link', { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/icons/favicon-96x96.png' }],
-    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/icons/favicon-16x16.png' }]
+    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/icons/favicon-16x16.png' }],
   ],
   plugins: [
     ['@vuepress/back-to-top', true],
-    ['@vuepress/pwa', {
-      serviceWorker: true,
-      updatePopup: true
-    }],
+    [
+      '@vuepress/pwa',
+      {
+        serviceWorker: true,
+        updatePopup: true,
+      },
+    ],
   ],
   locales: {
-    "/": {
-      lang: "en-US",
-      title: "vue-composable-utils",
-      description: "Vue composable utils functions",
+    '/': {
+      lang: 'en-US',
+      title: 'vue-composable-utils',
+      description: 'Vue composable utils functions',
     },
     '/tr/': {
-      lang: "tr-Tr",
-      title: "vue-composable-utils",
-      description: "Vue composable fonksiyonlar",
-    }
+      lang: 'tr-Tr',
+      title: 'vue-composable-utils',
+      description: 'Vue composable fonksiyonlar',
+    },
   },
   themeConfig: {
-    repo: 'test/vue-composable-utils',
-    docsRepo: "test/vue-composable-utils",
+    repo: 'cube-action-team/vue-composable-utils',
+    docsRepo: 'cube-action-team/vue-composable-utils',
     docsDir: 'docs',
     logo: '/img/vue-composable-utils-logo-72.png',
     editLinks: true,
@@ -89,7 +92,7 @@ module.exports = {
       },
     ],
     sidebar: getSidebar(),
-  }
+  },
 };
 
 function getSidebar() {

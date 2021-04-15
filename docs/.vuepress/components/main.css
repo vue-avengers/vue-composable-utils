@@ -28,14 +28,12 @@ body.dark-mode .dropdown-wrapper > button {
   border: none !important;
 }
 
-body.dark-mode header.navbar
-body.dark-mode aside {
+body.dark-mode header.navbar body.dark-mode aside {
   background-color: #161b22 !important;
   color: #f0f6fc !important;
 }
 
-body.dark-mode header.navbar
-body.dark-mode aside {
+body.dark-mode header.navbar body.dark-mode aside {
   background-color: #161b22 !important;
   color: #f0f6fc !important;
 }
@@ -67,7 +65,7 @@ body.dark-mode button {
 img.logo {
   height: 2.2rem !important;
   min-width: 2.2rem !important;
-  margin-right: .8rem !important;
+  margin-right: 0.8rem !important;
   vertical-align: top !important;
   margin-top: -2px;
 }
