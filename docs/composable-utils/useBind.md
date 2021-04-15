@@ -21,6 +21,8 @@ const { value, changed, reset } = useBind('Type a here....');
 
 You can see how it changes reactively using the example below.
 
+<BindInputComponent />
+
 ```vue
 <template>
   <div>
@@ -41,6 +43,8 @@ export default {
 };
 </script>
 ```
+
+<BindSelectComponent />
 
 ```vue
 <template>
