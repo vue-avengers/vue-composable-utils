@@ -7,7 +7,11 @@
       <div
         v-for="(option, i) of options"
         :key="i"
-        @click="selected = option; open = false;$emit('input', option);"
+        @click="
+          selected = option;
+          open = false;
+          $emit('input', option);
+        "
       >
         {{ option }}
       </div>
@@ -36,16 +40,12 @@ export default {
   },
   data() {
     return {
-      selected: this.default
-        ? this.default
-        : this.options.length > 0
-        ? this.options[0]
-        : null,
+      selected: this.default ? this.default : this.options.length > 0 ? this.options[0] : null,
       open: false,
     };
   },
   mounted() {
-    this.$emit("input", this.selected);
+    this.$emit('input', this.selected);
   },
 };
 </script>
@@ -77,7 +77,7 @@ export default {
 
 .custom-select .selected:after {
   position: absolute;
-  content: "";
+  content: '';
   top: 22px;
   right: 1em;
   width: 0;

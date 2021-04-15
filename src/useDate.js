@@ -1,9 +1,9 @@
 import Vue from 'vue';
 import { ref, watch } from '@vue/composition-api';
 
-const useDate = (lng) => {
+const useDate = language => {
   const vm = Vue.prototype;
-  const lang = ref(lng);
+  const lang = ref(language);
 
   watch(lng, currentValue => {
     lang.value = currentValue;

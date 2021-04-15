@@ -19,12 +19,12 @@ const commons = {
   outputFolder: path.join(__dirname, '..', 'dist'),
   uglifyOptions: {
     compress: true,
-    mangle: true
-  }
+    mangle: true,
+  },
 };
 
 const paths = {
-  dist: commons.outputFolder
+  dist: commons.outputFolder,
 };
 
 const utils = {
@@ -37,7 +37,7 @@ const utils = {
   async writeBundle({ input, output }, fileName, minify = false) {
     const bundle = await rollup(input);
     const {
-      output: [{ code }]
+      output: [{ code }],
     } = await bundle.generate(output);
 
     let outputPath = path.join(paths.dist, fileName);
@@ -56,7 +56,7 @@ const utils = {
     }
 
     return true;
-  }
+  },
 };
 
 const builds = {
@@ -64,12 +64,12 @@ const builds = {
     input: 'src/index.js',
     format: 'umd',
     name: 'VueComposableUtils',
-    env: 'production'
+    env: 'production',
   },
   esm: {
     input: 'src/index.js',
-    format: 'es'
-  }
+    format: 'es',
+  },
 };
 
 function genConfig(options) {
@@ -77,11 +77,7 @@ function genConfig(options) {
     input: {
       input: options.input,
       external: ['vue', '@vue/composition-api'],
-      plugins: [
-        replace({ __VERSION__: version }),
-        resolve(),
-        commonjs()
-      ]
+      plugins: [replace({ __VERSION__: version }), resolve(), commonjs()],
     },
     output: {
       banner: commons.banner,
@@ -89,16 +85,16 @@ function genConfig(options) {
       name: options.name,
       globals: {
         vue: 'Vue',
-        '@vue/composition-api': 'vueCompositionApi'
-      }
-    }
+        '@vue/composition-api': 'vueCompositionApi',
+      },
+    },
   };
 
   if (options.env) {
     config.input.plugins.unshift(
       replace({
-        'process.env.NODE_ENV': JSON.stringify(options.env)
-      })
+        'process.env.NODE_ENV': JSON.stringify(options.env),
+      }),
     );
   }
 
@@ -115,5 +111,5 @@ module.exports = {
   configs,
   utils,
   uglifyOptions: commons.uglifyOptions,
-  paths
+  paths,
 };

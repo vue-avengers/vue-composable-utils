@@ -6,7 +6,7 @@ const { configs, utils, paths } = require('./config');
 const mkdir = promisify(fs.mkdir);
 
 async function build() {
-  await mkdir(paths.dist, { recursive: true })
+  await mkdir(paths.dist, { recursive: true });
   // eslint-disable-next-line
   console.log(chalk.cyan('Generating ESM build...'));
   await utils.writeBundle(configs.esm, 'vue-composable-utils.esm.js');
@@ -18,6 +18,6 @@ async function build() {
   await utils.writeBundle(configs.umd, 'vue-composable-utils.js', true);
   // eslint-disable-next-line
   console.log(chalk.cyan('Done!'));
-};
+}
 
 build();

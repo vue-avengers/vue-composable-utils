@@ -1,11 +1,7 @@
 <template>
   <div>
     <p>Value : {{ debounceVal }}</p>
-    <input
-      :value="value"
-      @input="debounceListener"
-      placeholder="Type a here..."
-    /><br />
+    <input :value="value" @input="debounceListener" placeholder="Type a here..." /><br />
     <small>Delay is set to 1000ms.</small>
   </div>
 </template>
@@ -18,7 +14,9 @@ export default {
   setup() {
     const { debounceVal, value, debounceListener } = useDebounce(1000);
     return {
-      debounceVal, value, debounceListener,
+      debounceVal,
+      value,
+      debounceListener,
     };
   },
 };

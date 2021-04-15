@@ -3,9 +3,9 @@
     <div class="wrapper">
       <div class="select">
         <select v-model="selectedLang">
-          <option v-for="lang in languages" :value="lang.key" :key="lang.key">{{lang.name}}</option>
+          <option v-for="lang in languages" :value="lang.key" :key="lang.key">{{ lang.name }}</option>
         </select>
-        <h4>Language: {{langUnit}}</h4>
+        <h4>Language: {{ langUnit }}</h4>
       </div>
     </div>
     <div>
@@ -37,41 +37,40 @@
 
 <script>
 import { useDate } from '../../../src';
-import {ref, computed, watch} from '@vue/composition-api'
+import { ref, computed, watch } from '@vue/composition-api';
 export default {
   name: 'DateComponent',
   setup() {
     const date = new Date();
-    const selectedLang = ref('tr')
-    const langUnit = ref('tr')
-    const languages =  ref([{
-        key: "tr",
-        name: "Turkish"
+    const selectedLang = ref('tr');
+    const langUnit = ref('tr');
+    const languages = ref([
+      {
+        key: 'tr',
+        name: 'Turkish',
       },
       {
-        key: "en",
-        name: "English"
+        key: 'en',
+        name: 'English',
       },
       {
-        key: "ar",
-        name: "Arabic"
+        key: 'ar',
+        name: 'Arabic',
       },
-
-    ])
+    ]);
 
     const { format, timeAgo, getDate, utc, timezone, difference } = useDate(langUnit);
 
-    watch(selectedLang,(currentValue) => {
-      langUnit.value = currentValue
+    watch(selectedLang, currentValue => {
+      langUnit.value = currentValue;
     });
 
     const dateFormat = computed(() => format(date, 'LLLL'));
-    const timeAgoFormat = computed(() => timeAgo(date, '2021-04-07:23:00'))
+    const timeAgoFormat = computed(() => timeAgo(date, '2021-04-07:23:00'));
     const getDateFormat = computed(() => getDate('date'));
     const differenceFormat = computed(() => difference(date, '2018-06-05', 'd'));
     const utcFormat = computed(() => utc(date, 'LLLL'));
     const timezoneFormat = computed(() => timezone('2014-06-01 12:00', 'America/New_York', 'L LT'));
-
 
     return {
       dateFormat,

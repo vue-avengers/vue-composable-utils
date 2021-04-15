@@ -7,7 +7,6 @@
 The `UseDebounce` function is used as the following reactive state:
 
 ```js
-
 import { useDebounce } from 'vue-composable-utils';
 const { debounceVal, value, debounceListener } = useDebounce(1000);
 ```
@@ -30,11 +29,7 @@ You can see how it changes reactively using the example below.
 <template>
   <div>
     <p>Value : {{ debounceVal }}</p>
-    <input
-      :value="value"
-      @input="debounceListener"
-      placeholder="search here"
-    />
+    <input :value="value" @input="debounceListener" placeholder="search here" />
     <small>Delay is set to 1000ms.</small>
   </div>
 </template>
@@ -47,7 +42,9 @@ export default {
   setup() {
     const { debounceVal, value, debounceListener } = useDebounce(1000);
     return {
-      debounceVal, value, debounceListener,
+      debounceVal,
+      value,
+      debounceListener,
     };
   },
 };
