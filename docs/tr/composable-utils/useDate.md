@@ -70,6 +70,7 @@ new Vue({
 
 ## :rocket: Example.vue
 
+<Date/>
 Example.vue
 ```js
 <template>
