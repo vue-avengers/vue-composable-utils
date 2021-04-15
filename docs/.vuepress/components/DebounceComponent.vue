@@ -10,7 +10,7 @@
 import { useDebounce } from '../../../src';
 
 export default {
-  name: 'Debounce',
+  name: 'DebounceComponent',
   setup() {
     const { debounceVal, value, debounceListener } = useDebounce(1000);
     return {

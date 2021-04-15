@@ -23,7 +23,7 @@ const { value } = useLocalStorage('test', 1);
 
 You can see how it changes reactively using the example below.
 
-<LocalStorage />
+<LocalStorageComponent />
 
 ```vue
 <template>

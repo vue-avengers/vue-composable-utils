@@ -44,7 +44,7 @@ npm install @vue/composition-api vue-composable-utils
 
 ## :computer: Uygulama
 
-<List />
+<ListComponent />
 
 ```vue
 <template>

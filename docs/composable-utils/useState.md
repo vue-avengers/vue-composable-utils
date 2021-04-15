@@ -23,6 +23,8 @@ const [count, setCount] = useState();
 
 You can see how it changes reactively using the example below.
 
+<StateComponent />
+
 ```vue
 <template>
   <p>{{ count }}</p>

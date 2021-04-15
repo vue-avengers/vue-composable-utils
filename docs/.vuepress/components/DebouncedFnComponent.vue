@@ -12,7 +12,7 @@ import { ref } from '@vue/composition-api';
 import { useDebounceFn } from '../../../src';
 
 export default {
-  name: 'DebouncedFn',
+  name: 'DebouncedFnComponent',
   setup() {
     const updated = ref('');
     const fn = e => (updated.value = e.target.value);

@@ -70,8 +70,10 @@ new Vue({
 
 ## :rocket: Example.vue
 
-<Date/>
+<DateComponent />
+
 Example.vue
+
 ```js
 <template>
   <div id="app">
@@ -119,16 +121,19 @@ export default {
 };
 </script>
 
-````
+```
 
 ## :star2: Özellikler
+
 ### format() Fonksiyonu
+
 Gönderilen tarihi formatlamak için kullanılır. 2 tane parametre alır. Birinci parametre olarak formatlanmak istenilen tarih. İkinci parametre ise format biçimi verilir.
+
 ```js
-const dateFormat = format(date, "dddd"); // Cuma, 9 Nisan 2021 21:14
-const dateFormat = format(date, "YYYY"); // 2021
-const dateFormat = format(date, "MMM");  // Jan-Dec
-````
+const dateFormat = format(date, 'dddd'); // Cuma, 9 Nisan 2021 21:14
+const dateFormat = format(date, 'YYYY'); // 2021
+const dateFormat = format(date, 'MMM'); // Jan-Dec
+```
 
 | Format |      Output      |                           Description |
 | :----- | :--------------: | ------------------------------------: |

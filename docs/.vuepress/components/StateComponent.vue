@@ -1,49 +1,40 @@
 <template>
   <div>
-    <p>Value is: {{ value }}</p>
-    <button class="fourth" @click="value = '2'">Change</button>
+    <p>Count: {{ count }}</p>
+    <button class="fourth" @click="setCount(count - 1)">Decrement</button>
+    <button class="fourth" @click="setCount(count + 1)">Increment</button>
   </div>
 </template>
 
 <script>
-import { useLocalStorage } from '../../../src';
+import { useState } from '../../../src';
 
 export default {
-  name: 'LocalStorage',
+  name: 'StateComponent',
   setup() {
-    const { value } = useLocalStorage('test', 1);
+    const [count, setCount] = useState(0);
 
-    return { value };
+    return {
+      count,
+      setCount,
+    };
   },
 };
 </script>
 
 <style lang="scss" scoped>
-$green: #2ecc71;
 $red: #e74c3c;
-$blue: #3498db;
 $yellow: #f1c40f;
-$purple: #8e44ad;
-$turquoise: #1abc9c;
 
 p {
-  margin: 10px;
-  padding: 0.8em 0.8em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #8e44ad;
-}
-
-input {
-  border: 2px solid #8e44ad;
-  margin: 10px;
-  padding: 0.8em 0.8em;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #8e44ad;
+  font-size: 1.5em;
 }
+
 button {
   box-sizing: border-box;
   appearance: none;
@@ -56,7 +47,7 @@ button {
   align-self: center;
   line-height: 1;
   margin: 10px;
-  padding: 1.2em 1.2em;
+  padding: 0.8em 0.8em;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;

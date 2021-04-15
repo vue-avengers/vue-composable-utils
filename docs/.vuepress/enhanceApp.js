@@ -1,19 +1,21 @@
 import VueCompositionAPI from '@vue/composition-api';
 import ToggleDarkMode from './components/ToggleDarkMode.vue';
-import Debounce from './components/debounce.vue';
-import DebouncedFn from './components/debouncedFn.vue';
-import LocalStorage from './components/LocalStorage.vue';
-import List from './components/List.vue';
-import DateComponent from './components/Date.vue';
-import './components/main.css';
+import DebounceComponent from './components/DebounceComponent.vue';
+import DebouncedFnComponent from './components/DebouncedFnComponent.vue';
+import LocalStorageComponent from './components/LocalStorageComponent.vue';
+import ListComponent from './components/ListComponent.vue';
+import DateComponent from './components/DateComponent.vue';
+import StateComponent from './components/StateComponent.vue';
+import './public/style/main.css';
 import './plugins/dayjs.js';
 
 export default ({ Vue }) => {
   Vue.use(VueCompositionAPI);
   Vue.component('ToggleDarkMode', ToggleDarkMode);
-  Vue.component('DebouncedFn', DebouncedFn);
-  Vue.component('Debounce', Debounce);
-  Vue.component('LocalStorage', LocalStorage);
-  Vue.component('List', List);
-  Vue.component('Date', DateComponent);
+  Vue.component('DebouncedFnComponent', DebouncedFnComponent);
+  Vue.component('DebounceComponent', DebounceComponent);
+  Vue.component('LocalStorageComponent', LocalStorageComponent);
+  Vue.component('ListComponent', ListComponent);
+  Vue.component('DateComponent', DateComponent);
+  Vue.component('StateComponent', StateComponent);
 };

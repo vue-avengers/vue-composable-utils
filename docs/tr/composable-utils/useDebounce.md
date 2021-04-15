@@ -23,7 +23,7 @@ const { debounceVal, value, debounceListener } = useDebounce(1000);
 
 You can see how it changes reactively using the example below.
 
-<Debounce />
+<DebounceComponent />
 
 ```vue
 <template>

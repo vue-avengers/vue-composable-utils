@@ -26,7 +26,7 @@ const debouncedFn = useDebouncefn({ delay: 1000, immediate: true }, fn);
 
 You can see how it changes reactively using the example below.
 
-<DebouncedFn />
+<DebouncedFnComponent />
 
 ```vue
 <template>

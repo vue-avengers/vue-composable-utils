@@ -51,7 +51,7 @@ npm install @vue/composition-api vue-composable-utils
 
 ## :computer: Usage
 
-<List />
+<ListComponent />
 
 ```vue
 <template>

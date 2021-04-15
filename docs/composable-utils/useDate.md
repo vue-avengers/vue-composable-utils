@@ -69,7 +69,7 @@ new Vue({
 
 ## :rocket: Example
 
-<Date/>
+<DateComponent />
 
 Example.vue
 

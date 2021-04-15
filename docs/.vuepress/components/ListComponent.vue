@@ -43,7 +43,7 @@
 import { useList } from '../../../src';
 
 export default {
-  name: 'List',
+  name: 'ListComponent',
   setup() {
     const { list, sort, set, reduce, first, deleteFirst, deleteLast, last, filter, push, reset } = useList([
       5,

@@ -23,6 +23,8 @@ const [count, setCount] = useState();
 
 Aşağıdaki örneği kullanarak reactive olarak nasıl değiştiğini görebilirsiniz.
 
+<StateComponent />
+
 ```vue
 <template>
   <p>{{ count }}</p>

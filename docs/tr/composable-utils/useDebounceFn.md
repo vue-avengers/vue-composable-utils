@@ -26,25 +26,26 @@ const debouncedFn = useDebouncefn({ delay: 1000, immediate: true }, fn);
 
 You can see how it changes reactively using the example below.
 
-<DebouncedFn />
+<DebouncedFnComponent />
+
 ```vue
 <template>
   <div>
     <p>Event handler : {{ updated }}</p>
     <input :value="updated" @input="debouncedFn" placeholder="input" />
-    <input disabled placeholder="output" :value="updated"/>
+    <input disabled placeholder="output" :value="updated" />
     <small>Delay is set to 1000ms.</small>
   </div>
 </template>
 
 <script>
-import { ref } from "vue";
-import { useDebounceFn } from "vue-composable-utils";
+import { ref } from 'vue';
+import { useDebounceFn } from 'vue-composable-utils';
 
 export default {
   setup() {
     const updated = ref('');
-    const fn = (e) => updated.value = e.target.value;
+    const fn = e => (updated.value = e.target.value);
 
     const debouncedFn = useDebounceFn({ delay: 1000, immediate: true }, fn);
 
@@ -55,11 +56,11 @@ export default {
 
 <style scoped>
 input {
-    margin: 0.5em;
-    padding: 0.8em;
+  margin: 0.5em;
+  padding: 0.8em;
 }
 </style>
-
 ```
+
 <ToggleDarkMode/>
 ```

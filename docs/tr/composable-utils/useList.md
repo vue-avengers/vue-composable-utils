@@ -34,7 +34,7 @@ const { list, sort, set, reduce, first, deleteFirst, deleteLast, last, filter, p
 
 Aşağıdaki örneği kullanarak reactive olarak nasıl değiştiğini görebilirsiniz.
 
-<List />
+<ListComponent />
 
 ```vue
 <template>
