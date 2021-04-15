@@ -5,7 +5,7 @@ const useDate = language => {
   const vm = Vue.prototype;
   const lang = ref(language);
 
-  watch(lng, currentValue => {
+  watch(language, currentValue => {
     lang.value = currentValue;
   });
 
