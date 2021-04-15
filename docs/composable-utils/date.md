@@ -1,7 +1,7 @@
-# useDate
+# :sparkles: useDate
 > `useDate` It is a function that we have completed date operations in functions.
 
-## Use
+## :convenience_store: Use
 
 `useDate` function import.
 
@@ -15,9 +15,9 @@ const {  format,
         difference } = useDate('Type a here....');
 ```
 
-## Setup
+## :hammer_and_wrench: Setup
 
-### Step 1
+### :key: Step 1
 src/dayjs.js
 
 Open a file named as `dayjs.js` inside the folder of  `src` and add the codes below. The reason adding `dayjs.js` file is customizability of `dayjs` library.
@@ -48,7 +48,7 @@ Object.defineProperties(Vue.prototype, {
 });
 ```
 
-### Step 2
+### :key: Step 2
 Import `dayjs.js` file inside `main.js`
 
 #### main.js
@@ -66,12 +66,11 @@ new Vue({
   render: (h) => h(App)
 }).$mount("#app");
 ```
-
-### Step 3
-#### Example.vue
+## :rocket: Example
 
 <Date/>
 
+Example.vue
 ```js
 <template>
   <div id="app">
@@ -85,25 +84,25 @@ new Vue({
 </template>
 
 <script>
+import {ref, computed} from '@vue/composition-api'
 import { useDate } from "vue-composable-utils";
 
 export default {
   name: "Examples",
   setup(props) {
     const date = new Date();
-		// The useDate function is added and the desired properties are used.
-		// The parameter sent from useDate represents the language option.
-
-    const { format, timeAgo, getDate, utc, timezone, difference } = useDate(
-      "en"
-    );
+    const langUnit = ref('en')
 		
-    const dateFormat = format(date, "LLLL"); // Friday, April 9, 2021 11:47 PM
-    const timeAgoFormat = timeAgo(date, "2021-04-07:23:00"); // 2 days ago
-    const getDateFormat = getDate("day"); // 10
-    const differenceFormat = difference(date, "2018-06-05", "day"); // 1400
-    const utcFormat = utc(date, "LLLL");
-    const timezoneFormat = timezone("2014-06-01 12:00","America/New_York","L LT");
+    // The useDate function is added and the desired properties are used.
+		// The parameter sent from useDate represents the language option.
+    const { format, timeAgo, getDate, utc, timezone, difference } = useDate(langUnit);
+
+    const dateFormat = computed(() => format(date, 'LLLL')); // Friday, April 9, 2021 11:47 PM
+    const timeAgoFormat = computed(() => timeAgo(date, '2021-04-07:23:00'))  // 2 days ago
+    const getDateFormat = computed(() => getDate('date')); // 10
+    const differenceFormat = computed(() => difference(date, '2018-06-05', 'day'));  // 1400
+    const utcFormat = computed(() => utc(date, 'LLLL'));
+    const timezoneFormat = computed(() => timezone('2014-06-01 12:00', 'America/New_York', 'L LT'));
 
     return {
       dateFormat,
@@ -118,7 +117,7 @@ export default {
 </script>
 ```
 
-## Features
+## :star2: Features
 ### format() Func
 is used to format sent date. Gets two parameters. First one is the date that is going to be formatted, second one is format style.
 ```js

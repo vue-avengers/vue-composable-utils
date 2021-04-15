@@ -1,26 +1,94 @@
 <template>
-  <div>
-    <p>{{dateFormat}}</p>
+  <div class="date">
+    <div class="wrapper">
+      <div class="select">
+        <select v-model="selectedLang">
+          <option v-for="lang in languages" :value="lang.key" :key="lang.key">{{lang.name}}</option>
+        </select>
+        <h4>Language: {{langUnit}}</h4>
+      </div>
+    </div>
+    <div>
+      <p>format() --></p>
+      <p>{{ dateFormat }}</p>
+    </div>
+    <div>
+      <p>timeAgo() --></p>
+      <p>{{ timeAgoFormat }}</p>
+    </div>
+    <div>
+      <p>getDate() --></p>
+      <p>{{ getDateFormat }}</p>
+    </div>
+    <div>
+      <p>difference() --></p>
+      <p>{{ differenceFormat }}</p>
+    </div>
+    <div>
+      <p>utc() --></p>
+      <p>{{ utcFormat }}</p>
+    </div>
+    <div>
+      <p>timezone() --></p>
+      <p>{{ timezoneFormat }}</p>
+    </div>
   </div>
 </template>
 
 <script>
-import { useDate } from "../../../src";
-
+import { useDate } from '../../../src';
+import {ref, computed, watch} from '@vue/composition-api'
 export default {
-  name: "Date",
+  name: 'Date',
   setup() {
-    const { format } = useDate("tr");
-    const date = new Date()
-    const  dateFormat = format(date, "LLLL")
+    const date = new Date();
+    const selectedLang = ref('tr')
+    const langUnit = ref('tr')
+    const languages =  ref([{
+        key: "tr",
+        name: "Turkish"
+      },
+      {
+        key: "en",
+        name: "English"
+      },
+      {
+        key: "ar",
+        name: "Arabic"
+      },
 
-    return { dateFormat };
+    ])
+
+    const { format, timeAgo, getDate, utc, timezone, difference } = useDate(langUnit);
+
+    watch(selectedLang,(currentValue) => {
+      langUnit.value = currentValue
+    });
+
+    const dateFormat = computed(() => format(date, 'LLLL'));
+    const timeAgoFormat = computed(() => timeAgo(date, '2021-04-07:23:00'))
+    const getDateFormat = computed(() => getDate('date'));
+    const differenceFormat = computed(() => difference(date, '2018-06-05', 'd'));
+    const utcFormat = computed(() => utc(date, 'LLLL'));
+    const timezoneFormat = computed(() => timezone('2014-06-01 12:00', 'America/New_York', 'L LT'));
+
+
+    return {
+      dateFormat,
+      timeAgoFormat,
+      getDateFormat,
+      differenceFormat,
+      utcFormat,
+      timezoneFormat,
+      languages,
+      langUnit,
+      selectedLang,
+    };
   },
 };
 </script>
 
 <style lang="scss" scoped>
-
 $green: #2ecc71;
 $red: #e74c3c;
 $blue: #3498db;
@@ -28,63 +96,34 @@ $yellow: #f1c40f;
 $purple: #8e44ad;
 $turquoise: #1abc9c;
 
-p {
-    margin: 10px;
-    padding: 0.8em 0.8em;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #8e44ad;
-}
+.date {
+  .wrapper {
+    margin-top: 30px;
 
-input {
-    border: 2px solid #8e44ad;
-    margin: 10px;
-    padding: 0.8em 0.8em;
-    text-decoration: none;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #8e44ad;
-}
-button{
-  box-sizing: border-box;
-  appearance: none;
-  background-color: transparent;
-  border: 2px solid $red;
-  border-radius: 0.6em;
-  color: $red;
-  cursor: pointer;
-  // display: flex;
-  align-self: center;
-  line-height: 1;
-  margin: 10px;
-  padding: 1.2em 1.2em;
-  text-decoration: none;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 12px;
+    .select {
+      display: flex;
+      align-items: center;
+      height: 30px;
+    }
 
-  &:hover,
-  &:focus {
-    outline: 0;
+    h4 {
+      margin-left: 20px;
+    }
   }
-}
 
-.fourth {
-  border-color: $yellow;
-  color: #000;
-  background: {
-    image: linear-gradient(45deg,$yellow 50%, transparent 50%);
-    position: 100%;
-    size: 400%;
-  }
-  transition: background 300ms ease-in-out;
+  div {
+    font-size: 16px;
+    display: flex;
+    p {
+      margin: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #8e44ad;
 
-  &:hover {
-        color: #fff;
-    background-position: 0;
+      &:first-child {
+        color: #000;
+      }
+    }
   }
 }
 </style>

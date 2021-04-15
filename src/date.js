@@ -1,14 +1,20 @@
 import Vue from 'vue';
+import { ref, watch } from '@vue/composition-api';
 
-export function useDate(lang = 'en') {
+export function useDate(lng) {
   const vm = Vue.prototype;
+  const lang = ref(lng);
+
+  watch(lng, currentValue => {
+    lang.value = currentValue;
+  });
 
   const format = (date, dateFormat) => {
-    return vm.$dayjs(date).locale(lang).format(dateFormat);
+    return vm.$dayjs(date).locale(lang.value).format(dateFormat);
   };
 
   const timeAgo = (date, time) => {
-    return vm.$dayjs(date).locale(lang).to(vm.$dayjs(time));
+    return vm.$dayjs(date).locale(lang.value).to(vm.$dayjs(time));
   };
 
   const getDate = unit => {
@@ -16,11 +22,11 @@ export function useDate(lang = 'en') {
   };
 
   const utc = (date, format) => {
-    return vm.$dayjs(date).utc().locale(lang).format(format);
+    return vm.$dayjs(date).utc().locale(lang.value).format(format);
   };
 
   const timezone = (date, local, format) => {
-    return vm.$dayjs(date).tz(local).locale(lang).format(format);
+    return vm.$dayjs(date).tz(local).locale(lang.value).format(format);
   };
 
   const difference = (datePri, dateSec, unit) => {

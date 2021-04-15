@@ -1,7 +1,7 @@
-# useDate
+# :sparkles: useDate
 > `useDate` fonksiyonu bileşenlerde tarih işlemlerini kolayca yaptığımız bir fonksiyondur.
 
-## Kullanım
+## :convenience_store: Kullanım
 
 `useDate` fonksiyonunun import edilmesi.
 
@@ -15,9 +15,9 @@ const {  format,
         difference } = useDate('Type a here....');
 ```
 
-## Kurulum
+## :hammer_and_wrench:  Kurulum
 
-### 1. Adım 
+### :key: 1. Adım 
 src/dayjs.js
 
 `src` klasörünün içine `dayjs.js` adında bir dosya açılır aşağıdaki kodları eklenir. Dayjs.js dosyasını src'ye eklememizin nedeni dayjs kütüphanesinin özelleştirilebilir olmasıdır.
@@ -49,7 +49,7 @@ Object.defineProperties(Vue.prototype, {
 });
 ```
 
-### 2. Adım
+### :key: 2. Adım
 `main.js` dosyasının içerisine `dayjs.js` dosyasını import edilir.
 
 #### main.js
@@ -68,11 +68,10 @@ new Vue({
 }).$mount("#app");
 ```
 
-### 3. Adım
-#### Example.vue
+## :rocket: Example.vue
 
 <Date/>
-
+Example.vue
 ```js
 <template>
   <div id="app">
@@ -86,29 +85,26 @@ new Vue({
 </template>
 
 <script>
+import {ref, computed} from '@vue/composition-api'
 import { useDate } from "vue-composable-utils";
 
 export default {
   name: "Example",
-  setup(props) {
+  setup() {
     const date = new Date();
-		// useDate fonksiyonu eklenir ve istenilen özellikleri kullanılır.
-		// useDate gönderilen parametre dil seçeneğini temsil eder.
+    const langUnit = ref('tr')
 
-    const { format, timeAgo, getDate, utc, timezone, difference } = useDate(
-      "tr"
-    );
-		
-    const dateFormat = format(date, "LLLL"); // Cuma, 9 Nisan 2021 23:47
-    const timeAgoFormat = timeAgo(date, "2021-04-07:23:00"); // 2 gün önce
-    const getDateFormat = getDate("day");
-    const differenceFormat = difference(date, "2018-06-05", "d");
-    const utcFormat = utc(date, "LLLL");
-    const timezoneFormat = timezone(
-      "2014-06-01 12:00",
-      "America/New_York",
-      "L LT"
-    );
+    // useDate fonksiyonu eklenir ve istenilen özellikleri kullanılır.
+		// useDate gönderilen parametre dil seçeneğini temsil eder.
+    const { format, timeAgo, getDate, utc, timezone, difference } = useDate(langUnit);
+
+    const dateFormat = computed(() => format(date, 'LLLL'));
+    const timeAgoFormat = computed(() => timeAgo(date, '2021-04-07:23:00'))
+    const getDateFormat = computed(() => getDate('date'));
+    const differenceFormat = computed(() => difference(date, '2018-06-05', 'day'));
+    const utcFormat = computed(() => utc(date, 'LLLL'));
+    const timezoneFormat = computed(() => timezone('2014-06-01 12:00', 'America/New_York', 'L LT'));
+
 
     return {
       dateFormat,
@@ -116,14 +112,15 @@ export default {
       getDateFormat,
       differenceFormat,
       utcFormat,
-      timezoneFormat
+      timezoneFormat,
+      langUnit,
     };
-  }
+  };
 };
 </script>
 ```
 
-## Özellikler
+## :star2: Özellikler
 ### format() Fonksiyonu
 Gönderilen tarihi formatlamak için kullanılır. 2 tane parametre alır. Birinci parametre olarak formatlanmak istenilen tarih. İkinci parametre ise format biçimi verilir.
 ```js
