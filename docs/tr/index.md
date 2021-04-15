@@ -34,11 +34,13 @@ npm install @vue/composition-api vue-composable-utils
 
 ## :rocket: Composable Utils
 
-- [UseList](./composable-utils/list.md).
-- [UseDebounce](./composable-utils/list.md).
-- [UseState](./composable-utils/list.md).
-- [UseBind](./composable-utils/list.md).
-- [UseRouter](./composable-utils/list.md).
+- [useBind](./composable-utils/useBind.md).
+- [useEmbed](./composable-utils/useEmbed.md).
+- [useState](./composable-utils/useState.md).
+- [useList](./composable-utils/useList.md).
+- [useDate](./composable-utils/useData.md).
+- [useDebounceFn](./composable-utils/useDebounceFn.md).
+- [useLocalStorage](./composable-utils/useLocalStorage.md).
 
 ## :computer: Uygulama
 

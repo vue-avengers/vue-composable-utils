@@ -1,5 +1,5 @@
 import { onMounted } from '@vue/composition-api';
-import { useState } from './state';
+import { useState } from './useState';
 
 /**
  * @param {function} fn This callback fn that you want to execute after the Interval
@@ -7,7 +7,7 @@ import { useState } from './state';
  * @returns isActive, start, stop,
  */
 
-export function useInterval(fn, ms = 100) {
+const useInterval = (fn, ms = 100) => {
   let interval = null;
   const [active, setActive] = useState(false);
 
@@ -41,4 +41,6 @@ export function useInterval(fn, ms = 100) {
     start,
     stop,
   };
-}
+};
+
+export default useInterval;

@@ -24,15 +24,18 @@ npm install @vue/composition-api vue-composable-utils
 
 | Name                                         | Arguments | Returns                                                                            |
 | -------------------------------------------- | --------- | ---------------------------------------------------------------------------------- |
-| [`UseBind`](/vue-composable-utils/bind.md)   | initial   | value, changed, reset                                                              |
-| [`UseEmbed`](/vue-composable-utils/embed.md) | f         | -                                                                                  |
-| [`UseState`](/vue-composable-utils/state.md) | initial   | value, set                                                                         |
-| [`UseList`](/vue-composable-utils/list.md)   | initial   | list, set, reduce, sort, first, deleteFirst, deleteLast, last, filter, push, reset |
+| [`useBind`](./useBind.md)   | initial   | value, changed, reset                                                              |
+| [`useEmbed`](./useEmbed.md) | f         | -                                                                                  |
+| [`useState`](./useState.md) | initial   | value, set                                                                         |
+| [`useList`](./useList.md)   | initial   | list, set, reduce, sort, first, deleteFirst, deleteLast, last, filter, push, reset |
 
-- [UseBind](./vue-composable-utils/bind.md).
-- [UseEmbed](./vue-composable-utils/embed.md).
-- [UseState](./vue-composable-utils/state.md).
-- [UseList](./vue-composable-utils/list.md).
+- [useBind](./useBind.md).
+- [useEmbed](./useEmbed.md).
+- [useState](./useState.md).
+- [useList](./useList.md).
+- [useDate](./useData.md).
+- [useDebounceFn](./useDebounceFn.md).
+- [useLocalStorage](./useLocalStorage.md).
 
 ## :man: :woman: Contributors
 

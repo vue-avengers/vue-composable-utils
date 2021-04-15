@@ -1,4 +1,4 @@
-import { useState } from './state';
+import { useState } from './useState';
 
 /**
  * This function update value when another value changes (data-binding).
@@ -6,7 +6,7 @@ import { useState } from './state';
  * @returns value, setValue, changed, reset
  */
 
-export function useBind(initial) {
+const useBind = initial => {
   const [value, setValue] = useState(initial);
 
   const reset = () => setValue(initial);
@@ -18,4 +18,6 @@ export function useBind(initial) {
     changed,
     reset,
   };
-}
+};
+
+export default useBind;

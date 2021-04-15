@@ -102,32 +102,32 @@ function getSidebar() {
       collapsable: false,
       children: [
         {
-          title: 'Bind',
-          path: '/composable-utils/bind',
+          title: 'useBind',
+          path: '/composable-utils/useBind',
         },
         {
-          title: 'Debounce',
-          path: '/composable-utils/debounce',
+          title: 'useDebounceFn',
+          path: '/composable-utils/useDebounceFn',
         },
         {
-          title: 'Embed',
-          path: '/composable-utils/embed',
+          title: 'useEmbed',
+          path: '/composable-utils/useEmbed',
         },
         {
-          title: 'List',
-          path: '/composable-utils/list',
+          title: 'useList',
+          path: '/composable-utils/useList',
         },
         {
-          title: 'LocalStorage',
-          path: '/composable-utils/localStorage',
+          title: 'useLocalStorage',
+          path: '/composable-utils/useLocalStorage',
         },
         {
-          title: 'State',
-          path: '/composable-utils/state',
+          title: 'useState',
+          path: '/composable-utils/useState',
         },
         {
-          title: 'Date',
-          path: '/composable-utils/date',
+          title: 'useDate',
+          path: '/composable-utils/useDate',
         },
       ],
     },
@@ -141,32 +141,32 @@ function getSidebarTR() {
       collapsable: false,
       children: [
         {
-          title: 'Bind',
-          path: '/tr/composable-utils/bind',
+          title: 'useBind',
+          path: '/tr/composable-utils/useBind',
         },
         {
-          title: 'Debounce',
-          path: '/tr/composable-utils/debounce',
+          title: 'useDebounceFn',
+          path: '/tr/composable-utils/useDebounceFn',
         },
         {
-          title: 'Embed',
-          path: '/tr/composable-utils/embed',
+          title: 'useEmbed',
+          path: '/tr/composable-utils/useEmbed',
         },
         {
-          title: 'List',
-          path: '/tr/composable-utils/list',
+          title: 'useList',
+          path: '/tr/composable-utils/useList',
         },
         {
-          title: 'LocalStorage',
-          path: '/tr/composable-utils/localStorage',
+          title: 'useLocalStorage',
+          path: '/tr/composable-utils/useLocalStorage',
         },
         {
-          title: 'State',
-          path: '/tr/composable-utils/state',
+          title: 'useState',
+          path: '/tr/composable-utils/useState',
         },
         {
-          title: 'Date',
-          path: '/tr/composable-utils/date',
+          title: 'useDate',
+          path: '/tr/composable-utils/useDate',
         },
       ],
     },

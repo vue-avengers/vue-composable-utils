@@ -39,7 +39,7 @@
 import { useDate } from '../../../src';
 import {ref, computed, watch} from '@vue/composition-api'
 export default {
-  name: 'Date',
+  name: 'DateComponent',
   setup() {
     const date = new Date();
     const selectedLang = ref('tr')

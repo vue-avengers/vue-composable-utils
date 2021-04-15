@@ -1,4 +1,4 @@
-import { useState } from './state';
+import { useState } from './useState';
 
 /**
  * This function wait a certain amount of time before running again.
@@ -7,7 +7,7 @@ import { useState } from './state';
  * @returns debounceVal, value, debounceListener
  */
 
-export function useDebounce(delay = 1000) {
+const useDebounce = (delay = 1000) => {
   let timeoutRef = null;
   const [value, setValue] = useState('');
   const [debounceVal, setDebounce] = useState('');
@@ -22,4 +22,6 @@ export function useDebounce(delay = 1000) {
   };
 
   return { debounceVal, value, debounceListener };
-}
+};
+
+export default useDebounce;

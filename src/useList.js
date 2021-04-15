@@ -1,4 +1,4 @@
-import { useState } from './state';
+import { useState } from './useState';
 
 /**
  * This function update value when another value changes (data-binding).
@@ -6,7 +6,7 @@ import { useState } from './state';
  * @returns  set, sort, filter, first, last, list, deleteFirst, deleteLast, reduce, reset, push,
  */
 
-export function useList(initialList = []) {
+const useList = (initialList = []) => {
   const [list, setList] = useState(initialList);
 
   const isList = list => list || [];
@@ -69,4 +69,6 @@ export function useList(initialList = []) {
     reset,
     push,
   };
-}
+};
+
+export default useList;

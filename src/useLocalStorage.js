@@ -1,6 +1,6 @@
 import { ref, onMounted, onUnmounted, watchEffect } from '@vue/composition-api';
 
-export function useLocalStorage(storageKey, defaultValue = '') {
+const useLocalStorage = (storageKey, defaultValue = '') => {
   const value = ref(null);
   const init = () => {
     const item = localStorage.getItem(storageKey);
@@ -57,4 +57,6 @@ export function useLocalStorage(storageKey, defaultValue = '') {
   return {
     value,
   };
-}
+};
+
+export default useLocalStorage;

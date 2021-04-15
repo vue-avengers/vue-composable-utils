@@ -2,6 +2,10 @@ module.exports = {
   root: true,
   env: {
     node: true,
+    "jest/globals": true,
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
   },
   extends: ['plugin:vue/essential', 'eslint:recommended', '@vue/prettier'],
   parserOptions: {

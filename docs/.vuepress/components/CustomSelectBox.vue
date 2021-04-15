@@ -17,6 +17,7 @@
 
 <script>
 export default {
+  name: 'CustomSelectBox',
   props: {
     options: {
       type: Array,

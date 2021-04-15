@@ -9,7 +9,7 @@
  * @returns {function} debouncedFn
  */
 
-export function useDebounceFn({ delay, immediate }, func) {
+const useDebounceFn = ({ delay, immediate }, func) => {
   let timer = null;
   let initial = false;
   const debouncedFn = (...args) => {
@@ -32,4 +32,6 @@ export function useDebounceFn({ delay, immediate }, func) {
   };
 
   return debouncedFn;
-}
+};
+
+export default useDebounceFn;

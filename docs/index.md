@@ -37,15 +37,18 @@ npm install @vue/composition-api vue-composable-utils
 
 | Name                                      | Arguments | Returns                                                                           |
 | ----------------------------------------- | --------- | --------------------------------------------------------------------------------- |
-| [`UseBind`](./composable-utils/bind.md)   | initial   | value, changed, reset                                                             |
-| [`UseEmbed`](./composable-utils/embed.md) | f         | -                                                                                 |
-| [`UseState`](./composable-utils/state.md) | initial   | value, set                                                                        |
-| [`UseList`](./composable-utils/list.md)   | initial   | list, set, reduce, sort, first, deleteFirst, deleteLast, last, filter,push, reset |
+| [`useBind`](./composable-utils/bind.md)   | initial   | value, changed, reset                                                             |
+| [`useEmbed`](./composable-utils/embed.md) | f         | -                                                                                 |
+| [`useState`](./composable-utils/state.md) | initial   | value, set                                                                        |
+| [`useList`](./composable-utils/list.md)   | initial   | list, set, reduce, sort, first, deleteFirst, deleteLast, last, filter,push, reset |
 
-- [UseBind](./composable-utils/bind.md).
-- [UseEmbed](./composable-utils/embed.md).
-- [UseState](./composable-utils/state.md).
-- [UseList](./composable-utils/list.md).
+- [useBind](./composable-utils/useBind.md).
+- [useEmbed](./composable-utils/useEmbed.md).
+- [useState](./composable-utils/useState.md).
+- [useList](./composable-utils/useList.md).
+- [useDate](./composable-utils/useData.md).
+- [useDebounceFn](./composable-utils/useDebounceFn.md).
+- [useLocalStorage](./composable-utils/useLocalStorage.md).
 
 ## :computer: Usage
 

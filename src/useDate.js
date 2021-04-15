@@ -1,7 +1,6 @@
 import Vue from 'vue';
-import { ref, watch } from '@vue/composition-api';
 
-export function useDate(lng) {
+const useDate = (lng) => {
   const vm = Vue.prototype;
   const lang = ref(lng);
 
@@ -44,4 +43,6 @@ export function useDate(lng) {
     timezone,
     difference,
   };
-}
+};
+
+export default useDate;

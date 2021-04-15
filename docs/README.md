@@ -41,10 +41,13 @@ npm install @vue/composition-api vue-composable-utils
 | [`UseState`](./composable-utils/state.md) | initial   | value, set                                                                        |
 | [`UseList`](./composable-utils/list.md)   | initial   | list, set, reduce, sort, first, deleteFirst, deleteLast, last, filter,push, reset |
 
-- [UseBind](./composable-utils/bind.md).
-- [UseEmbed](./composable-utils/embed.md).
-- [UseState](./composable-utils/state.md).
-- [UseList](./composable-utils/list.md).
+- [UseBind](./composable-utils/useBind.md).
+- [UseEmbed](./composable-utils/useEmbed.md).
+- [UseState](./composable-utils/useState.md).
+- [UseList](./composable-utils/useList.md).
+- [UseDate](./composable-utils/useData.md).
+- [UseDebounceFn](./composable-utils/useDebounceFn.md).
+- [UseLocalStorage](./composable-utils/useLocalStorage.md).
 
 ## :computer: Usage
 
