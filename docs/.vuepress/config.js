@@ -128,6 +128,10 @@ function getSidebar() {
           path: '/composable-utils/useEmbed',
         },
         {
+          title: 'usePick',
+          path: '/composable-utils/usePick',
+        },
+        {
           title: 'useList',
           path: '/composable-utils/useList',
         },
@@ -169,6 +173,10 @@ function getSidebarTR() {
         {
           title: 'useEmbed',
           path: '/tr/composable-utils/useEmbed',
+        },
+        {
+          title: 'usePick',
+          path: '/tr/composable-utils/usePick',
         },
         {
           title: 'useList',

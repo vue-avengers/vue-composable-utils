@@ -8,6 +8,7 @@ import LocalStorageComponent from './components/LocalStorageComponent.vue';
 import ListComponent from './components/ListComponent.vue';
 import StateComponent from './components/StateComponent.vue';
 import EmbedComponent from './components/EmbedComponent.vue';
+import PickComponent from './components/PickComponent.vue';
 import ToggleDarkMode from './components/ToggleDarkMode.vue';
 import './public/style/main.css';
 import './plugins/dayjs.js';
@@ -23,5 +24,6 @@ export default ({ Vue }) => {
   Vue.component('ListComponent', ListComponent);
   Vue.component('StateComponent', StateComponent);
   Vue.component('EmbedComponent', EmbedComponent);
+  Vue.component('PickComponent', PickComponent);
   Vue.component('ToggleDarkMode', ToggleDarkMode);
 };
