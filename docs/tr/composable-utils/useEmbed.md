@@ -46,10 +46,10 @@ export default {
     return {
       code,
       clear,
-      isEmbedBlock
-    }
-  }
-}
+      isEmbedBlock,
+    };
+  },
+};
 </script>
 ```
 

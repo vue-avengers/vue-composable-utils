@@ -1,6 +1,6 @@
 const { name, description } = require('../../package.json');
 
-const Base_URL = 'https://vue-composable-utils.netlify.app'
+const Base_URL = 'https://vue-composable-utils.netlify.app';
 
 module.exports = {
   title: name,

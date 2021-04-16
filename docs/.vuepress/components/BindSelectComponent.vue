@@ -1,24 +1,24 @@
 <template>
   <div>
-     <p>Select : {{ value }}</p>
-       <select class="fourth" @change="changed">
-         <option value="apple">Apple</option>
-         <option value="orange">Orange</option>
-         <option value="orange">Watermelon</option>
-         <option value="strawberry">Strawberry</option>
-       </select>
+    <p>Select : {{ value }}</p>
+    <select class="fourth" @change="changed">
+      <option value="apple">Apple</option>
+      <option value="orange">Orange</option>
+      <option value="orange">Watermelon</option>
+      <option value="strawberry">Strawberry</option>
+    </select>
   </div>
 </template>
 
 <script>
-import { useBind } from "../../../src";
+import { useBind } from '../../../src';
 
 export default {
-  name: "BindSelectComponent",
+  name: 'BindSelectComponent',
   setup() {
     const { value, changed, reset } = useBind('Type a here....');
     return { value, changed, reset };
-  }
+  },
 };
 </script>
 

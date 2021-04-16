@@ -84,7 +84,7 @@ const useEmbed = (code = null) => {
     injectScript,
     getEmbedScriptSrc,
     clearScript,
-    clear
+    clear,
   };
 };
 

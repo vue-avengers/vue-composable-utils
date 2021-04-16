@@ -1,24 +1,20 @@
 <template>
   <div>
     <p>Input : {{ value }}</p>
-    <input
-    type="text"
-     :value="value"
-     @input="changed"
-    />
+    <input type="text" :value="value" @input="changed" />
     <button class="fourth" @click="reset">Reset</button>
   </div>
 </template>
 
 <script>
-import { useBind } from "../../../src";
+import { useBind } from '../../../src';
 
 export default {
-  name: "BindInputComponent",
+  name: 'BindInputComponent',
   setup() {
     const { value, changed, reset } = useBind('Type a here....');
     return { value, changed, reset };
-  }
+  },
 };
 </script>
 

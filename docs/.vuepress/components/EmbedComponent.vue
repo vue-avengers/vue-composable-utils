@@ -2,7 +2,8 @@
   <div>
     <textarea rows="5" cols="50" placeholder="Place embed code here" v-model="code"></textarea>
     <button type="button" class="first" @click="clear">Clear</button>
-    <div v-if="isEmbedBlock" v-html="code" class="embed-block"></div><br />
+    <div v-if="isEmbedBlock" v-html="code" class="embed-block"></div>
+    <br />
     <small>Embed Example: {{ twitterEmbed }}</small>
   </div>
 </template>
@@ -14,7 +15,6 @@ import { useEmbed } from '../../../src';
 export default {
   name: 'EmbedComponent',
   setup() {
-
     const code = ref(null);
 
     const { isEmbedBlock, clear } = useEmbed(code);
@@ -28,10 +28,10 @@ export default {
       code,
       clear,
       isEmbedBlock,
-      twitterEmbed
-    }
-  }
-}
+      twitterEmbed,
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
