@@ -18,8 +18,8 @@ import { ref, computed, watch } from '@vue/composition-api';
  * }
  */
 
-const useEmbed = (code = ref(null)) => {
-  const embedCode = ref(code.value);
+const useEmbed = (code = null) => {
+  const embedCode = ref(code);
   const injectedScripts = ref([]);
 
   const isEmbedBlock = computed(
@@ -57,6 +57,11 @@ const useEmbed = (code = ref(null)) => {
     script.src = src;
     script.async = async;
     script.defer = defer;
+    script.addEventListener('load', () => {
+      if (window.instgrm) {
+        window.instgrm.Embeds.process();
+      }
+    });
     document.body.insertAdjacentElement('afterend', script);
     injectedScripts.value = [...injectedScripts.value, script];
   };
@@ -67,17 +72,19 @@ const useEmbed = (code = ref(null)) => {
     injectedScripts.value = [];
   };
 
-  const registerWatcher = callback => {
-    watch(code, callback);
-  };
+  watch(code, newValue => {
+    if (newValue) {
+      const src = getEmbedScriptSrc(newValue);
+      injectScript({ id: 'id', src });
+    }
+  });
 
   return {
     isEmbedBlock,
     injectScript,
     getEmbedScriptSrc,
     clearScript,
-    clear,
-    registerWatcher,
+    clear
   };
 };
 

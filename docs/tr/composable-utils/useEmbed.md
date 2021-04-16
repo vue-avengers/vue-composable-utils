@@ -22,11 +22,13 @@ const { getEmbedScriptSrc, injectScript, isEmbedBlock, clearScript } = useEmbed(
 
 You can see how it changes reactively using the example below.
 
+<EmbedComponent />
+
 ```vue
 <template>
   <div>
     <textarea rows="5" cols="50" placeholder="Place embed code here" v-model="code"></textarea>
-    <button type="button" @click="clear">Clear</button>
+    <button type="button" class="first" @click="clear">Clear</button>
     <div v-if="isEmbedBlock" v-html="code"></div>
   </div>
 </template>
@@ -38,25 +40,16 @@ import { useEmbed } from 'vue-composable-utils';
 export default {
   setup() {
     const code = ref(null);
-    const { getEmbedScriptSrc, injectScript, isEmbedBlock, clearScript } = useEmbed(code);
-    const clear = () => {
-      code.value = null;
-      const script = document.getElementById('id');
-      clearScript(script);
-    };
-    watch(code, newValue => {
-      if (newValue) {
-        const src = getEmbedScriptSrc(newValue);
-        injectScript({ id: 'id', src });
-      }
-    });
+
+    const { isEmbedBlock, clear } = useEmbed(code);
+
     return {
       code,
       clear,
-      isEmbedBlock,
-    };
-  },
-};
+      isEmbedBlock
+    }
+  }
+}
 </script>
 ```
 
