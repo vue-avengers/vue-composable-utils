@@ -19,6 +19,7 @@ module.exports = {
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:site', content: '@VueComposableUtils' }],
     ['meta', { name: 'twitter:creator', content: '@VueComposableUtils' }],
+    ['meta', { name: 'twitter:image', content: `${Base_URL}/assets/vue-composable-utils-logo.svg` }],
     ['meta', { name: 'twitter:title', content: name }],
     ['meta', { name: 'twitter:description', content: description }],
     ['meta', { name: 'twitter:url', content: Base_URL }],
