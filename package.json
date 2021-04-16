@@ -1,6 +1,6 @@
 {
   "name": "vue-composable-utils",
-  "description": "Vue Composable Utils",
+  "description": "Vue composable utils that have been brought together for you to use in all your components.",
   "author": "Abdulnasır olcan",
   "version": "0.1.0",
   "module": "dist/vue-composable-utils.esm.js",
