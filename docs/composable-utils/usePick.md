@@ -8,7 +8,7 @@ The `useState` function is used as the following reactive state:
 
 ```js
 import { usePick } from 'vue-composable-utils';
-const pick = usePick({a: 1,b: 2,c: 3,d: 4,},["a", "d"]);
+const pick = usePick({ a: 1, b: 2, c: 3, d: 4 }, ['a', 'd']);
 ```
 
 `import { usePick } from "vue-composable-utils"` function Example() { // Declare a new state variable, which we'll call `pick` ` const pick = usePick({a: 1,b: 2,c: 3,d: 4,},["a", "d"]);` We declare a state variable called count , and set it to 0 .
