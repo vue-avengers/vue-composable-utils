@@ -1,50 +1,37 @@
 <template>
-  <div>
-    <p>Value is: {{ value }}</p>
-    <button class="fourth" @click="value = '2'">Change</button>
-    <button class="first" @click="remove">Remove</button>
-  </div>
+   <div>
+      <p>First: {{first}}</p>
+      <p>Last: {{last}}</p>
+      <p>Size: {{size}}</p>
+      <button class="fourth" @click="set([...state, (last || 0) + 1])">Add</button>
+      <button class="first" @click="remove()">Remove</button>
+    </div>
 </template>
 
 <script>
-import { useLocalStorage } from '../../../src';
+import { useQueue } from "../../../src";
 
 export default {
-  name: 'LocalStorageComponent',
+  name: "QueueComponentTwo",
   setup() {
-    const { value, remove } = useLocalStorage('test', 1);
+  const { set, state, remove, first, last, size } = useQueue();
 
-    return { value, remove };
-  },
+    return {set, state, remove, first, last, size };
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-$green: #2ecc71;
 $red: #e74c3c;
-$blue: #3498db;
 $yellow: #f1c40f;
-$purple: #8e44ad;
-$turquoise: #1abc9c;
 
 p {
-  margin: 10px;
-  padding: 0.8em 0.8em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #8e44ad;
-}
-
-input {
-  border: 2px solid #8e44ad;
-  margin: 10px;
-  padding: 0.8em 0.8em;
   text-decoration: none;
   text-align: center;
-  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #8e44ad;
 }
+
 button {
   box-sizing: border-box;
   appearance: none;
@@ -53,11 +40,10 @@ button {
   border-radius: 0.6em;
   color: $red;
   cursor: pointer;
-  // display: flex;
   align-self: center;
   line-height: 1;
   margin: 10px;
-  padding: 1.2em 1.2em;
+  padding: 0.8em 0.8em;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
@@ -68,6 +54,14 @@ button {
   &:hover,
   &:focus {
     outline: 0;
+  }
+}
+
+.first {
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  &:hover {
+    color: #fff;
+    box-shadow: 0 0 40px 40px $red inset;
   }
 }
 

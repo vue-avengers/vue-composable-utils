@@ -75,5 +75,32 @@ export default {
 };
 </script>
 ```
+You can see how it changes reactively using the example below.
+
+<QueueComponentTwo />
+
+```vue
+<template>
+   <div>
+      <p>First: {{first}}</p>
+      <p>Last: {{last}}</p>
+      <p>Size: {{size}}</p>
+      <button @click="set([...state, (last || 0) + 1])">Add</button>
+      <button @click="remove()">Remove</button>
+    </div>
+</template>
+
+<script>
+import { useQueue } from "vue-composable-utils";
+
+export default {
+  setup() {
+  const { set, state, remove, first, last, size } = useQueue();
+
+    return {set, state, remove, first, last, size };
+  }
+};
+</script>
+```
 
 <ToggleDarkMode/>

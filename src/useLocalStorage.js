@@ -54,8 +54,19 @@ const useLocalStorage = (storageKey, defaultValue = '') => {
     window.removeEventListener('storage', handler);
   });
 
+  const remove = () => {
+    try {
+      localStorage.removeItem(storageKey);
+      value.value = null;
+    } catch (error) {
+      // localStorage can throw.
+      console.error(error);
+    }
+  }
+
   return {
     value,
+    remove
   };
 };
 
