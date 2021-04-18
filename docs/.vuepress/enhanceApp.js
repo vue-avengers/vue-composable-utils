@@ -10,6 +10,7 @@ import StateComponent from './components/StateComponent.vue';
 import EmbedComponent from './components/EmbedComponent.vue';
 import PickComponent from './components/PickComponent.vue';
 import QueueComponent from './components/QueueComponent.vue';
+import QueueComponentTwo from './components/QueueComponentTwo.vue';
 import ToggleDarkMode from './components/ToggleDarkMode.vue';
 import './public/style/main.css';
 import './plugins/dayjs.js';
@@ -27,5 +28,6 @@ export default ({ Vue }) => {
   Vue.component('EmbedComponent', EmbedComponent);
   Vue.component('PickComponent', PickComponent);
   Vue.component('QueueComponent', QueueComponent);
+  Vue.component('QueueComponentTwo', QueueComponentTwo);
   Vue.component('ToggleDarkMode', ToggleDarkMode);
 };
