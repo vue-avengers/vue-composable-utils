@@ -144,6 +144,10 @@ function getSidebar() {
           path: '/composable-utils/useState',
         },
         {
+          title: 'useQueue',
+          path: '/composable-utils/useQueue',
+        },
+        {
           title: 'useDate',
           path: '/composable-utils/useDate',
         },
@@ -189,6 +193,10 @@ function getSidebarTR() {
         {
           title: 'useState',
           path: '/tr/composable-utils/useState',
+        },
+        {
+          title: 'useQueue',
+          path: '/tr/composable-utils/useQueue',
         },
         {
           title: 'useDate',
