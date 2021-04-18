@@ -1,37 +1,36 @@
-import Vue from 'vue';
-import { ref, watch } from '@vue/composition-api';
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
 
-const useDate = language => {
-  const vm = Vue.prototype;
-  const lang = ref(language);
+dayjs.extend(relativeTime);
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
-  watch(language, currentValue => {
-    lang.value = currentValue;
-  });
-
+const useDate = () => {
   const format = (date, dateFormat) => {
-    return vm.$dayjs(date).locale(lang.value).format(dateFormat);
+    return dayjs(date).format(dateFormat);
   };
 
   const timeAgo = (date, time) => {
-    return vm.$dayjs(date).locale(lang.value).to(vm.$dayjs(time));
+    return dayjs(date).to(dayjs(time));
   };
 
   const getDate = unit => {
-    return vm.$dayjs().get(unit);
+    return dayjs().get(unit);
   };
 
   const utc = (date, format) => {
-    return vm.$dayjs(date).utc().locale(lang.value).format(format);
+    return dayjs(date).utc().format(format);
   };
 
   const timezone = (date, local, format) => {
-    return vm.$dayjs(date).tz(local).locale(lang.value).format(format);
+    return dayjs(date).tz(local).format(format);
   };
 
   const difference = (datePri, dateSec, unit) => {
-    const datePrimary = vm.$dayjs(datePri);
-    const dateSecondary = vm.$dayjs(dateSec);
+    const datePrimary = dayjs(datePri);
+    const dateSecondary = dayjs(dateSec);
 
     return datePrimary.diff(dateSecondary, unit);
   };

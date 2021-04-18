@@ -1,10 +1,10 @@
 # :sparkles: useDebounceFn
 
-> `useState` is a function that allows you to have state variables in functional components. You pass the initial state to this function and it returns a variable with the current state value (not necessarily the initial state) and another function to update this value.
+> `useDebounceFn()` fonksiyonu işlemin tekrar çalıştırılmadan önce belirli bir süre beklemeyi sağlar. Fonksiyonun çağırılma sayısını sınırlamak için oluşturlmuştur.(Örn. Kullanıcının bir butona kaç kez basıldığına bakılmaksızın belirlenen sabit zamandan sonra işlemi gerçekleştirir.)
 
-## :convenience_store: State
+## :convenience_store: Kullanım
 
-The `UseDebounceFn` function is used as the following reactive state:
+`UseDebounceFn` fonksiyonunun kullanım şekli aşağıdaki gibidir.
 
 ```js
 import { ref } from 'vue';
@@ -14,17 +14,19 @@ const fn = e => (updated.value = e.target.value);
 const debouncedFn = useDebouncefn({ delay: 1000, immediate: true }, fn);
 ```
 
-`import { UseDebounceFn } from "vue-composable-utils"` function Example() { // Declare a new state variable, which we'll call `count` ` const debouncedFn = useDebouncefn({ delay: 1000, immediate: true }, fn);` We declare a state variable called count , and set it to 0 .
+## :rocket: Özellikler
 
-## :rocket: Features
+`useDebounceFn` fonksiyonu nesne içerisinde iki parametre `{delay: 1000, immediate: true}` özelliklerini içerir ve callback fonksiyon alır.
 
-`UseDebounceFn` are functions that provide you with `"reactive"` `@vue/composition-api` and properties used as reactive.
+`delay` --> Milisaniye cinsinden geçikme süresidir.
 
-- UseDebounceFn: use `ref` and `readonly` from `@vue/composition-api`
+`immediate` --> Eğer immediate true ise fonksiyon hemen tetiklenir.
 
-## :computer: Example
+`fn` --> Debounce zamanından sonra yürütmek istediğimiz callback fonksiyondur.
 
-You can see how it changes reactively using the example below.
+## :computer: Uygulama
+
+Aşağıdaki örneği kullanarak reaktif olarak nasıl çalıştığını görebilirsiniz.
 
 <DebouncedFnComponent />
 
@@ -63,4 +65,3 @@ input {
 ```
 
 <ToggleDarkMode/>
-```

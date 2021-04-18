@@ -1,12 +1,12 @@
-import { computed } from "@vue/composition-api";
-import { useState } from "./useState";
+import { computed } from '@vue/composition-api';
+import { useState } from './useState';
 
 const useQueue = (initial = []) => {
   const [queue, setQueue] = useState(initial);
 
-  const set = (value) => {
+  const set = value => {
     return setQueue(value);
-  }
+  };
 
   const first = computed(() => {
     const [first] = queue.value;
@@ -24,14 +24,14 @@ const useQueue = (initial = []) => {
 
   const remove = () => {
     let result;
-    const [first, ...rest] = queue.value
+    const [first, ...rest] = queue.value;
     const removed = ([first, ...rest]) => {
       result = first;
       return rest;
-    }
+    };
     setQueue(removed([first, ...rest]));
     return result;
-  }
+  };
 
   return {
     state: queue,
@@ -39,8 +39,8 @@ const useQueue = (initial = []) => {
     remove,
     first,
     last,
-    size
+    size,
   };
-}
+};
 
 export default useQueue;

@@ -2,7 +2,7 @@
 
 > `useList` is a function that allows you to have state variables in functional components.
 
-## :convenience_store: State
+## :convenience_store: Usage
 
 The `useList` function is used as the following reactive state:
 
@@ -26,9 +26,21 @@ const { list, sort, set, reduce, first, deleteFirst, deleteLast, last, filter, p
 
 ## :rocket: Features
 
-`useList` are functions that provide you with `"reactive"` `@vue/composition-api` and properties used as reactive.
+`useList` 1 adet parametre alır. --> `useList([])`
 
-- useList: use `list`,`set` ,`reduce`,`sort`,`first`,`deleteFirst`,`deleteLast`,`last`,`filter`,`push` and `reset`, from `@vue/composition-api`
+| Parametre     | Açıklama                                           |
+| :------------ | :------------------------------------------------- |
+| `list`        | Parametre olarak gönderilen değeri verir.          |
+| `sort`        | Gönderilen listeyi sıralar.                        |
+| `set`         | İşlem yapılmış yeni listeyi verir.                 |
+| `reduce`      | Listede reduce işlemini gerçekleştirir.            |
+| `first`       | Listenin ilk değerini verir.                       |
+| `deleteFirst` | Listenin ilk değerini siler.                       |
+| `deleteLast`  | Listenin son değerini siler.                       |
+| `last`        | Listenin son değerini verir.                       |
+| `filter`      | Listeyi belirtilen koşula göre yeni listeyi verir. |
+| `push`        | Listenin sonuna verilen değeri ekler.              |
+| `reset`       | Listeyi başlangıç değerine döndürür.               |
 
 ## :computer: Example
 

@@ -1,6 +1,6 @@
 # :sparkles: useBind
 
-> `useBind` is a function that allows you to have state variables in functional components.
+> `useBind` is a function that binds data into component
 
 ## :convenience_store: State
 
@@ -13,9 +13,15 @@ const { value, changed, reset } = useBind('Type a here....');
 
 ## :rocket: Features
 
-`useBind` are functions that provide you with `"reactive"` `@vue/composition-api` and properties used as reactive.
+The initial value is sent to the function `useBind()`.
 
-- useBind: use `value`, `changed` and `reset` from `@vue/composition-api`
+`useBind` has 3 reactive properties
+
+1 - `value` --> The value that is going to be binded.
+
+2 - `changed` --> The value that is going to be changed.
+
+3 - `reset` --> The method that returns to initial values.
 
 ## :computer: Example
 
@@ -37,7 +43,7 @@ import { useBind } from 'vue-composable-utils';
 
 export default {
   setup() {
-    const { value, changed, reset } = useBind('Type a here....');
+    const { value, changed, reset } = useBind('Type here....');
     return { value, changed, reset };
   },
 };

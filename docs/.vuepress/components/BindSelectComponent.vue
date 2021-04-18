@@ -17,6 +17,7 @@ export default {
   name: 'BindSelectComponent',
   setup() {
     const { value, changed, reset } = useBind('Type a here....');
+
     return { value, changed, reset };
   },
 };

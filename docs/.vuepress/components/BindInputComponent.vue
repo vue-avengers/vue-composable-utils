@@ -12,7 +12,7 @@ import { useBind } from '../../../src';
 export default {
   name: 'BindInputComponent',
   setup() {
-    const { value, changed, reset } = useBind('Type a here....');
+    const { value, changed, reset } = useBind('Type here....');
     return { value, changed, reset };
   },
 };

@@ -1,21 +1,27 @@
 # :sparkles: useBind
 
-> `useBind` fonksiyon bileşenlerde durum değişkenlerine sahip olmanızı sağlayan bir işlevdir..
+> `useBind` verileri bileşenlere bağlamaya yarayan bir fonksiyondur.
 
-## :convenience_store: State
+## :convenience_store: Kullanım
 
-`useBind` fonksiyon aşağıdaki reaktif durum olarak kullanılır:
+`useBind` fonksiyon aşağıdaki gibi kullanılır.
 
 ```js
 import { useBind } from 'vue-composable-utils';
 const { value, changed, reset } = useBind('Type a here....');
 ```
 
-## :rocket: Özellikleri
+## :rocket: Özellikler
 
-`useBind`, size `reactive` `@vue/composition-api` ve reaktif olarak kullanılan özellikleri sağlayan fonksiyonlardır.
+`useBind()` fonksiyonuna başlangıç değeri gönderilir.
 
-- useBind: `@vue/composition-api` den `value`, `changed` ve `reset`
+`useBind` 3 adet reaktif özelliğe sahiptir.
+
+1 - `value` --> Bind edilmek istenilen değer
+
+2 - `changed` --> Değiştirilmek istenilen değer
+
+3 - `reset` --> Başlangıç değerine döndüren metoddur.
 
 ## :computer: Uygulama
 
@@ -37,7 +43,7 @@ import { useBind } from 'vue-composable-utils';
 
 export default {
   setup() {
-    const { value, changed, reset } = useBind('Type a here....');
+    const { value, changed, reset } = useBind('Bir şeyler yazın...');
     return { value, changed, reset };
   },
 };
@@ -65,7 +71,7 @@ import { useBind } from 'vue-composable-utils';
 
 export default {
   setup() {
-    const { value, changed, reset } = useBind('Type a here....');
+    const { value, changed, reset } = useBind('Bir şeyler yazın...');
     return { value, changed, reset };
   },
 };

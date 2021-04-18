@@ -1,27 +1,28 @@
 # :sparkles: usePick
 
-> `usePick` is a function that allows you to have state variables in functional components. You pass the initial state to this function and it returns a variable with the current state value (not necessarily the initial state) and another function to update this value.
+> `usePick()` fonksiyonu verilen anahtarları kullanarak filtrelenen nesnenin bir kopyasını döndürmek için kullanılır. Bu fonksiyon nesneden hangi özelliklerin seçildiğini belirterek istenilen koşulu sağlar.
 
-## :sparkles: State
+## :sparkles: Kullanım
 
-The `usePick` function is used as the following reactive state:
+`usePick` fonksiyonunun kullanım şekli aşağıdaki gibidir.
 
 ```js
 import { usePick } from 'vue-composable-utils';
 const pick = usePick({ a: 1, b: 2, c: 3, d: 4 }, ['a', 'd']);
 ```
 
-`import { usePick } from "vue-composable-utils"` function Example() { // Declare a new state variable, which we'll call `pick` ` const pick = usePick({a: 1,b: 2,c: 3,d: 4,},["a", "d"]);` We declare a state variable called count , and set it to 0 .
+## :rocket: Özellikler
 
-## :rocket: Features
+`usePick` 2 adet parametre alır.
 
-`usePick` are functions that provide you with `"reactive"` `@vue/composition-api` and properties used as reactive.
+| Parametre | Açıklama                                                                      |
+| :-------- | :---------------------------------------------------------------------------- |
+| `Object`  | Bu parametre bir nesnenin değerini tutar.                                     |
+| `Keys`    | İsteğe bağlı bir parametredir. Değeri seçilmesi gereken anahtar adını içerir. |
 
-- usePick: use `ref` and `readonly` from `@vue/composition-api`
+## :computer: Uygulama
 
-## :computer: Example
-
-You can see how it changes reactively using the example below.
+Aşağıdaki örneği kullanarak reaktif olarak nasıl çalıştığını görebilirsiniz.
 
 <PickComponent />
 
@@ -31,7 +32,7 @@ You can see how it changes reactively using the example below.
 </template>
 
 <script>
-import { usePick } from '../../../src';
+import { usePick } from 'vue-composable-utils';
 
 export default {
   setup() {

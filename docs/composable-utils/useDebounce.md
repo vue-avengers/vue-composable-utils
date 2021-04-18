@@ -1,23 +1,31 @@
 # :sparkles: useDebounce
 
-> `useState` is a function that allows you to have state variables in functional components. You pass the initial state to this function and it returns a variable with the current state value (not necessarily the initial state) and another function to update this value.
+> `useDebounce` fonksiyonu işlemin tekrar çalıştırılmadan önce belirli bir süre beklemeyi sağlar. Fonksiyonun çağırılma sayısını sınırlamak için oluşturlmuştur.(Örn. Kullanıcının bir butona kaç kez basıldığına bakılmaksızın belirlenen sabit zamandan sonra işlemi gerçekleştirir.)
 
-## :convenience_store: State
+## :convenience_store: Usage
 
-The `UseDebounce` function is used as the following reactive state:
+`useDebounce` fonksiyonunun kullanım şekli aşağıdaki gibidir.
 
 ```js
 import { useDebounce } from 'vue-composable-utils';
 const { debounceVal, value, debounceListener } = useDebounce(1000);
 ```
 
-`import { UseDebounce } from "vue-composable-utils"` function Example() { // Declare a new state variable, which we'll call `value` ` const { debounceVal, value, debounceListener } = useDebounce(1000);` We declare a state variable called count , and set it to 0 .
-
 ## :rocket: Features
 
-`UseDebounce` are functions that provide you with `"reactive"` `@vue/composition-api` and properties used as reactive.
+`useDebounce` 1 adet parametre alır ve 3 adet özelliğe sahiptir.
 
-- UseDebounceFn: use `ref` and `readonly` from `@vue/composition-api`
+`Özellikler`
+
+1 - `debounceVal` --> Belirlenen zamandan sonra gelen değer.
+
+2 - `value` --> Kullanıcı tarafından girilen ilk değer.
+
+3 - `debounceListener` --> Verilen zamanın sonunda `debounce` değeri atamak için kullanılır.
+
+`Parametreler` --> `useDebounce(delay)`
+
+1- `delay` --> Verilen zaman değeri.(Milisaniye)
 
 ## :computer: Example
 

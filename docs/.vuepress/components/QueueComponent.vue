@@ -1,21 +1,24 @@
 <template>
-   <div>
-      <p>First: {{first}}</p>
-      <p>Last: {{last}}</p>
-      <p>Size: {{size}}</p>
-      <button class="fourth" @click="set([...state, ...data])">Add</button>
-      <button class="first" @click="remove()">Remove</button>
-    </div>
+  <div>
+    <p>First: {{ first }}</p>
+    <p>Last: {{ last }}</p>
+    <p>Size: {{ size }}</p>
+    <button class="fourth" @click="set([...state, ...data])">Add</button>
+    <button class="first" @click="remove()">Remove</button>
+  </div>
 </template>
 
 <script>
-import { useQueue } from "../../../src";
+import { useQueue } from '../../../src';
 
 export default {
-  name: "QueueComponent",
+  name: 'QueueComponent',
   setup() {
-  const data = [{ id: 9, name: 'John', age: 15, occupation: 'gardener' }, { id: 10, name: 'Lenny', age: 51, occupation: 'programmer' }]
-  const { set, state, remove, first, last, size } = useQueue([
+    const data = [
+      { id: 9, name: 'John', age: 15, occupation: 'gardener' },
+      { id: 10, name: 'Lenny', age: 51, occupation: 'programmer' },
+    ];
+    const { set, state, remove, first, last, size } = useQueue([
       { id: 1, name: 'John', age: 25, occupation: 'gardener' },
       { id: 2, name: 'Lenny', age: 51, occupation: 'programmer' },
       { id: 3, name: 'Andrew', age: 43, occupation: 'teacher' },
@@ -27,7 +30,7 @@ export default {
     ]);
 
     return { data, set, state, remove, first, last, size };
-  }
+  },
 };
 </script>
 
