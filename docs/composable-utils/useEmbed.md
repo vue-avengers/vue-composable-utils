@@ -24,7 +24,7 @@ const code = ref(null);
 const { isEmbedBlock, clear } = useEmbed(code);
 ```
 
-### isEmbedBlock
+### :alembic: isEmbedBlock
 
 `isEmbedBlock` is a computed that return the given code is an embed code or not.
 
@@ -49,14 +49,14 @@ export default {
 
     return {
       code,
-      isEmbedBlock
-    }
-  }
-}
+      isEmbedBlock,
+    };
+  },
+};
 </script>
 ```
 
-### Clear
+### :x: Clear
 
 Clears scripts added to DOM.
 
@@ -69,7 +69,7 @@ Clears scripts added to DOM.
 </template>
 
 <script>
-import  { ref } from '@vue/composition-api';
+import { ref } from '@vue/composition-api';
 import { useEmbed } from 'vue-composable-utils';
 
 export default {
@@ -81,16 +81,18 @@ export default {
 
     return {
       code,
-      clear
-    }
-  }
-}
+      clear,
+    };
+  },
+};
 </script>
 ```
 
 ## :computer: Example
 
 You can see how it changes reactively using the example below.
+
+<EmbedComponent />
 
 ```vue
 <template>
@@ -128,7 +130,5 @@ export default {
 };
 </script>
 ```
-
-<EmbedComponent />
 
 <ToggleDarkMode/>
