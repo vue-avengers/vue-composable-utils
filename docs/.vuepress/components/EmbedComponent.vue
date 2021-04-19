@@ -59,5 +59,10 @@ $white: #fff;
       }
     }
   }
+
+  .embed-block {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
 }
 </style>
