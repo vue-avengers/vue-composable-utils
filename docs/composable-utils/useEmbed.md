@@ -92,6 +92,44 @@ export default {
 
 You can see how it changes reactively using the example below.
 
+```vue
+<template>
+  <div>
+    <textarea rows="5" cols="50" placeholder="Place embed code here" v-model="code"></textarea>
+    <button type="button" class="first" @click="clear">Clear</button>
+    <div v-if="isEmbedBlock" v-html="code" class="embed-block"></div>
+  </div>
+</template>
+
+<script>
+import { ref } from '@vue/composition-api';
+import { useEmbed } from 'vue-composable-utils';
+
+export default {
+  name: 'EmbedComponent',
+  setup() {
+    const code = ref(null);
+
+    const { isEmbedBlock, clear } = useEmbed(code);
+
+    const twitterEmbed = `<blockquote class="twitter-tweet">
+      <p lang="tr" dir="ltr">Vue composable utils <a href="https://t.co/2zLCR4VjyR">pic.twitter.com/0xNpVFMuxE</a></p>
+      &mdash; VueComposableUtils (@VueComposableUtils) <a href="https://twitter.com/VueComposableUtils/status/1383062695537217537?ref_src=twsrc%5Etfw">April 16, 2021</a>
+      </blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8">`;
+
+    code.value = twitterEmbed;
+
+    return {
+      code,
+      clear,
+      isEmbedBlock,
+      twitterEmbed,
+    };
+  },
+};
+</script>
+```
+
 <EmbedComponent />
 
 <ToggleDarkMode/>
