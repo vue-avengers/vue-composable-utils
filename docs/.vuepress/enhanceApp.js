@@ -7,8 +7,8 @@ import DebouncedFnComponent from './components/DebouncedFnComponent.vue';
 import LocalStorageComponent from './components/LocalStorageComponent.vue';
 import ListComponent from './components/ListComponent.vue';
 import StateComponent from './components/StateComponent.vue';
-import EmbedComponent from './components/EmbedComponent.vue';
 import ToggleDarkMode from './components/ToggleDarkMode.vue';
+import EmbedComponent from './components/EmbedComponent';
 import './public/style/main.css';
 import './plugins/dayjs.js';
 
@@ -22,6 +22,6 @@ export default ({ Vue }) => {
   Vue.component('LocalStorageComponent', LocalStorageComponent);
   Vue.component('ListComponent', ListComponent);
   Vue.component('StateComponent', StateComponent);
-  Vue.component('EmbedComponent', EmbedComponent);
   Vue.component('ToggleDarkMode', ToggleDarkMode);
+  Vue.component('EmbedComponent', EmbedComponent);
 };

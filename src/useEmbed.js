@@ -57,11 +57,6 @@ const useEmbed = (code = null) => {
     script.src = src;
     script.async = async;
     script.defer = defer;
-    script.addEventListener('load', () => {
-      if (window.instgrm) {
-        window.instgrm.Embeds.process();
-      }
-    });
     document.body.insertAdjacentElement('afterend', script);
     injectedScripts.value = [...injectedScripts.value, script];
   };
@@ -81,10 +76,7 @@ const useEmbed = (code = null) => {
 
   return {
     isEmbedBlock,
-    injectScript,
-    getEmbedScriptSrc,
-    clearScript,
-    clear
+    clear,
   };
 };
 
