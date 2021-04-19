@@ -1,10 +1,10 @@
 # :sparkles: useLocalStorage
 
-> `useLocalStorage` is a function that allows you to have state variables in functional components. You pass the initial state to this function and it returns a variable with the current state value (not necessarily the initial state) and another function to update this value.
+> `useLocalStorage` fonksiyonu tarayıcıda key, value verilerini kaydetmek için kullanılan yöntemlerinden birisidir.
 
-## :convenience_store: State
+## :convenience_store: Usage
 
-The `useLocalStorage` function is used as the following reactive state:
+The example usage of `useLocalStorage` function is shown below.
 
 ```js
 import { useLocalStorage } from 'vue-composable-utils';
@@ -15,9 +15,18 @@ const { value } = useLocalStorage('test', 1);
 
 ## :rocket: Features
 
-`useLocalStorage` are functions that provide you with `"reactive"` `@vue/composition-api` and properties used as reactive.
+`useLocalStorage` 2 adet parameter alır ve 1 adet özelliğe sahiptir.
 
-- useLocalStorage: use `ref` and `readonly` from `@vue/composition-api`
+Özellik
+
+1 - `value` --> Local storage'a eklemek istediğimiz değer.
+
+Parametreler
+
+`useLocalStorage(key,value)`
+
+1- key --> Anahtarlar arasında geçiş yapmanız gereken durumlarda kullanılır.
+2- value --> Depolanan veridir.
 
 ## :computer: Example
 

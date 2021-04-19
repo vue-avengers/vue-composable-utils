@@ -1,20 +1,76 @@
-# :sparkles: useDate
+# :sparkles: useMultiLangDate
 
-> `useDate` fonksiyonu bileşenlerde tarih işlemlerini kolayca yaptığımız bir fonksiyondur.
+> `useMultiLangDate` fonksiyonu bileşenlerde tarih işlemlerini kolayca yaptığımız bir fonksiyondur.
 
 ## :convenience_store: Kullanım
 
-`useDate` fonksiyonunun import edilmesi.
+`useMultiLangDate` fonksiyonunun import edilmesi.
 
 ```js
-import { useDate } from 'vue-composable-utils';
-const { format, timeAgo, getDate, utc, timezone, difference } = useDate();
+import { useMultiLangDate } from 'vue-composable-utils';
+const { format, timeAgo, getDate, utc, timezone, difference } = useMultiLangDate('Type a here....');
 ```
 
+## :hammer_and_wrench: Kurulum
+
+### :key: 1. Adım
+
+src/dayjs.js
+
+`src` klasörünün içine `dayjs.js` adında bir dosya açılır aşağıdaki kodları eklenir. Dayjs.js dosyasını src'ye eklememizin nedeni dayjs kütüphanesinin özelleştirilebilir olmasıdır.
+
+#### dayjs.js
+
+```js
+import Vue from 'vue';
+import dayjs from 'dayjs';
+// Farklı dil seçeneklerinin eklenmesi için "dayjs/locale/{dil kodu}" şeklinde kullanılır.
+// For the other language options, add "dayjs/locale/{langCode}"
+import 'dayjs/locale/tr';
+import 'dayjs/locale/ar';
+import relativeTime from 'dayjs/plugin/relativeTime';
+import localizedFormat from 'dayjs/plugin/localizedFormat';
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
+
+dayjs.extend(relativeTime);
+dayjs.extend(localizedFormat);
+dayjs.extend(utc);
+dayjs.extend(timezone);
+
+Object.defineProperties(Vue.prototype, {
+  $dayjs: {
+    get() {
+      return dayjs;
+    },
+  },
+});
+```
+
+### :key: 2. Adım
+
+`main.js` dosyasının içerisine `dayjs.js` dosyasını import edilir.
+
+#### main.js
+
+```js
+import Vue from 'vue';
+import App from './App.vue';
+import VueCompositionApi from '@vue/composition-api';
+// "dayjs.js" import edilir
+import './dayjs.js';
+
+Vue.use(VueCompositionApi);
+Vue.config.productionTip = false;
+
+new Vue({
+  render: h => h(App),
+}).$mount('#app');
+```
 
 ## :rocket: Example.vue
 
-<DateComponent />
+<MultiLangDateComponent />
 
 Example.vue
 
@@ -31,22 +87,25 @@ Example.vue
 </template>
 
 <script>
-import { useDate } from "vue-composable-utils";
+import {ref, computed} from '@vue/composition-api'
+import { useMultiLangDate } from "vue-composable-utils";
 
 export default {
   name: "Example",
   setup() {
     const date = new Date();
+    const langUnit = ref('tr')
 
-    // useDate fonksiyonu eklenir ve istenilen özellikleri kullanılır.
-    const { format, timeAgo, getDate, utc, timezone, difference } = useDate();
+    // useMultiLangDate fonksiyonu eklenir ve istenilen özellikleri kullanılır.
+		// useMultiLangDate gönderilen parametre dil seçeneğini temsil eder.
+    const { format, timeAgo, getDate, utc, timezone, difference } = useMultiLangDate(langUnit);
 
-    const dateFormat = format(date, 'LLLL');
-    const timeAgoFormat = timeAgo(date, '2021-04-07:23:00');
-    const getDateFormat = getDate('date');
-    const differenceFormat = difference(date, '2018-06-05', 'day');
-    const utcFormat = utc(date, 'LLLL');
-    const timezoneFormat = timezone('2014-06-01 12:00', 'America/New_York', 'L LT');
+    const dateFormat = computed(() => format(date, 'LLLL'));
+    const timeAgoFormat = computed(() => timeAgo(date, '2021-04-07:23:00'))
+    const getDateFormat = computed(() => getDate('date'));
+    const differenceFormat = computed(() => difference(date, '2018-06-05', 'day'));
+    const utcFormat = computed(() => utc(date, 'LLLL'));
+    const timezoneFormat = computed(() => timezone('2014-06-01 12:00', 'America/New_York', 'L LT'));
 
 
     return {

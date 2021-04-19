@@ -1,14 +1,18 @@
 import VueCompositionAPI from '@vue/composition-api';
 import BindInputComponent from './components/BindInputComponent.vue';
 import BindSelectComponent from './components/BindSelectComponent.vue';
+import MultiLangDateComponent from './components/MultiLangDateComponent.vue';
 import DateComponent from './components/DateComponent.vue';
 import DebounceComponent from './components/DebounceComponent.vue';
 import DebouncedFnComponent from './components/DebouncedFnComponent.vue';
 import LocalStorageComponent from './components/LocalStorageComponent.vue';
 import ListComponent from './components/ListComponent.vue';
 import StateComponent from './components/StateComponent.vue';
+import EmbedComponent from './components/EmbedComponent.vue';
+import PickComponent from './components/PickComponent.vue';
+import QueueComponent from './components/QueueComponent.vue';
+import QueueComponentTwo from './components/QueueComponentTwo.vue';
 import ToggleDarkMode from './components/ToggleDarkMode.vue';
-import EmbedComponent from './components/EmbedComponent';
 import './public/style/main.css';
 import './plugins/dayjs.js';
 
@@ -17,11 +21,15 @@ export default ({ Vue }) => {
   Vue.component('BindInputComponent', BindInputComponent);
   Vue.component('BindSelectComponent', BindSelectComponent);
   Vue.component('DateComponent', DateComponent);
+  Vue.component('MultiLangDateComponent', MultiLangDateComponent);
   Vue.component('DebouncedFnComponent', DebouncedFnComponent);
   Vue.component('DebounceComponent', DebounceComponent);
   Vue.component('LocalStorageComponent', LocalStorageComponent);
   Vue.component('ListComponent', ListComponent);
   Vue.component('StateComponent', StateComponent);
-  Vue.component('ToggleDarkMode', ToggleDarkMode);
   Vue.component('EmbedComponent', EmbedComponent);
+  Vue.component('PickComponent', PickComponent);
+  Vue.component('QueueComponent', QueueComponent);
+  Vue.component('QueueComponentTwo', QueueComponentTwo);
+  Vue.component('ToggleDarkMode', ToggleDarkMode);
 };

@@ -1,8 +1,9 @@
 module.exports = {
   root: true,
   env: {
+    browser: true,
     node: true,
-    'jest/globals': true,
+    jest: true,
     browser: true,
     commonjs: true,
     es6: true,
@@ -12,12 +13,13 @@ module.exports = {
     parser: 'babel-eslint',
   },
   rules: {
+    'prettier/prettier': ['error'],
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
   },
   overrides: [
     {
-      files: ['**/__tests__/*.{j,t}s?(x)', '**/tests/unit/**/*.spec.{j,t}s?(x)'],
+      files: ['**/__tests__/*.js?(x)', '**/tests/**/*.test.js?(x)'],
       env: {
         jest: true,
       },

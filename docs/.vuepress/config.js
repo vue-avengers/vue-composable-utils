@@ -1,6 +1,6 @@
 const { name, description } = require('../../package.json');
 
-const Base_URL = 'https://vue-composable-utils.netlify.app'
+const Base_URL = 'https://vue-composable-utils.netlify.app';
 
 module.exports = {
   title: name,
@@ -128,6 +128,10 @@ function getSidebar() {
           path: '/composable-utils/useEmbed',
         },
         {
+          title: 'usePick',
+          path: '/composable-utils/usePick',
+        },
+        {
           title: 'useList',
           path: '/composable-utils/useList',
         },
@@ -140,8 +144,16 @@ function getSidebar() {
           path: '/composable-utils/useState',
         },
         {
+          title: 'useQueue',
+          path: '/composable-utils/useQueue',
+        },
+        {
           title: 'useDate',
           path: '/composable-utils/useDate',
+        },
+        {
+          title: 'useMultiLangDate',
+          path: '/composable-utils/useMultiLangDate',
         },
       ],
     },
@@ -171,6 +183,10 @@ function getSidebarTR() {
           path: '/tr/composable-utils/useEmbed',
         },
         {
+          title: 'usePick',
+          path: '/tr/composable-utils/usePick',
+        },
+        {
           title: 'useList',
           path: '/tr/composable-utils/useList',
         },
@@ -183,8 +199,16 @@ function getSidebarTR() {
           path: '/tr/composable-utils/useState',
         },
         {
+          title: 'useQueue',
+          path: '/tr/composable-utils/useQueue',
+        },
+        {
           title: 'useDate',
           path: '/tr/composable-utils/useDate',
+        },
+        {
+          title: 'useMultiLangDate',
+          path: '/tr/composable-utils/useMultiLangDate',
         },
       ],
     },

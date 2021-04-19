@@ -1,19 +1,75 @@
-# :sparkles: useDate
+# :sparkles: useMultiLangDate
 
-> `useDate` It is a function that we have completed date operations in functions.
+> `useMultiLangDate` It is a function that we have completed date operations in functions.
 
 ## :convenience_store: Usage
 
-`useDate` function import.
+`useMultiLangDate` function import.
 
 ```js
-import { useDate } from 'vue-composable-utils';
-const { format, timeAgo, getDate, utc, timezone, difference } = useDate();
+import { useMultiLangDate } from 'vue-composable-utils';
+const { format, timeAgo, getDate, utc, timezone, difference } = useMultiLangDate('Type a here....');
+```
+
+## :hammer_and_wrench: Setup
+
+### :key: Step 1
+
+src/dayjs.js
+
+Open a file named as `dayjs.js` inside the folder of `src` and add the codes below. The reason adding `dayjs.js` file is customizability of `dayjs` library.
+
+#### dayjs.js
+
+```js
+import Vue from 'vue';
+import dayjs from 'dayjs';
+// For the other language options, add "dayjs/locale/{langCode}"
+import 'dayjs/locale/tr';
+import 'dayjs/locale/ar';
+import relativeTime from 'dayjs/plugin/relativeTime';
+import localizedFormat from 'dayjs/plugin/localizedFormat';
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
+
+dayjs.extend(relativeTime);
+dayjs.extend(localizedFormat);
+dayjs.extend(utc);
+dayjs.extend(timezone);
+
+Object.defineProperties(Vue.prototype, {
+  $dayjs: {
+    get() {
+      return dayjs;
+    },
+  },
+});
+```
+
+### :key: Step 2
+
+Import `dayjs.js` file inside `main.js`
+
+#### main.js
+
+```js
+import Vue from 'vue';
+import App from './App.vue';
+import VueCompositionApi from '@vue/composition-api';
+// "dayjs.js" imported
+import './dayjs.js';
+
+Vue.use(VueCompositionApi);
+Vue.config.productionTip = false;
+
+new Vue({
+  render: h => h(App),
+}).$mount('#app');
 ```
 
 ## :rocket: Example
 
-<DateComponent />
+<MultiLangDateComponent />
 
 Example.vue
 
@@ -30,21 +86,25 @@ Example.vue
 </template>
 
 <script>
-import { useDate } from "vue-composable-utils";
+import {ref, computed} from '@vue/composition-api'
+import { useMultiLangDate } from "vue-composable-utils";
 
 export default {
   name: "Examples",
   setup(props) {
-    // The useDate function is added and the desired properties are used.
-		// The parameter sent from useDate represents the language option.
-    const { format, timeAgo, getDate, utc, timezone, difference } = useDate();
+    const date = new Date();
+    const langUnit = ref('en')
 
-    const dateFormat = format(date, 'LLLL'); // Friday, April 9, 2021 11:47 PM
-    const timeAgoFormat = timeAgo(date, '2021-04-07:23:00')  // 2 days ago
-    const getDateFormat = getDate('date'); // 10
-    const differenceFormat = difference(date, '2018-06-05', 'day');  // 1400
-    const utcFormat = utc(date, 'LLLL');
-    const timezoneFormat = timezone('2014-06-01 12:00', 'America/New_York', 'L LT');
+    // The useMultiLangDate function is added and the desired properties are used.
+		// The parameter sent from useMultiLangDate represents the language option.
+    const { format, timeAgo, getDate, utc, timezone, difference } = useMultiLangDate(langUnit);
+
+    const dateFormat = computed(() => format(date, 'LLLL')); // Friday, April 9, 2021 11:47 PM
+    const timeAgoFormat = computed(() => timeAgo(date, '2021-04-07:23:00'))  // 2 days ago
+    const getDateFormat = computed(() => getDate('date')); // 10
+    const differenceFormat = computed(() => difference(date, '2018-06-05', 'day'));  // 1400
+    const utcFormat = computed(() => utc(date, 'LLLL'));
+    const timezoneFormat = computed(() => timezone('2014-06-01 12:00', 'America/New_York', 'L LT'));
 
     return {
       dateFormat,

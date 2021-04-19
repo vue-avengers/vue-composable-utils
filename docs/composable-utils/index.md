@@ -33,7 +33,8 @@ npm install @vue/composition-api vue-composable-utils
 - [useEmbed](./useEmbed.md).
 - [useState](./useState.md).
 - [useList](./useList.md).
-- [useDate](./useData.md).
+- [useDate](./useDate.md).
+- [useDate](./useMultiLangDate.md).
 - [useDebounceFn](./useDebounceFn.md).
 - [useLocalStorage](./useLocalStorage.md).
 

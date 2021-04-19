@@ -1,10 +1,10 @@
 # :sparkles: useList
 
-> `useList` fonksiyon bileşenlerde durum değişkenlerine sahip olmanızı sağlayan bir işlevdir..
+> `useList()` fonksiyonu diziyi özelleştirmek için kullanılan bir fonksiyondur.
 
-## State
+## Kullanım
 
-`useList` fonksiyon aşağıdaki reaktif durum olarak kullanılır:
+`useList` fonksiyon aşağıdaki reaktif durum olarak kullanılır.
 
 ```js
 import { useList } from 'vue-composable-utils';
@@ -24,11 +24,23 @@ const { list, sort, set, reduce, first, deleteFirst, deleteLast, last, filter, p
 ]);
 ```
 
-## Özellikleri
+## Özellikler
 
-`useList`, size `reactive` `@vue/composition-api` ve reaktif olarak kullanılan özellikleri sağlayan fonksiyonlardır.
+`useList` 1 adet parametre alır. --> `useList([])`
 
-- useList: `@vue/composition-api` den `list`,`set` ,`reduce`,`sort`,`first`,`deleteFirst`,`deleteLast`,`last`,`filter`,`push` ve `reset`
+| Parametre     | Açıklama                                           |
+| :------------ | :------------------------------------------------- |
+| `list`        | Parametre olarak gönderilen değeri verir.          |
+| `sort`        | Gönderilen listeyi sıralar.                        |
+| `set`         | İşlem yapılmış yeni listeyi verir.                 |
+| `reduce`      | Listede reduce işlemini gerçekleştirir.            |
+| `first`       | Listenin ilk değerini verir.                       |
+| `deleteFirst` | Listenin ilk değerini siler.                       |
+| `deleteLast`  | Listenin son değerini siler.                       |
+| `last`        | Listenin son değerini verir.                       |
+| `filter`      | Listeyi belirtilen koşula göre yeni listeyi verir. |
+| `push`        | Listenin sonuna verilen değeri ekler.              |
+| `reset`       | Listeyi başlangıç değerine döndürür.               |
 
 ## Uygulama
 

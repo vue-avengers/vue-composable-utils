@@ -2,6 +2,7 @@
   <div>
     <p>Value is: {{ value }}</p>
     <button class="fourth" @click="value = '2'">Change</button>
+    <button class="first" @click="remove">Remove</button>
   </div>
 </template>
 
@@ -11,9 +12,9 @@ import { useLocalStorage } from '../../../src';
 export default {
   name: 'LocalStorageComponent',
   setup() {
-    const { value } = useLocalStorage('test', 1);
+    const { value, remove } = useLocalStorage('test', 1);
 
-    return { value };
+    return { value, remove };
   },
 };
 </script>

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`usePick should get count value when trigger method 1`] = `
+<div>
+  <p>Pick: {"a":1,"d":4}</p>
+</div>
+`;
+
+exports[`usePick should get count value when trigger method 2`] = `<div></div>`;
+
+exports[`usePick should get count value when trigger method 3`] = `<div></div>`;
+
+exports[`usePick should get count value when trigger method 4`] = `<div></div>`;
+
+exports[`usePick should get count value when trigger method 5`] = `<div></div>`;
+
+exports[`usePick should get pick value 1`] = `
+<div>
+  <p>Pick: {"a":1,"d":4}</p>
+</div>
+`;

@@ -1,25 +1,23 @@
 <template>
-  <div>
-    <p>Select : {{ value }}</p>
-    <select class="fourth" @change="changed">
-      <option value="apple">Apple</option>
-      <option value="orange">Orange</option>
-      <option value="orange">Watermelon</option>
-      <option value="strawberry">Strawberry</option>
-    </select>
-  </div>
+   <div>
+      <p>First: {{first}}</p>
+      <p>Last: {{last}}</p>
+      <p>Size: {{size}}</p>
+      <button class="fourth" @click="set([...state, (last || 0) + 1])">Add</button>
+      <button class="first" @click="remove()">Remove</button>
+    </div>
 </template>
 
 <script>
-import { useBind } from '../../../src';
+import { useQueue } from "../../../src";
 
 export default {
-  name: 'BindSelectComponent',
+  name: "QueueComponentTwo",
   setup() {
-    const { value, changed, reset } = useBind('Type a here....');
+  const { set, state, remove, first, last, size } = useQueue();
 
-    return { value, changed, reset };
-  },
+    return {set, state, remove, first, last, size };
+  }
 };
 </script>
 
@@ -30,13 +28,11 @@ $yellow: #f1c40f;
 p {
   text-decoration: none;
   text-align: center;
-  text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 1.5em;
 }
 
-select {
+button {
   box-sizing: border-box;
   appearance: none;
   background-color: transparent;
@@ -44,7 +40,6 @@ select {
   border-radius: 0.6em;
   color: $red;
   cursor: pointer;
-  // display: flex;
   align-self: center;
   line-height: 1;
   margin: 10px;
@@ -59,6 +54,14 @@ select {
   &:hover,
   &:focus {
     outline: 0;
+  }
+}
+
+.first {
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  &:hover {
+    color: #fff;
+    box-shadow: 0 0 40px 40px $red inset;
   }
 }
 

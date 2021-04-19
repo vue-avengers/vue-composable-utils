@@ -1,0 +1,68 @@
+# :sparkles: usePick
+
+> `usePick()` fonksiyonu verilen anahtarları kullanarak filtrelenen nesnenin bir kopyasını döndürmek için kullanılır. Bu fonksiyon nesneden hangi özelliklerin seçildiğini belirterek istenilen koşulu sağlar.
+
+## :sparkles: State
+
+The `useState` function is used as the following reactive state:
+
+```js
+import { usePick } from 'vue-composable-utils';
+const pick = usePick({ a: 1, b: 2, c: 3, d: 4 }, ['a', 'd']);
+```
+
+## :rocket: Features
+
+`usePick` 2 adet parametre alır.
+
+| Parametre | Açıklama                                                                      |
+| :-------- | :---------------------------------------------------------------------------- |
+| `Object`  | Bu parametre bir nesnenin değerini tutar.                                     |
+| `Keys`    | İsteğe bağlı bir parametredir. Değeri seçilmesi gereken anahtar adını içerir. |
+
+## :computer: Example
+
+You can see how it changes reactively using the example below.
+
+<PickComponent />
+
+```vue
+<template>
+  <p>{{ JSON.stringify(pick) }}</p>
+</template>
+
+<script>
+import { usePick } from 'vue-composable-utils';
+
+export default {
+  setup() {
+    const pick = usePick(
+      {
+        a: 1,
+        b: 2,
+        c: 3,
+        d: 4,
+      },
+      ['a', 'd'],
+    );
+
+    return {
+      pick,
+    };
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+p {
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+</style>
+```
+
+<ToggleDarkMode/>
