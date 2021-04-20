@@ -82,24 +82,24 @@ You can see how it changes reactively using the example below.
 
 ```vue
 <template>
-   <div>
-      <p>First: {{first}}</p>
-      <p>Last: {{last}}</p>
-      <p>Size: {{size}}</p>
-      <button @click="set([...state, (last || 0) + 1])">Add</button>
-      <button @click="remove()">Remove</button>
-    </div>
+  <div>
+    <p>First: {{ first }}</p>
+    <p>Last: {{ last }}</p>
+    <p>Size: {{ size }}</p>
+    <button @click="set([...state, (last || 0) + 1])">Add</button>
+    <button @click="remove()">Remove</button>
+  </div>
 </template>
 
 <script>
-import { useQueue } from "vue-composable-utils";
+import { useQueue } from 'vue-composable-utils';
 
 export default {
   setup() {
-  const { set, state, remove, first, last, size } = useQueue();
+    const { set, state, remove, first, last, size } = useQueue();
 
-    return {set, state, remove, first, last, size };
-  }
+    return { set, state, remove, first, last, size };
+  },
 };
 </script>
 ```

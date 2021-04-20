@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$turquoise: #1abc9c;
+$red: #e74c3c;
 $grey: #2c3e50;
 $white: #fff;
 
@@ -38,7 +38,12 @@ $white: #fff;
     align-items: flex-end;
 
     textarea {
-      border-radius: 0.5em;
+      border: 2px solid #8e44ad;
+      padding: 0.8em 0.8em;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #8e44ad;
     }
 
     .clear-button {
@@ -50,9 +55,9 @@ $white: #fff;
       margin-left: 0.5em;
       transition: 0.2s;
       &:hover {
-        background-color: $turquoise;
+        background-color: $red;
         color: $white;
-        border: solid $turquoise 1px;
+        border: solid $red 1px;
       }
       &:focus {
         outline: none;

@@ -62,11 +62,11 @@ const useLocalStorage = (storageKey, defaultValue = '') => {
       // localStorage can throw.
       console.error(error);
     }
-  }
+  };
 
   return {
     value,
-    remove
+    remove,
   };
 };
 

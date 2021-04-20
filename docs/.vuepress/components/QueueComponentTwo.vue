@@ -1,23 +1,23 @@
 <template>
-   <div>
-      <p>First: {{first}}</p>
-      <p>Last: {{last}}</p>
-      <p>Size: {{size}}</p>
-      <button class="fourth" @click="set([...state, (last || 0) + 1])">Add</button>
-      <button class="first" @click="remove()">Remove</button>
-    </div>
+  <div>
+    <p>First: {{ first }}</p>
+    <p>Last: {{ last }}</p>
+    <p>Size: {{ size }}</p>
+    <button class="fourth" @click="set([...state, (last || 0) + 1])">Add</button>
+    <button class="first" @click="remove()">Remove</button>
+  </div>
 </template>
 
 <script>
-import { useQueue } from "../../../src";
+import { useQueue } from '../../../src';
 
 export default {
-  name: "QueueComponentTwo",
+  name: 'QueueComponentTwo',
   setup() {
-  const { set, state, remove, first, last, size } = useQueue();
+    const { set, state, remove, first, last, size } = useQueue();
 
-    return {set, state, remove, first, last, size };
-  }
+    return { set, state, remove, first, last, size };
+  },
 };
 </script>
 
