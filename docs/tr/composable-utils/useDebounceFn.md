@@ -16,9 +16,9 @@ const debouncedFn = useDebouncefn({ delay: 1000, immediate: true }, fn);
 
 ## :rocket: Özellikler
 
-`useDebounceFn` fonksiyonu nesne içerisinde iki parametre `{delay: 1000, immediate: true}` özelliklerini içerir ve callback fonksiyon alır.
+`useDebounceFn` fonksiyonu bir nesne `{delay: 1000, immediate: true}` ve callback fonksiyonu olmak üzere iki parametre alır.
 
-`delay` --> Milisaniye cinsinden geçikme süresidir.
+`delay` --> Milisaniye cinsinden gecikme süresidir.
 
 `immediate` --> Eğer immediate true ise fonksiyon hemen tetiklenir.
 

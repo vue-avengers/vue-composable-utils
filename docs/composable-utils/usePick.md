@@ -1,10 +1,10 @@
 # :sparkles: usePick
 
-> `usePick()` fonksiyonu verilen anahtarları kullanarak filtrelenen nesnenin bir kopyasını döndürmek için kullanılır. Bu fonksiyon nesneden hangi özelliklerin seçildiğini belirterek istenilen koşulu sağlar.
+> The `usePick ()` function is used to return a copy of the filtered object using the given `key` value. This function provides the desired condition by specifying which properties are selected from the object.
 
-## :sparkles: State
+## :sparkles: Usage
 
-The `useState` function is used as the following reactive state:
+The example usage of `usePick` function is shown below.
 
 ```js
 import { usePick } from 'vue-composable-utils';
@@ -13,12 +13,12 @@ const pick = usePick({ a: 1, b: 2, c: 3, d: 4 }, ['a', 'd']);
 
 ## :rocket: Features
 
-`usePick` 2 adet parametre alır.
+`usePick` takes two parameters.
 
-| Parametre | Açıklama                                                                      |
-| :-------- | :---------------------------------------------------------------------------- |
-| `Object`  | Bu parametre bir nesnenin değerini tutar.                                     |
-| `Keys`    | İsteğe bağlı bir parametredir. Değeri seçilmesi gereken anahtar adını içerir. |
+| Parameter | Description                                                     |
+| :-------- | :---------------------------------------------------------------|
+| `Object`  | The object to be processed.                                     |
+| `Keys`    | Optional. The `key` value that should be selected.              |
 
 ## :computer: Example
 

@@ -1,6 +1,6 @@
 # :sparkles: useLocalStorage
 
-> `useLocalStorage` fonksiyonu tarayıcıda key, value verilerini kaydetmek için kullanılan yöntemlerinden birisidir.
+> `useLocalStorage` function is one of the methods of storing `key` and `value` in the browser.
 
 ## :convenience_store: Usage
 
@@ -11,26 +11,25 @@ import { useLocalStorage } from 'vue-composable-utils';
 const { value } = useLocalStorage('test', 1);
 ```
 
-`import { useLocalStorage } from "vue-composable-utils";` function Example() { // Declare a new state variable, which we'll call `value` ` const { value } = useLocalStorage("test", 1);` We declare a state variable called count , and set it to 0 .
-
 ## :rocket: Features
 
-`useLocalStorage` 2 adet parameter alır ve 1 adet özelliğe sahiptir.
+`useLocalStorage` has two parameters and one property 
 
-Özellik
+Property
 
-1 - `value` --> Local storage'a eklemek istediğimiz değer.
+1 - `value` --> The data that is going to be stored in local storage
 
-Parametreler
+Parameters
 
 `useLocalStorage(key,value)`
 
-1- key --> Anahtarlar arasında geçiş yapmanız gereken durumlarda kullanılır.
-2- value --> Depolanan veridir.
+1- `key` --> Is used to switch between keys.
+
+2- `value` --> Stored data.
 
 ## :computer: Example
 
-You can see how it changes reactively using the example below.
+You can see how it works reactively applying the example below.
 
 <LocalStorageComponent />
 

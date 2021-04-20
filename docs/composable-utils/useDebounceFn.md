@@ -1,10 +1,10 @@
 # :sparkles: useDebounceFn
 
-> `useState` is a function that allows you to have state variables in functional components. You pass the initial state to this function and it returns a variable with the current state value (not necessarily the initial state) and another function to update this value.
+> `useDebounceFn` function is used to wait for the given period of time before the next operation is run again. Limits the number of requests for the next operation.(eg. The operation is run after the given period of time regardless how many times the user clicks the button.)
 
 ## :convenience_store: Usage
 
-The `UseDebounceFn` function is used as the following reactive state:
+The example usage of `useDebounceFn` function is shown below.
 
 ```js
 import { ref } from 'vue';
@@ -16,13 +16,13 @@ const debouncedFn = useDebouncefn({ delay: 1000, immediate: true }, fn);
 
 ## :rocket: Features
 
-`useDebounceFn` fonksiyonu nesne içerisinde iki parametre `{delay: 1000, immediate: true}` özelliklerini içerir ve callback fonksiyon alır.
+The `useDebounceFn` function takes two parameters, first one is an object `{delay: 1000, immediate: true}` and second one is a callback function.
 
-`delay` --> Milisaniye cinsinden geçikme süresidir.
+`delay` --> The given period of time in milliseconds.
 
-`immediate` --> Eğer immediate true ise fonksiyon hemen tetiklenir.
+`immediate` --> If the value is `true` the function is triggered at the immediately.
 
-`fn` --> Debounce zamanından sonra yürütmek istediğimiz callback fonksiyondur.
+`fn` --> The callback function that is executed after the debounce time.
 
 ## :computer: Example
 

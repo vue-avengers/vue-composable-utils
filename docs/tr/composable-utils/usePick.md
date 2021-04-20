@@ -1,6 +1,6 @@
 # :sparkles: usePick
 
-> `usePick()` fonksiyonu verilen anahtarları kullanarak filtrelenen nesnenin bir kopyasını döndürmek için kullanılır. Bu fonksiyon nesneden hangi özelliklerin seçildiğini belirterek istenilen koşulu sağlar.
+> `usePick()` fonksiyonu verilen `key` değerini kullanarak filtrelenen nesnenin bir kopyasını döndürmek için kullanılır. Bu fonksiyon nesneden hangi özelliklerin seçildiğini belirterek istenilen koşulu sağlar.
 
 ## :sparkles: Kullanım
 
@@ -17,8 +17,8 @@ const pick = usePick({ a: 1, b: 2, c: 3, d: 4 }, ['a', 'd']);
 
 | Parametre | Açıklama                                                                      |
 | :-------- | :---------------------------------------------------------------------------- |
-| `Object`  | Bu parametre bir nesnenin değerini tutar.                                     |
-| `Keys`    | İsteğe bağlı bir parametredir. Değeri seçilmesi gereken anahtar adını içerir. |
+| `Object`  | İşlem yapılmak istenilen nesnedir.                                   |
+| `Keys`    | İsteğe bağlı bir parametredir. Seçilmesi gereken `key` değeridir. |
 
 ## :computer: Uygulama
 

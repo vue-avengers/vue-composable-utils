@@ -38,7 +38,7 @@ const { list, sort, set, reduce, first, deleteFirst, deleteLast, last, filter, p
 | `deleteFirst` | Listenin ilk değerini siler.                       |
 | `deleteLast`  | Listenin son değerini siler.                       |
 | `last`        | Listenin son değerini verir.                       |
-| `filter`      | Listeyi belirtilen koşula göre yeni listeyi verir. |
+| `filter`      | Belirtilen koşula göre yeni listeyi verir. |
 | `push`        | Listenin sonuna verilen değeri ekler.              |
 | `reset`       | Listeyi başlangıç değerine döndürür.               |
 

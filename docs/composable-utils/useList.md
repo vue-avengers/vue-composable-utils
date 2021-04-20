@@ -1,10 +1,10 @@
 # :sparkles: useList
 
-> `useList` is a function that allows you to have state variables in functional components.
+> `useList()` is a function to be used to customized the array.
 
 ## :convenience_store: Usage
 
-The `useList` function is used as the following reactive state:
+The example usage of `useList` function is shown below.
 
 ```js
 import { useList } from 'vue-composable-utils';
@@ -26,21 +26,21 @@ const { list, sort, set, reduce, first, deleteFirst, deleteLast, last, filter, p
 
 ## :rocket: Features
 
-`useList` 1 adet parametre alır. --> `useList([])`
+`useList` has one parameter. --> `useList([])`
 
-| Parametre     | Açıklama                                           |
+| Parameters     | Description                                       |
 | :------------ | :------------------------------------------------- |
-| `list`        | Parametre olarak gönderilen değeri verir.          |
-| `sort`        | Gönderilen listeyi sıralar.                        |
-| `set`         | İşlem yapılmış yeni listeyi verir.                 |
-| `reduce`      | Listede reduce işlemini gerçekleştirir.            |
-| `first`       | Listenin ilk değerini verir.                       |
-| `deleteFirst` | Listenin ilk değerini siler.                       |
-| `deleteLast`  | Listenin son değerini siler.                       |
-| `last`        | Listenin son değerini verir.                       |
-| `filter`      | Listeyi belirtilen koşula göre yeni listeyi verir. |
-| `push`        | Listenin sonuna verilen değeri ekler.              |
-| `reset`       | Listeyi başlangıç değerine döndürür.               |
+| `list`        | Gives the value of the list sent as parameter      |
+| `sort`        | Sorts the list.                                    |
+| `set`         | Gives the new list that is processed               |
+| `reduce`      | Performs the reduce process in the list.           |
+| `first`       | Gives the fist value of the list.                  |
+| `deleteFirst` | Removes the fist value of the list.                |
+| `deleteLast`  | Removes the last value of the list.                |
+| `last`        | Gives the last value of the list.                  |
+| `filter`      | Gives the new list according to the specified condition|
+| `push`        | Inserts the value to the end of the list           |
+| `reset`       | Resets the list.               |
 
 ## :computer: Example
 

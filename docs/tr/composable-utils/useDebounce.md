@@ -1,6 +1,6 @@
 # :sparkles: useDebounce
 
-> `useDebounce` fonksiyonu işlemin tekrar çalıştırılmadan önce belirli bir süre beklemeyi sağlar. Fonksiyonun çağırılma sayısını sınırlamak için oluşturlmuştur.(Örn. Kullanıcının bir butona kaç kez basıldığına bakılmaksızın belirlenen sabit zamandan sonra işlemi gerçekleştirir.)
+> `useDebounce` fonksiyonu işlem tekrar çalıştırılmadan önce belirli bir süre beklemeyi sağlar. Fonksiyonun çağırılma sayısını sınırlamak için oluşturlmuştur.(Örn. Kullanıcının bir butona kaç kez bastığına bakılmaksızın belirlenen sabit zamandan sonra işlemi gerçekleştirir.)
 
 ## :convenience_store: Kullanım
 
@@ -25,7 +25,7 @@ const { debounceVal, value, debounceListener } = useDebounce(1000);
 
 `Parametreler` --> `useDebounce(delay)`
 
-1- `delay` --> Milisaniye cinsinden geçikme süresidir.
+1- `delay` --> Milisaniye cinsinden gecikme süresidir.
 
 ## :computer: Uygulama
 

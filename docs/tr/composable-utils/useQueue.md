@@ -1,6 +1,6 @@
 # :sparkles: useQueue
 
-> `useQueue()` fonksiyonu veri yapısını ve dizi türü yöntemlerini kullanarak verinin kuyruğa nasıl uygulanacağını sağlar. FIFO (first-in, first-out) ve LIFO(last-in, first-out) veri yapıları kullanılır.
+> `useQueue()` fonksiyonu veri yapılarını ve dizi türü yöntemlerini kullanarak verinin kuyruğa nasıl uygulanacağını belirler. FIFO (first-in, first-out) ve LIFO(last-in, first-out) veri yapıları kullanılır.
 
 ## :sparkles: Kullanım
 
@@ -9,7 +9,7 @@
 ```js
 import { useQueue } from 'vue-composable-utils';
 const { set, state, remove, first, last, size } = useQueue([
-  { id: 1, name: 'John', age: 25, occupation: 'gardener' },
+  { id: 1, name: 'Rukiye', age: 25, occupation: 'analyst' },
   { id: 2, name: 'Lenny', age: 51, occupation: 'programmer' },
   { id: 3, name: 'Andrew', age: 43, occupation: 'teacher' },
   { id: 4, name: 'Peter', age: 52, occupation: 'gardener' },

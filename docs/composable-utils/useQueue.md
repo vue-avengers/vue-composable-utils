@@ -1,15 +1,15 @@
 # :sparkles: useQueue
 
-> `useQueue()` fonksiyonu veri yapısını ve dizi türü yöntemlerini kullanarak verinin kuyruğa nasıl uygulanacağını sağlar. FIFO (first-in, first-out) ve LIFO(last-in, first-out) veri yapıları kullanılır.
+> The `useQueue()` function determines how data is applied to the queue using data structures and array type methods. FIFO (first-in, first-out) and LIFO (last-in, first-out) data structures are used. 
 
 ## :sparkles: Usage
 
-`useQueue` fonksiyonunun kullanım şekli aşağıdaki gibidir.
+The example usage of `useQueue` function is shown below.
 
 ```js
 import { useQueue } from 'vue-composable-utils';
 const { set, state, remove, first, last, size } = useQueue([
-  { id: 1, name: 'John', age: 25, occupation: 'gardener' },
+  { id: 1, name: 'Rukiye', age: 25, occupation: 'analyst' },
   { id: 2, name: 'Lenny', age: 51, occupation: 'programmer' },
   { id: 3, name: 'Andrew', age: 43, occupation: 'teacher' },
   { id: 4, name: 'Peter', age: 52, occupation: 'gardener' },
@@ -22,16 +22,16 @@ const { set, state, remove, first, last, size } = useQueue([
 
 ## :rocket: Features
 
-`useQueue` 1 adet parametre alır. --> `useQueue()`
+`useQueue` has one parameters. --> `useQueue()`
 
-| Parametre | Açıklama                                    |
+| Parameters | Description                                |
 | :-------- | :------------------------------------------ |
-| `set`     | Diziye obje öğe ekler.                      |
-| `state`   | Değişebilecek verilerin tutulduğu nesnedir. |
-| `remove`  | İlk değeri silmek için kullanılır.          |
-| `first`   | İlk değeri verir.                           |
-| `last`    | Son değeri verir.                           |
-| `size`    | Dizinin boyutunu verir.                     |
+| `set`     | Inserts object to the array.                |
+| `state`   | It is the object that keeps the value that can be changed |
+| `remove`  | Is used to remove the initial value         |
+| `first`   | Gives the initial value                     |
+| `last`    | Gives the last value                        |
+| `size`    | Gives the size of the array                 |
 
 ## :computer: Example
 

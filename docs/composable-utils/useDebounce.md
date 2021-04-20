@@ -1,10 +1,9 @@
 # :sparkles: useDebounce
 
-> `useDebounce` fonksiyonu işlemin tekrar çalıştırılmadan önce belirli bir süre beklemeyi sağlar. Fonksiyonun çağırılma sayısını sınırlamak için oluşturlmuştur.(Örn. Kullanıcının bir butona kaç kez basıldığına bakılmaksızın belirlenen sabit zamandan sonra işlemi gerçekleştirir.)
-
+> `useDebounce` function is used to wait for the given period of time before the next operation is run again. Limits the number of requests for the next operation.(eg. The operation is run after the given period of time regardless how many times the user clicks the button.)
 ## :convenience_store: Usage
 
-`useDebounce` fonksiyonunun kullanım şekli aşağıdaki gibidir.
+The example usage of `useDebounce` function is shown below.
 
 ```js
 import { useDebounce } from 'vue-composable-utils';
@@ -13,19 +12,19 @@ const { debounceVal, value, debounceListener } = useDebounce(1000);
 
 ## :rocket: Features
 
-`useDebounce` 1 adet parametre alır ve 3 adet özelliğe sahiptir.
+`useDebounce` has one parameter and three properties.
 
-`Özellikler`
+`Properties`
 
-1 - `debounceVal` --> Belirlenen zamandan sonra gelen değer.
+1 - `debounceVal` --> Final value after the given time.
 
-2 - `value` --> Kullanıcı tarafından girilen ilk değer.
+2 - `value` --> The initial value that is inserted by the user.
 
-3 - `debounceListener` --> Verilen zamanın sonunda `debounce` değeri atamak için kullanılır.
+3 - `debounceListener` --> Is used to assign `debounce` value at the end of given time.
 
-`Parametreler` --> `useDebounce(delay)`
+`Parameter` --> `useDebounce(delay)`
 
-1- `delay` --> Verilen zaman değeri.(Milisaniye)
+1- `delay` --> The given period of time in milliseconds.
 
 ## :computer: Example
 
