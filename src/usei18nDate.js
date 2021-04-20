@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import { ref, watch } from '@vue/composition-api';
 
-const useMultiLangDate = language => {
+const usei18nDate = language => {
   const vm = Vue.prototype;
   const lang = ref(language);
 
@@ -46,4 +46,4 @@ const useMultiLangDate = language => {
   };
 };
 
-export default useMultiLangDate;
+export default usei18nDate;

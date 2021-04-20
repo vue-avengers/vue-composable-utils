@@ -1,7 +1,7 @@
 import VueCompositionAPI from '@vue/composition-api';
 import BindInputComponent from './components/BindInputComponent.vue';
 import BindSelectComponent from './components/BindSelectComponent.vue';
-import MultiLangDateComponent from './components/MultiLangDateComponent.vue';
+import I18nDateComponent from './components/I18nDateComponent.vue';
 import DateComponent from './components/DateComponent.vue';
 import DebounceComponent from './components/DebounceComponent.vue';
 import DebouncedFnComponent from './components/DebouncedFnComponent.vue';
@@ -21,7 +21,7 @@ export default ({ Vue }) => {
   Vue.component('BindInputComponent', BindInputComponent);
   Vue.component('BindSelectComponent', BindSelectComponent);
   Vue.component('DateComponent', DateComponent);
-  Vue.component('MultiLangDateComponent', MultiLangDateComponent);
+  Vue.component('I18nDateComponent', I18nDateComponent);
   Vue.component('DebouncedFnComponent', DebouncedFnComponent);
   Vue.component('DebounceComponent', DebounceComponent);
   Vue.component('LocalStorageComponent', LocalStorageComponent);

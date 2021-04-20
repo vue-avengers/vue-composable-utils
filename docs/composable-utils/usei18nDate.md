@@ -1,30 +1,29 @@
-# :sparkles: useMultiLangDate
+# :sparkles: usei18nDate
 
-> `useMultiLangDate` fonksiyonu bileşenlerde tarih işlemlerini kolayca yaptığımız bir fonksiyondur.
+> `usei18nDate` It is a function that we have completed date operations in functions.
 
-## :convenience_store: Kullanım
+## :convenience_store: Usage
 
-`useMultiLangDate` fonksiyonunun import edilmesi.
+`usei18nDate` function import.
 
 ```js
-import { useMultiLangDate } from 'vue-composable-utils';
-const { format, timeAgo, getDate, utc, timezone, difference } = useMultiLangDate('Type a here....');
+import { usei18nDate } from 'vue-composable-utils';
+const { format, timeAgo, getDate, utc, timezone, difference } = usei18nDate('Type a here....');
 ```
 
-## :hammer_and_wrench: Kurulum
+## :hammer_and_wrench: Setup
 
-### :key: 1. Adım
+### :key: Step 1
 
 src/dayjs.js
 
-`src` klasörünün içine `dayjs.js` adında bir dosya açılır aşağıdaki kodları eklenir. Dayjs.js dosyasını src'ye eklememizin nedeni dayjs kütüphanesinin özelleştirilebilir olmasıdır.
+Open a file named as `dayjs.js` inside the folder of `src` and add the codes below. The reason adding `dayjs.js` file is customizability of `dayjs` library.
 
 #### dayjs.js
 
 ```js
 import Vue from 'vue';
 import dayjs from 'dayjs';
-// Farklı dil seçeneklerinin eklenmesi için "dayjs/locale/{dil kodu}" şeklinde kullanılır.
 // For the other language options, add "dayjs/locale/{langCode}"
 import 'dayjs/locale/tr';
 import 'dayjs/locale/ar';
@@ -47,9 +46,9 @@ Object.defineProperties(Vue.prototype, {
 });
 ```
 
-### :key: 2. Adım
+### :key: Step 2
 
-`main.js` dosyasının içerisine `dayjs.js` dosyasını import edilir.
+Import `dayjs.js` file inside `main.js`
 
 #### main.js
 
@@ -57,7 +56,7 @@ Object.defineProperties(Vue.prototype, {
 import Vue from 'vue';
 import App from './App.vue';
 import VueCompositionApi from '@vue/composition-api';
-// "dayjs.js" import edilir
+// "dayjs.js" imported
 import './dayjs.js';
 
 Vue.use(VueCompositionApi);
@@ -68,9 +67,9 @@ new Vue({
 }).$mount('#app');
 ```
 
-## :rocket: Example.vue
+## :rocket: Example
 
-<MultiLangDateComponent />
+<I18nDateComponent />
 
 Example.vue
 
@@ -88,25 +87,24 @@ Example.vue
 
 <script>
 import {ref, computed} from '@vue/composition-api'
-import { useMultiLangDate } from "vue-composable-utils";
+import { usei18nDate } from "vue-composable-utils";
 
 export default {
-  name: "Example",
-  setup() {
+  name: "Examples",
+  setup(props) {
     const date = new Date();
-    const langUnit = ref('tr')
+    const langUnit = ref('en')
 
-    // useMultiLangDate fonksiyonu eklenir ve istenilen özellikleri kullanılır.
-		// useMultiLangDate gönderilen parametre dil seçeneğini temsil eder.
-    const { format, timeAgo, getDate, utc, timezone, difference } = useMultiLangDate(langUnit);
+    // The usei18nDate function is added and the desired properties are used.
+		// The parameter sent from usei18nDate represents the language option.
+    const { format, timeAgo, getDate, utc, timezone, difference } = usei18nDate(langUnit);
 
-    const dateFormat = computed(() => format(date, 'LLLL'));
-    const timeAgoFormat = computed(() => timeAgo(date, '2021-04-07:23:00'))
-    const getDateFormat = computed(() => getDate('date'));
-    const differenceFormat = computed(() => difference(date, '2018-06-05', 'day'));
+    const dateFormat = computed(() => format(date, 'LLLL')); // Friday, April 9, 2021 11:47 PM
+    const timeAgoFormat = computed(() => timeAgo(date, '2021-04-07:23:00'))  // 2 days ago
+    const getDateFormat = computed(() => getDate('date')); // 10
+    const differenceFormat = computed(() => difference(date, '2018-06-05', 'day'));  // 1400
     const utcFormat = computed(() => utc(date, 'LLLL'));
     const timezoneFormat = computed(() => timezone('2014-06-01 12:00', 'America/New_York', 'L LT'));
-
 
     return {
       dateFormat,
@@ -114,23 +112,21 @@ export default {
       getDateFormat,
       differenceFormat,
       utcFormat,
-      timezoneFormat,
-      langUnit,
+      timezoneFormat
     };
-  };
+  }
 };
 </script>
-
 ```
 
-## :star2: Özellikler
+## :star2: Features
 
-### format() Fonksiyonu
+### format() Func
 
-Gönderilen tarihi formatlamak için kullanılır. 2 tane parametre alır. Birinci parametre olarak formatlanmak istenilen tarih. İkinci parametre ise format biçimi verilir.
+is used to format sent date. Gets two parameters. First one is the date that is going to be formatted, second one is format style.
 
 ```js
-const dateFormat = format(date, 'dddd'); // Cuma, 9 Nisan 2021 21:14
+const dateFormat = format(date, 'dddd'); //  Friday, April 9, 2021 11:47 PM
 const dateFormat = format(date, 'YYYY'); // 2021
 const dateFormat = format(date, 'MMM'); // Jan-Dec
 ```
@@ -164,7 +160,7 @@ const dateFormat = format(date, 'MMM'); // Jan-Dec
 | `a`    |      am pm       |                                       |
 
 Yerelleştirilmiş formatların listesi
-| Format | İngilizce Yerel Ayarları | Örnek Çıktı|
+| Format | English Locale | Sample Output|
 | :--- | :----: | ---: |
 | `LT` | h:mm A | 8:02 PM |
 | `LTS` | h:mm:ss A | 8:02:18 PM |
@@ -177,7 +173,7 @@ Yerelleştirilmiş formatların listesi
 | `lll` | MMM D, YYYY h:mm A | Aug 16, 2018 8:02 PM |
 | `llll` | ddd, MMM D, YYYY h:mm A | Thu, Aug 16, 2018 8:02 PM |
 
-Örnek
+Sample
 
 ```js
 const dateFormat = format(date, 'LLLL'); // Friday, April 9, 2021 9:23 PM
@@ -185,60 +181,60 @@ const dateFormat = format(date, 'llll'); // Fri, Apr 9, 2021 9:23 PM
 const dateFormat = format(date, 'll'); // Apr 9, 2021
 ```
 
-### getDate() Fonksiyonu
+### getDate() Func
 
 ```js
 const getDateFormat = getDate('date'); // date => Ayın Tarihi
 ```
 
-| Birim        | Kısa gösterim |                             Açıklama |
-| :----------- | :-----------: | -----------------------------------: |
-| `date`       |       D       |                          Ayın Tarihi |
-| `day`        |       d       | Haftanın Günü (Pazar 0, Cumartesi 6) |
-| `month`      |       M       |               Ay (Ocak 0, Aralık 11) |
-| `year`       |       y       |                                  Yıl |
-| `hour`       |       h       |                                 Saat |
-| `minute`     |       m       |                               Dakika |
-| `second`     |       s       |                               Saniye |
-| `milisecond` |      ms       |                           Milisaniye |
+| Uni          | Shorted |                              Description |
+| :----------- | :-----: | ---------------------------------------: |
+| `date`       |    D    |                            Date of Month |
+| `day`        |    d    | Day of Week (Sunday as 0, Saturday as 6) |
+| `month`      |    M    |     Month (January as 0, December as 11) |
+| `year`       |    y    |                                     Year |
+| `hour`       |    h    |                                     Hour |
+| `minute`     |    m    |                                   Minute |
+| `second`     |    s    |                                   Second |
+| `milisecond` |   ms    |                              Millisecond |
 
-### difference() Fonksiyonu
+### difference() Func
 
-Belirlenen zaman birimine göre iki tarih arasındaki farkı verir.
+Gives the difference of two dates according to the determined time unit.
 
-3 parametre alır.
+Gets three parameters
 
-1- Birinci Tarih
+1- First Date
 
-2- İkinci Tarih
+2- Second Date
 
-3- İki tarih arasındaki zaman birimi
+3- Time Unit
 
 ```js
-// İki tarih arasında kaç gün olduğunu bildirir.
+// It tells you how many days are between two dates.
 const differenceFormat = difference(date1, date2, 'day');
 
-// İki tarih arasında kaç ay olduğunu bildirir.
+// Reports how many months are between two dates.
 const differenceFormat = difference(date1, date2, 'mount');
 ```
 
-### utc() Fonksiyonu
+### utc() Func
 
-2 parametre alır. Birinci parametre gönderilen tarih. İkinci parametre tarih birimi.
+Gets two parameters. First one is the sent date, second one is date format unit.
 
 ```js
 const utcFormat = utc(date, 'llll');
 ```
 
-### timezone() Fonksiyonu
+### timezone() Func
 
-3 tane parametre alır.
+It takes 3 parameters.
 
-1- Tarih
+1- Date
 
-2- Lokasyon Location
+2- Location
 
-3- Biçimlendirilmek istenilen birim Format Unit
+3- Format Unit
 
 ```js
 const timezoneFormat = timezone('2014-06-01 12:00', 'Europe/Istanbul', 'LLLL');

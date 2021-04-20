@@ -36,10 +36,10 @@
 </template>
 
 <script>
-import { useMultiLangDate } from '../../../src';
+import { usei18nDate } from '../../../src';
 import { ref, computed, watch } from '@vue/composition-api';
 export default {
-  name: 'MultiLangDateComponent',
+  name: 'I18nDateComponent',
   setup() {
     const date = new Date();
     const selectedLang = ref('tr');
@@ -59,7 +59,7 @@ export default {
       },
     ]);
 
-    const { format, timeAgo, getDate, utc, timezone, difference } = useMultiLangDate(langUnit);
+    const { format, timeAgo, getDate, utc, timezone, difference } = usei18nDate(langUnit);
 
     watch(selectedLang, currentValue => {
       langUnit.value = currentValue;

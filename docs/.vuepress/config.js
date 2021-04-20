@@ -152,8 +152,8 @@ function getSidebar() {
           path: '/composable-utils/useDate',
         },
         {
-          title: 'useMultiLangDate',
-          path: '/composable-utils/useMultiLangDate',
+          title: 'usei18nDate',
+          path: '/composable-utils/usei18nDate',
         },
       ],
     },
@@ -207,8 +207,8 @@ function getSidebarTR() {
           path: '/tr/composable-utils/useDate',
         },
         {
-          title: 'useMultiLangDate',
-          path: '/tr/composable-utils/useMultiLangDate',
+          title: 'usei18nDate',
+          path: '/tr/composable-utils/usei18nDate',
         },
       ],
     },
