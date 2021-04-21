@@ -1,6 +1,7 @@
 # :sparkles: useDebounce
 
 > `useDebounce` function is used to wait for the given period of time before the next operation is run again. Limits the number of requests for the next operation.(eg. The operation is run after the given period of time regardless how many times the user clicks the button.)
+
 ## :convenience_store: Usage
 
 The example usage of `useDebounce` function is shown below.

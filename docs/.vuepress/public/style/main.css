@@ -1,61 +1,61 @@
-body.dark-mode {
+body.theme-dark {
   background: #0c1117;
 }
-body.dark-mode header,
-body.dark-mode aside,
-body.dark-mode ul li,
-body.dark-mode a,
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode p {
+body.theme-dark header,
+body.theme-dark aside,
+body.theme-dark ul li,
+body.theme-dark a,
+body.theme-dark h1,
+body.theme-dark h2,
+body.theme-dark h3,
+body.theme-dark p {
   color: #f0f6fc !important;
   background-color: #0c1117 !important;
 }
 
-body.dark-mode header.navbar > a > span {
+body.theme-dark header.navbar > a > span {
   color: #f0f6fc !important;
 }
 
-body.dark-mode header.navbar > div.links {
+body.theme-dark header.navbar > div.links {
   color: #f0f6fc !important;
   background-color: #0c1117 !important;
 }
 
-body.dark-mode .dropdown-wrapper > button {
+body.theme-dark .dropdown-wrapper > button {
   color: #f0f6fc !important;
   background-color: #0c1117 !important;
   border: none !important;
 }
 
-body.dark-mode header.navbar body.dark-mode aside {
+body.theme-dark header.navbar body.theme-dark aside {
   background-color: #161b22 !important;
   color: #f0f6fc !important;
 }
 
-body.dark-mode header.navbar body.dark-mode aside {
+body.theme-dark header.navbar body.theme-dark aside {
   background-color: #161b22 !important;
   color: #f0f6fc !important;
 }
 
-body.dark-mode h2 code {
+body.theme-dark h2 code {
   background-color: #0c1117 !important;
 }
 
-body.dark-mode pre code {
+body.theme-dark pre code {
   background-color: transparent !important;
 }
 
-body.dark-mode .highlight-lines .highlighted {
+body.theme-dark .highlight-lines .highlighted {
   background-color: rgba(240, 246, 252, 0.15) !important;
 }
 
-/* body.dark-mode input {
+/* body.theme-dark input {
   color: #f0f6fc !important;
   box-shadow: none !important;
 } */
 
-body.dark-mode button {
+body.theme-dark button {
   color: #f0f6fc !important;
   background-color: rgba(240, 246, 252, 0.15) !important;
   border: 1px solid #6e7681 !important;

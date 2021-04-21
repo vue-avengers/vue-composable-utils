@@ -34,7 +34,7 @@ npm install @vue/composition-api vue-composable-utils
 - [useState](./useState.md).
 - [useList](./useList.md).
 - [useDate](./useDate.md).
-- [useDate](./usei18nDate.md).
+- [usei18nDate](./usei18nDate.md).
 - [useDebounceFn](./useDebounceFn.md).
 - [useLocalStorage](./useLocalStorage.md).
 

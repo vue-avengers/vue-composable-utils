@@ -148,6 +148,10 @@ function getSidebar() {
           path: '/composable-utils/useQueue',
         },
         {
+          title: 'useDarkMode',
+          path: '/composable-utils/useDarkMode',
+        },
+        {
           title: 'useDate',
           path: '/composable-utils/useDate',
         },
@@ -201,6 +205,10 @@ function getSidebarTR() {
         {
           title: 'useQueue',
           path: '/tr/composable-utils/useQueue',
+        },
+        {
+          title: 'useDarkMode',
+          path: '/tr/composable-utils/useDarkMode',
         },
         {
           title: 'useDate',

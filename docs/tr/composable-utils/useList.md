@@ -28,19 +28,19 @@ const { list, sort, set, reduce, first, deleteFirst, deleteLast, last, filter, p
 
 `useList` 1 adet parametre alır. --> `useList([])`
 
-| Parametre     | Açıklama                                           |
-| :------------ | :------------------------------------------------- |
-| `list`        | Parametre olarak gönderilen değeri verir.          |
-| `sort`        | Gönderilen listeyi sıralar.                        |
-| `set`         | İşlem yapılmış yeni listeyi verir.                 |
-| `reduce`      | Listede reduce işlemini gerçekleştirir.            |
-| `first`       | Listenin ilk değerini verir.                       |
-| `deleteFirst` | Listenin ilk değerini siler.                       |
-| `deleteLast`  | Listenin son değerini siler.                       |
-| `last`        | Listenin son değerini verir.                       |
+| Parametre     | Açıklama                                   |
+| :------------ | :----------------------------------------- |
+| `list`        | Parametre olarak gönderilen değeri verir.  |
+| `sort`        | Gönderilen listeyi sıralar.                |
+| `set`         | İşlem yapılmış yeni listeyi verir.         |
+| `reduce`      | Listede reduce işlemini gerçekleştirir.    |
+| `first`       | Listenin ilk değerini verir.               |
+| `deleteFirst` | Listenin ilk değerini siler.               |
+| `deleteLast`  | Listenin son değerini siler.               |
+| `last`        | Listenin son değerini verir.               |
 | `filter`      | Belirtilen koşula göre yeni listeyi verir. |
-| `push`        | Listenin sonuna verilen değeri ekler.              |
-| `reset`       | Listeyi başlangıç değerine döndürür.               |
+| `push`        | Listenin sonuna verilen değeri ekler.      |
+| `reset`       | Listeyi başlangıç değerine döndürür.       |
 
 ## Uygulama
 

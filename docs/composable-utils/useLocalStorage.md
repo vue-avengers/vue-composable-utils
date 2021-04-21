@@ -13,7 +13,7 @@ const { value } = useLocalStorage('test', 1);
 
 ## :rocket: Features
 
-`useLocalStorage` has two parameters and one property 
+`useLocalStorage` has two parameters and one property
 
 Property
 

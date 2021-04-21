@@ -28,19 +28,19 @@ const { list, sort, set, reduce, first, deleteFirst, deleteLast, last, filter, p
 
 `useList` has one parameter. --> `useList([])`
 
-| Parameters     | Description                                       |
-| :------------ | :------------------------------------------------- |
-| `list`        | Gives the value of the list sent as parameter      |
-| `sort`        | Sorts the list.                                    |
-| `set`         | Gives the new list that is processed               |
-| `reduce`      | Performs the reduce process in the list.           |
-| `first`       | Gives the fist value of the list.                  |
-| `deleteFirst` | Removes the fist value of the list.                |
-| `deleteLast`  | Removes the last value of the list.                |
-| `last`        | Gives the last value of the list.                  |
-| `filter`      | Gives the new list according to the specified condition|
-| `push`        | Inserts the value to the end of the list           |
-| `reset`       | Resets the list.               |
+| Parameters    | Description                                             |
+| :------------ | :------------------------------------------------------ |
+| `list`        | Gives the value of the list sent as parameter           |
+| `sort`        | Sorts the list.                                         |
+| `set`         | Gives the new list that is processed                    |
+| `reduce`      | Performs the reduce process in the list.                |
+| `first`       | Gives the fist value of the list.                       |
+| `deleteFirst` | Removes the fist value of the list.                     |
+| `deleteLast`  | Removes the last value of the list.                     |
+| `last`        | Gives the last value of the list.                       |
+| `filter`      | Gives the new list according to the specified condition |
+| `push`        | Inserts the value to the end of the list                |
+| `reset`       | Resets the list.                                        |
 
 ## :computer: Example
 

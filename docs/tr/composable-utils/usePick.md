@@ -15,9 +15,9 @@ const pick = usePick({ a: 1, b: 2, c: 3, d: 4 }, ['a', 'd']);
 
 `usePick` 2 adet parametre alır.
 
-| Parametre | Açıklama                                                                      |
-| :-------- | :---------------------------------------------------------------------------- |
-| `Object`  | İşlem yapılmak istenilen nesnedir.                                   |
+| Parametre | Açıklama                                                          |
+| :-------- | :---------------------------------------------------------------- |
+| `Object`  | İşlem yapılmak istenilen nesnedir.                                |
 | `Keys`    | İsteğe bağlı bir parametredir. Seçilmesi gereken `key` değeridir. |
 
 ## :computer: Uygulama

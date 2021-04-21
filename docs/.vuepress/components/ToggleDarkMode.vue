@@ -21,11 +21,11 @@ export default {
   methods: {
     toggleDarkTheme() {
       const body = document.body;
-      body.classList.toggle('dark-mode');
-      if (body.classList.contains('dark-mode')) {
+      body.classList.toggle('theme-dark');
+      if (body.classList.contains('theme-dark')) {
         localStorage.setItem('dark-theme', 'true');
       } else {
-        body.classList.remove('dark-mode');
+        body.classList.remove('theme-dark');
         setTimeout(function () {
           localStorage.removeItem('dark-theme');
         }, 100);
@@ -33,7 +33,7 @@ export default {
     },
     checkUserPreference() {
       if (localStorage.getItem('dark-theme')) {
-        document.body.classList.add('dark-mode');
+        document.body.classList.add('theme-dark');
         document.getElementById('theme-toggle').checked = true;
       }
     },

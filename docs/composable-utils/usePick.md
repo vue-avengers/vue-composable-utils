@@ -15,10 +15,10 @@ const pick = usePick({ a: 1, b: 2, c: 3, d: 4 }, ['a', 'd']);
 
 `usePick` takes two parameters.
 
-| Parameter | Description                                                     |
-| :-------- | :---------------------------------------------------------------|
-| `Object`  | The object to be processed.                                     |
-| `Keys`    | Optional. The `key` value that should be selected.              |
+| Parameter | Description                                        |
+| :-------- | :------------------------------------------------- |
+| `Object`  | The object to be processed.                        |
+| `Keys`    | Optional. The `key` value that should be selected. |
 
 ## :computer: Example
 

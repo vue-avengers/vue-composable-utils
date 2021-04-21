@@ -1,6 +1,6 @@
 # :sparkles: useQueue
 
-> The `useQueue()` function determines how data is applied to the queue using data structures and array type methods. FIFO (first-in, first-out) and LIFO (last-in, first-out) data structures are used. 
+> The `useQueue()` function determines how data is applied to the queue using data structures and array type methods. FIFO (first-in, first-out) and LIFO (last-in, first-out) data structures are used.
 
 ## :sparkles: Usage
 
@@ -24,14 +24,14 @@ const { set, state, remove, first, last, size } = useQueue([
 
 `useQueue` has one parameters. --> `useQueue()`
 
-| Parameters | Description                                |
-| :-------- | :------------------------------------------ |
-| `set`     | Inserts object to the array.                |
-| `state`   | It is the object that keeps the value that can be changed |
-| `remove`  | Is used to remove the initial value         |
-| `first`   | Gives the initial value                     |
-| `last`    | Gives the last value                        |
-| `size`    | Gives the size of the array                 |
+| Parameters | Description                                               |
+| :--------- | :-------------------------------------------------------- |
+| `set`      | Inserts object to the array.                              |
+| `state`    | It is the object that keeps the value that can be changed |
+| `remove`   | Is used to remove the initial value                       |
+| `first`    | Gives the initial value                                   |
+| `last`     | Gives the last value                                      |
+| `size`     | Gives the size of the array                               |
 
 ## :computer: Example
 
