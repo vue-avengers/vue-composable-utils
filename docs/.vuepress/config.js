@@ -218,6 +218,10 @@ function getSidebarTR() {
           title: 'usei18nDate',
           path: '/tr/composable-utils/usei18nDate',
         },
+        {
+          title: 'useStringCase',
+          path: '/tr/composable-utils/useStringCase',
+        },
       ],
     },
   ];

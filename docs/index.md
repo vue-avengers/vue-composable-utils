@@ -50,6 +50,7 @@ npm install @vue/composition-api vue-composable-utils
 - [usei18nDate](./composable-utils/usei18nDate.md).
 - [useDebounceFn](./composable-utils/useDebounceFn.md).
 - [useLocalStorage](./composable-utils/useLocalStorage.md).
+- [useStringCase](./composable-utils/useStringCase.md).
 
 ## :computer: Usage
 
