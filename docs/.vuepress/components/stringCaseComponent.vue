@@ -8,23 +8,19 @@
 </template>
 
 <script>
-import { useStringCase } from "../../../src"
+import { useStringCase } from '../../../src';
 export default {
-  name: "StringCaseComponent",
+  name: 'StringCaseComponent',
   setup() {
-    const { string, setString, camelCase, kebabCase, pascalCase} = useStringCase("Hello World")
+    const { string, setString, camelCase, kebabCase, pascalCase } = useStringCase('Hello World');
 
     return {
       string,
       setString,
       camelCase,
       kebabCase,
-      pascalCase
-    }
-  }
-}
+      pascalCase,
+    };
+  },
+};
 </script>
-
-<style>
-
-</style>

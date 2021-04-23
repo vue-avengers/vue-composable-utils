@@ -39,11 +39,7 @@ You can see how it changes reactively using the example below.
     <div class="modal" v-if="visible">
       <div class="modal-header">Modal Header</div>
       <button class="close" @click="closeModal">x</button>
-      <div
-        class="modal-content"
-        v-for="curr in current"
-        :key="curr.id"
-      >
+      <div class="modal-content" v-for="curr in current" :key="curr.id">
         <ul>
           <li>
             <p>{{ curr.emoji }}</p>
@@ -58,28 +54,28 @@ You can see how it changes reactively using the example below.
 </template>
 
 <script>
-import { useModal } from "vue-composable-utils";
+import { useModal } from 'vue-composable-utils';
 
 export default {
   setup() {
     const contrubitors = [
       {
         id: 1,
-        emoji: "👨",
-        fullname: "Abdulnasır Olcan",
-        job: "Frontend Developer",
+        emoji: '👨',
+        fullname: 'Abdulnasır Olcan',
+        job: 'Frontend Developer',
       },
       {
         id: 2,
-        emoji: "👩",
-        fullname: "Büşra Şanlıbayrak",
-        job: "Frontend Developer",
+        emoji: '👩',
+        fullname: 'Büşra Şanlıbayrak',
+        job: 'Frontend Developer',
       },
       {
         id: 3,
-        emoji: "🧑‍",
-        fullname: "Mehmet Varol",
-        job: "Frontend Developer",
+        emoji: '🧑‍',
+        fullname: 'Mehmet Varol',
+        job: 'Frontend Developer',
       },
     ];
     const { visible, setVisible, current, openModal, closeModal } = useModal();
@@ -134,7 +130,7 @@ export default {
   &:hover {
     color: #fff;
     background-position: 0;
-  
+
 .modal-vue .overlay {
   position: fixed;
   z-index: 9998;
@@ -232,9 +228,7 @@ export default {
 .modal-vue ul li span {
     margin: 0px 50px;
 }
-
 </style>
-
 ```
 
 <ToggleDarkMode/>
