@@ -148,8 +148,16 @@ function getSidebar() {
           path: '/composable-utils/useQueue',
         },
         {
+          title: 'useModal',
+          path: '/composable-utils/useModal',
+        },
+        {
           title: 'useDarkMode',
           path: '/composable-utils/useDarkMode',
+        },
+        {
+          title: 'useStringCase',
+          path: '/composable-utils/useStringCase',
         },
         {
           title: 'useDate',
@@ -207,8 +215,16 @@ function getSidebarTR() {
           path: '/tr/composable-utils/useQueue',
         },
         {
+          title: 'useModal',
+          path: '/tr/composable-utils/useModal',
+        },
+        {
           title: 'useDarkMode',
           path: '/tr/composable-utils/useDarkMode',
+        },
+        {
+          title: 'useStringCase',
+          path: '/tr/composable-utils/useStringCase',
         },
         {
           title: 'useDate',
@@ -217,10 +233,6 @@ function getSidebarTR() {
         {
           title: 'usei18nDate',
           path: '/tr/composable-utils/usei18nDate',
-        },
-        {
-          title: 'useStringCase',
-          path: '/tr/composable-utils/useStringCase',
         },
       ],
     },

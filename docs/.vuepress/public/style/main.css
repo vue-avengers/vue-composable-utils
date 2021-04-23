@@ -69,3 +69,8 @@ img.logo {
   vertical-align: top !important;
   margin-top: -2px;
 }
+
+.theme-dark .modal {
+  background-color: #000;
+
+}
