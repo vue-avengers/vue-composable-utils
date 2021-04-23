@@ -29,7 +29,6 @@ The initial value is sent to the function `useStringCase()`.
 
 You can see how it changes reactively using the example below.
 
-<StringCaseComponent />
 
 ```vue
 <template>

@@ -12,7 +12,7 @@ import EmbedComponent from './components/EmbedComponent.vue';
 import PickComponent from './components/PickComponent.vue';
 import QueueComponent from './components/QueueComponent.vue';
 import ModalComponent from './components/ModalComponent.vue';
-import StringCaseComponent from './components/StringCaseComponent.vue';
+// import StringCaseComponent from './components/StringCaseComponent.vue';
 import QueueComponentTwo from './components/QueueComponentTwo.vue';
 import DarkModeComponent from './components/DarkModeComponent.vue';
 import ToggleDarkMode from './components/ToggleDarkMode.vue';
@@ -33,7 +33,7 @@ export default ({ Vue }) => {
   Vue.component('EmbedComponent', EmbedComponent);
   Vue.component('PickComponent', PickComponent);
   Vue.component('QueueComponent', QueueComponent);
-  Vue.component('StringCaseComponent', StringCaseComponent);
+  // Vue.component('StringCaseComponent', StringCaseComponent);
   Vue.component('QueueComponentTwo', QueueComponentTwo);
   Vue.component('DarkModeComponent', DarkModeComponent);
   Vue.component('ModalComponent', ModalComponent);
