@@ -14,6 +14,7 @@ import QueueComponent from './components/QueueComponent.vue';
 import ModalComponent from './components/ModalComponent.vue';
 // import StringCaseComponent from './components/StringCaseComponent.vue';
 import QueueComponentTwo from './components/QueueComponentTwo.vue';
+import ClipboardComponent from './components/ClipboardComponent.vue';
 import DarkModeComponent from './components/DarkModeComponent.vue';
 import ToggleDarkMode from './components/ToggleDarkMode.vue';
 import './public/style/main.css';
@@ -35,6 +36,7 @@ export default ({ Vue }) => {
   Vue.component('QueueComponent', QueueComponent);
   // Vue.component('StringCaseComponent', StringCaseComponent);
   Vue.component('QueueComponentTwo', QueueComponentTwo);
+  Vue.component('ClipboardComponent', ClipboardComponent);
   Vue.component('DarkModeComponent', DarkModeComponent);
   Vue.component('ModalComponent', ModalComponent);
   Vue.component('ToggleDarkMode', ToggleDarkMode);

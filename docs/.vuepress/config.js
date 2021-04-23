@@ -167,6 +167,10 @@ function getSidebar() {
           title: 'usei18nDate',
           path: '/composable-utils/usei18nDate',
         },
+        {
+          title: 'useClipboard',
+          path: '/composable-utils/useClipboard',
+        },
       ],
     },
   ];
@@ -233,6 +237,10 @@ function getSidebarTR() {
         {
           title: 'usei18nDate',
           path: '/tr/composable-utils/usei18nDate',
+        },
+        {
+          title: 'useClipboard',
+          path: '/tr/composable-utils/useClipboard',
         },
       ],
     },
