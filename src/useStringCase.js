@@ -1,35 +1,43 @@
-import { useState } from './useState';
+import { ref } from '@vue/composition-api';
 
-const useStringCase = initialState => {
-  const [string, setString] = useState(initialState);
+const useStringCase = (lang = 'en') => {
+  const locale = ref(lang);
 
-  const camelCase = () => {
-    setString(initialState);
-    const camelCaseType = string.value
+  const camelCase = str =>
+    str
       .replace(/(?:^\w|[A-Z]|\b\w)/g, function (word, index) {
-        return index === 0 ? word.toLowerCase() : word.toUpperCase();
+        return index === 0 ? word.toLocaleLowerCase(locale) : word.toLocaleUpperCase(locale);
       })
       .replace(/\s+/g, '');
-    console.log(camelCaseType);
-    setString(camelCaseType);
+
+  const kebabCase = str =>
+    str
+      .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
+      .map(item => item.toLocaleLowerCase(locale))
+      .join('-');
+
+  const pascalCase = str =>
+    str.replace(/\w\S*/g, word => word.charAt(0).toLocaleUpperCase(locale) + word.substr(1).toLocaleLowerCase(locale));
+
+  const capitalizeCase = str => {
+    const camelized = str.replace(/[-_](\w)/g, (_, c) => c.toLocaleUpperCase(locale));
+    return camelized[0].toLocaleUpperCase(locale) + camelized.slice(1);
   };
-  const kebabCase = () => {
-    setString(
-      string.value
-        .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
-        .map(item => item.toLowerCase())
-        .join('-'),
-    );
-  };
-  const pascalCase = () => {
-    setString(string.value.replace(/\w\S*/g, word => word.charAt(0).toUpperCase() + word.substr(1).toLowerCase()));
-  };
+
+  const lowerCase = str => str.toLocaleLowerCase(locale);
+
+  const upperCase = str => str.toLocaleUpperCase(locale);
+
+  const sentenceCase = str => str.toLocaleLowerCase(locale).replace(/(^\s*\w|[.!?]\s*\w)/g, s => s.toLocaleUpperCase(locale));
+
   return {
-    string,
-    setString,
     camelCase,
     kebabCase,
     pascalCase,
+    upperCase,
+    lowerCase,
+    sentenceCase,
+    capitalizeCase,
   };
 };
 
