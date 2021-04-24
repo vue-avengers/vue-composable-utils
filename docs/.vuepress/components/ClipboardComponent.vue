@@ -1,22 +1,45 @@
 <template>
-  <div>
-    <p><b>Count: </b> {{ count }}</p>
-    <button class="fourth" @click="setCount(count - 1)">Decrement</button>
-    <button class="fourth" @click="setCount(count + 1)">Increment</button>
+  <div class="clipboard" ref="clipboardRef">
+    <div class="text">
+      <p>{{ copyText }}</p>
+      <button class="fourth" @click="onCopy">Copy</button>
+    </div>
+    <div>
+      <input type="text" v-model="clipboardModel" />
+      <button class="fourth" @click="onCopyInput">Copy</button>
+      <p v-if="clipboardModel">{{ clipboardModel }}</p>
+    </div>
   </div>
 </template>
 
 <script>
-import { useState } from '../../../src';
+import { ref } from '@vue/composition-api';
+import { useClipboard } from '../../../src';
 
 export default {
-  name: 'StateComponent',
+  name: 'ClipboardComponent',
   setup() {
-    const [count, setCount] = useState(0);
+    const clipboardRef = ref(null);
+    const clipboardModel = ref(null);
+    const copyText = ref('Kopyalanmak istenilen veri...');
+
+    const { copy } = useClipboard();
+
+    const onCopy = () => {
+      copy(copyText.value, clipboardRef.value);
+    };
+
+    const onCopyInput = () => {
+      copy(clipboardModel.value, clipboardRef.value);
+    };
 
     return {
-      count,
-      setCount,
+      copy,
+      onCopy,
+      copyText,
+      onCopyInput,
+      clipboardRef,
+      clipboardModel,
     };
   },
 };
@@ -26,6 +49,12 @@ export default {
 $red: #e74c3c;
 $yellow: #f1c40f;
 
+.clipboard {
+  .text {
+    display: flex;
+  }
+}
+
 p {
   background-color: #f4f4f4;
   border: 1px solid #ddd;
@@ -34,6 +63,14 @@ p {
   font-family: monospace;
   padding: 1em 1.5em;
   display: block;
+}
+
+input {
+  border: 2px solid #8e44ad;
+  padding: 0.8em 0.8em;
+  text-decoration: none;
+  font-weight: 700;
+  color: #8e44ad;
 }
 
 button {

@@ -1,8 +1,8 @@
 <template>
   <div>
-    <p>First: {{ first }}</p>
-    <p>Last: {{ last }}</p>
-    <p>Size: {{ size }}</p>
+    <p><b>First: </b> {{ first }}</p>
+    <p><b>Last: </b> {{ last }}</p>
+    <p><b>Size: </b> {{ size }}</p>
     <button class="fourth" @click="set([...state, ...data])">Add</button>
     <button class="first" @click="remove()">Remove</button>
   </div>
@@ -39,10 +39,13 @@ $red: #e74c3c;
 $yellow: #f1c40f;
 
 p {
-  text-decoration: none;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-left: 4px solid #c9c9c9;
+  color: #666;
+  font-family: monospace;
+  padding: 1em 1.5em;
+  display: block;
 }
 
 button {

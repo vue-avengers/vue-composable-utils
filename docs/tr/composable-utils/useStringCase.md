@@ -29,29 +29,48 @@ The initial value is sent to the function `useStringCase()`.
 
 You can see how it changes reactively using the example below.
 
+<CaseComponent />
 
 ```vue
 <template>
   <div>
-    <p>String: {{ string }}</p>
-    <button class="btn" @click="camelCase">camelCase</button>
-    <button class="btn" @click="kebabCase">kebab-case</button>
-    <button class="btn" @click="pascalCase">Pascal case</button>
+    <p><b>CamelCase: </b>{{ camelCase(state.about) }}</p>
+    <p><b>CapitalizeCase: </b>{{ capitalizeCase(state.name) }}</p>
+    <p><b>SentenceCase: </b>{{ sentenceCase(state.company) }}</p>
+    <p><b>KebabCase: </b>{{ kebabCase(state.balance) }}</p>
+    <p><b>PascalCase: </b>{{ pascalCase(state.address) }}</p>
+    <p><b>LowerCase: </b>{{ lowerCase(state.email) }}</p>
+    <p><b>UpperCase: </b>{{ upperCase(state.gender) }}</p>
   </div>
 </template>
 
 <script>
+import { reactive } from '@vue/composition-api';
 import { useStringCase } from 'vue-composable-utils';
+
 export default {
   setup() {
-    const { string, setString, camelCase, kebabCase, pascalCase } = useStringCase('Hello World');
+    const state = reactive({
+    name: "imelda white",
+    gender: "female",
+    company: "NEUROCELL",
+    email: "Imeldawhite@nr.com",
+    balance: "3,814.49",
+    about: "Veniam fugiat pariatur adipisicing do consequat.",
+    address: "bulwer place, lemoyne, district of columbia, 5597",
+    })
+
+    const { camelCase, kebabCase, pascalCase, upperCase, lowerCase, sentenceCase, capitalizeCase } = useStringCase();
 
     return {
-      string,
-      setString,
+      state,
       camelCase,
       kebabCase,
       pascalCase,
+      upperCase,
+      lowerCase,
+      sentenceCase,
+      capitalizeCase,
     };
   },
 };

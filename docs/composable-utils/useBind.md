@@ -60,6 +60,7 @@ export default {
       <select @change="changed">
         <option value="apple">apple</option>
         <option value="orange">orange</option>
+        <option value="watermelon">Watermelon</option>
         <option value="strawberry">Strawberry</option>
       </select>
     </div>

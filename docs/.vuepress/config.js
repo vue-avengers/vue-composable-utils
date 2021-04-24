@@ -132,6 +132,10 @@ function getSidebar() {
           path: '/composable-utils/usePick',
         },
         {
+          title: 'useResize',
+          path: '/composable-utils/useResize',
+        },
+        {
           title: 'useList',
           path: '/composable-utils/useList',
         },
@@ -171,6 +175,10 @@ function getSidebar() {
           title: 'useCookie',
           path: '/composable-utils/useCookie',
         },
+        {
+          title: 'useClipboard',
+          path: '/composable-utils/useClipboard',
+        },
       ],
     },
   ];
@@ -201,6 +209,10 @@ function getSidebarTR() {
         {
           title: 'usePick',
           path: '/tr/composable-utils/usePick',
+        },
+        {
+          title: 'useResize',
+          path: '/tr/composable-utils/useResize',
         },
         {
           title: 'useList',
@@ -237,6 +249,10 @@ function getSidebarTR() {
         {
           title: 'usei18nDate',
           path: '/tr/composable-utils/usei18nDate',
+        },
+        {
+          title: 'useClipboard',
+          path: '/tr/composable-utils/useClipboard',
         },
       ],
     },

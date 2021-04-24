@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>list: {{ JSON.stringify(list) }}</p>
+    <p><b>List: </b> {{ JSON.stringify(list) }}</p>
     <button class="btn fourth" @click="sort((a, b) => a - b)">Sort List</button>
     <button class="btn fifth" @click="set([...list, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20])">Set list</button>
     <button
@@ -87,12 +87,14 @@ $purple: #8e44ad;
 $turquoise: #1abc9c;
 
 p {
-  text-decoration: none;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 1.5em;
+  font-size: 1.1em;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-left: 4px solid #c9c9c9;
+  color: #666;
+  font-family: monospace;
+  padding: 1em 1.5em;
+  display: block;
 }
 
 .btn {
