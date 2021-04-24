@@ -1,4 +1,4 @@
-# :sparkles: useList
+# :pencil: useList
 
 > `useList()` is a function to be used to customized the array.
 

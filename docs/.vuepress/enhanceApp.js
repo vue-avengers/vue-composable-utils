@@ -16,6 +16,7 @@ import ModalComponent from './components/ModalComponent.vue';
 import QueueComponentTwo from './components/QueueComponentTwo.vue';
 import DarkModeComponent from './components/DarkModeComponent.vue';
 import ToggleDarkMode from './components/ToggleDarkMode.vue';
+import CookieComponent from './components/CookieComponent.vue';
 import './public/style/main.css';
 import './plugins/dayjs.js';
 
@@ -38,4 +39,5 @@ export default ({ Vue }) => {
   Vue.component('DarkModeComponent', DarkModeComponent);
   Vue.component('ModalComponent', ModalComponent);
   Vue.component('ToggleDarkMode', ToggleDarkMode);
+  Vue.component('CookieComponent', CookieComponent);
 };

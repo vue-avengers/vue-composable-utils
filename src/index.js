@@ -13,3 +13,4 @@ export { default as useDebounce } from './useDebounce';
 export { default as useStringCase } from './useStringCase';
 export { default as useDebounceFn } from './useDebounceFn';
 export { default as useLocalStorage } from './useLocalStorage';
+export { default as useCookie } from './useCookie';

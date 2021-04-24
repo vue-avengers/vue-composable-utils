@@ -6,7 +6,7 @@ import { useEmbed } from '@/';
 Vue.use(VueCompositionAPI);
 
 const localVue = createLocalVue();
-localVue.component('embed-component', {
+const Component = localVue.component('embed-component', {
   setup() {
     const embed = ref(null);
     const { isEmbedBlock, clear } = useEmbed(embed);
@@ -25,8 +25,6 @@ localVue.component('embed-component', {
     </div>
   `,
 });
-
-const Component = localVue.component('embed-component');
 
 describe('use embed composable tests', () => {
   test('embed preview have to be rendered if embed block computed is true', async () => {

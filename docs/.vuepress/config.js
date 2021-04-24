@@ -167,6 +167,10 @@ function getSidebar() {
           title: 'usei18nDate',
           path: '/composable-utils/usei18nDate',
         },
+        {
+          title: 'useCookie',
+          path: '/composable-utils/useCookie',
+        },
       ],
     },
   ];

@@ -1,4 +1,4 @@
-# :sparkles: useDate
+# :calendar: useDate
 
 > `useDate` It is a function that we have completed date operations in functions.
 
