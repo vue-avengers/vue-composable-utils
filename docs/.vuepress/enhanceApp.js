@@ -13,6 +13,7 @@ import PickComponent from './components/PickComponent.vue';
 import QueueComponent from './components/QueueComponent.vue';
 import ModalComponent from './components/ModalComponent.vue';
 import CaseComponent from './components/CaseComponent.vue';
+import ResizeComponent from './components/ResizeComponent.vue';
 import QueueComponentTwo from './components/QueueComponentTwo.vue';
 import ClipboardComponent from './components/ClipboardComponent.vue';
 import DarkModeComponent from './components/DarkModeComponent.vue';
@@ -35,6 +36,7 @@ export default ({ Vue }) => {
   Vue.component('PickComponent', PickComponent);
   Vue.component('QueueComponent', QueueComponent);
   Vue.component('CaseComponent', CaseComponent);
+  Vue.component('ResizeComponent', ResizeComponent);
   Vue.component('QueueComponentTwo', QueueComponentTwo);
   Vue.component('ClipboardComponent', ClipboardComponent);
   Vue.component('DarkModeComponent', DarkModeComponent);

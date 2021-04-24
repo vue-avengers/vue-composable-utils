@@ -6,6 +6,7 @@ export { default as useBind } from './useBind';
 export { default as useQueue } from './useQueue';
 export { default as useEmbed } from './useEmbed';
 export { default as useModal } from './useModal';
+export { default as useResize } from './useResize';
 export { default as usei18nDate } from './usei18nDate';
 export { default as useDarkMode } from './useDarkMode';
 export { default as useInterval } from './useInterval';

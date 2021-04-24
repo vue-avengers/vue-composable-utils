@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Value is: {{ value }}</p>
+    <p><b>Value is: </b> {{ value }}</p>
     <button class="fourth" @click="value = '2'">Change</button>
     <button class="first" @click="remove">Remove</button>
   </div>
@@ -28,23 +28,15 @@ $purple: #8e44ad;
 $turquoise: #1abc9c;
 
 p {
-  margin: 10px;
-  padding: 0.8em 0.8em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #8e44ad;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-left: 4px solid #c9c9c9;
+  color: #666;
+  font-family: monospace;
+  padding: 1em 1.5em;
+  display: block;
 }
 
-input {
-  border: 2px solid #8e44ad;
-  margin: 10px;
-  padding: 0.8em 0.8em;
-  text-decoration: none;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #8e44ad;
-}
 button {
   box-sizing: border-box;
   appearance: none;

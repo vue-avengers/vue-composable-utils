@@ -132,6 +132,10 @@ function getSidebar() {
           path: '/composable-utils/usePick',
         },
         {
+          title: 'useResize',
+          path: '/composable-utils/useResize',
+        },
+        {
           title: 'useList',
           path: '/composable-utils/useList',
         },
@@ -201,6 +205,10 @@ function getSidebarTR() {
         {
           title: 'usePick',
           path: '/tr/composable-utils/usePick',
+        },
+        {
+          title: 'useResize',
+          path: '/tr/composable-utils/useResize',
         },
         {
           title: 'useList',

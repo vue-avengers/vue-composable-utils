@@ -15,17 +15,15 @@ const { format, timeAgo, getDate, utc, timezone, difference } = useDate();
 
 <DateComponent />
 
-Example.vue
-
 ```js
 <template>
-  <div id="app">
-    <p>{{ dateFormat }}</p>
-    <p>{{ timeAgoFormat }}</p>
-    <p>{{ getDateFormat }}</p>
-    <p>{{ differenceFormat }}</p>
-    <p>{{ utcFormat }}</p>
-    <p>{{ timezoneFormat }}</p>
+  <div>
+    <p><b>Format: </b>{{ dateFormat }}</p>
+    <p><b>TimeAgo: </b>{{ timeAgoFormat }}</p>
+    <p><b>GetDate: </b>{{ getDateFormat }}</p>
+    <p><b>Difference: </b>{{ differenceFormat }}</p>
+    <p><b>Utc: </b>{{ utcFormat }}</p>
+    <p><b>Timezone: </b>{{ timezoneFormat }}</p>
   </div>
 </template>
 
@@ -33,7 +31,6 @@ Example.vue
 import { useDate } from "vue-composable-utils";
 
 export default {
-  name: "Examples",
   setup(props) {
     // The useDate function is added and the desired properties are used.
 		// The parameter sent from useDate represents the language option.

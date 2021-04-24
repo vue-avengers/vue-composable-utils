@@ -8,30 +8,12 @@
         <h4>Language: {{ langUnit }}</h4>
       </div>
     </div>
-    <div>
-      <p>format() --></p>
-      <p>{{ dateFormat }}</p>
-    </div>
-    <div>
-      <p>timeAgo() --></p>
-      <p>{{ timeAgoFormat }}</p>
-    </div>
-    <div>
-      <p>getDate() --></p>
-      <p>{{ getDateFormat }}</p>
-    </div>
-    <div>
-      <p>difference() --></p>
-      <p>{{ differenceFormat }}</p>
-    </div>
-    <div>
-      <p>utc() --></p>
-      <p>{{ utcFormat }}</p>
-    </div>
-    <div>
-      <p>timezone() --></p>
-      <p>{{ timezoneFormat }}</p>
-    </div>
+    <p><b>Format: </b>{{ dateFormat }}</p>
+    <p><b>TimeAgo: </b>{{ timeAgoFormat }}</p>
+    <p><b>GetDate: </b>{{ getDateFormat }}</p>
+    <p><b>Difference: </b>{{ differenceFormat }}</p>
+    <p><b>Utc: </b>{{ utcFormat }}</p>
+    <p><b>Timezone: </b>{{ timezoneFormat }}</p>
   </div>
 </template>
 
@@ -88,12 +70,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$green: #2ecc71;
-$red: #e74c3c;
-$blue: #3498db;
-$yellow: #f1c40f;
 $purple: #8e44ad;
-$turquoise: #1abc9c;
 
 .date {
   .wrapper {
@@ -103,6 +80,21 @@ $turquoise: #1abc9c;
       display: flex;
       align-items: center;
       height: 30px;
+
+      select {
+        border: 2px solid $purple;
+        border-radius: 0.6em;
+        padding: 0.8em 0.8em;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+
+        &:hover,
+        &:focus {
+          outline: 0;
+        }
+      }
     }
 
     h4 {
@@ -110,19 +102,14 @@ $turquoise: #1abc9c;
     }
   }
 
-  div {
-    font-size: 16px;
-    display: flex;
-    p {
-      margin: 10px;
-      font-size: 16px;
-      font-weight: 700;
-      color: #8e44ad;
-
-      &:first-child {
-        color: #000;
-      }
-    }
+  p {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 4px solid #c9c9c9;
+    color: #666;
+    font-family: monospace;
+    padding: 1em 1.5em;
+    display: block;
   }
 }
 </style>

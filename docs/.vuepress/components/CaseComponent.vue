@@ -43,3 +43,15 @@ export default {
 };
 </script>
 
+<style lang="scss" scoped>
+p {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-left: 4px solid #c9c9c9;
+  color: #666;
+  font-family: monospace;
+  padding: 1em 1.5em;
+  display: block;
+}
+</style>
+

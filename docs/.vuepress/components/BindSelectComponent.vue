@@ -1,10 +1,10 @@
 <template>
   <div>
-    <p>Select : {{ value }}</p>
+    <p><b>Select:</b> {{ value }}</p>
     <select class="fourth" @change="changed">
       <option value="apple">Apple</option>
       <option value="orange">Orange</option>
-      <option value="orange">Watermelon</option>
+      <option value="watermelon">Watermelon</option>
       <option value="strawberry">Strawberry</option>
     </select>
   </div>
@@ -28,33 +28,23 @@ $red: #e74c3c;
 $yellow: #f1c40f;
 
 p {
-  text-decoration: none;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 1.5em;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-left: 4px solid #c9c9c9;
+  color: #666;
+  font-family: monospace;
+  padding: 1em 1.5em;
+  display: block;
 }
 
 select {
-  box-sizing: border-box;
-  appearance: none;
-  background-color: transparent;
-  border: 2px solid $red;
+  border: 2px solid $yellow;
   border-radius: 0.6em;
-  color: $red;
-  cursor: pointer;
-  // display: flex;
-  align-self: center;
-  line-height: 1;
-  margin: 10px;
   padding: 0.8em 0.8em;
-  text-decoration: none;
-  text-align: center;
-  text-transform: uppercase;
+  letter-spacing: 0.15rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 14px;
 
   &:hover,
   &:focus {
