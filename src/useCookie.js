@@ -1,4 +1,5 @@
 import { ref } from '@vue/composition-api';
+import { stringifyObject } from '../utils/stringify';
 
 const useCookie = (cookieArg = document.cookie) => {
   const cookie = ref(cookieArg);
@@ -15,32 +16,30 @@ const useCookie = (cookieArg = document.cookie) => {
   };
 
   const setCookie = (key, value, options = {}) => {
-    const keyValuePairs = Object.entries(options);
-    const optionsString = keyValuePairs.reduce((acc, item) => (acc = acc + `${item[0]}=${item[1]};`), '');
+    const optionsString = stringifyObject(options);
 
-    const cookieObject = parseCookie();
-
-    cookie.value = JSON.stringify({
-      ...cookieObject,
-      [key]: `${value};${optionsString}`,
-    });
+    cookie.value = `${cookie.value};${key}=${value}${optionsString}`;
   };
 
   const appendCookie = (key, value, specialCharacter = ',') => {
     const parsedCookie = parseCookie();
-    const newCookieValue = `${parsedCookie[key]}${specialCharacter}${value}`;
-    cookie.value = `${key}=${newCookieValue}`;
+    parsedCookie[key] = `${parsedCookie[key]}${specialCharacter}${value}`
+
+    cookie.value = stringifyObject(parsedCookie);
   };
 
   const getCookie = key => {
-    const cookieObject = parseCookie(cookie.value);
+    const cookieObject = parseCookie();
 
     return cookieObject[key];
   };
 
   const deleteCookie = key => {
     // expiration date is set to an undoubtedly past date for to be deleted immediately
-    cookie.value = `${key}=; expires=Thu Jan 01 1970 00:00:00 GMT"`;
+    const parsedCookie = parseCookie();
+    parsedCookie[key] = ';expires=Thu Jan 01 1970 00:00:00 GMT"';
+
+    cookie.value = stringifyObject(parsedCookie);
   };
 
   return {

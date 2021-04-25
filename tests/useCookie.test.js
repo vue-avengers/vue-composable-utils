@@ -36,10 +36,7 @@ describe('useCookie tests', () => {
     const wrapper = mount(Component);
 
     wrapper.vm.setCookie('personalization_id', 'v1_CTbsFzQ90GViyLKibSOpsg==');
-    const expectedCookie = JSON.stringify({
-      guest_id: 'v1%3A160098099617459776',
-      personalization_id: 'v1_CTbsFzQ90GViyLKibSOpsg==;',
-    });
+    const expectedCookie = "guest_id=v1%3A160098099617459776;personalization_id=v1_CTbsFzQ90GViyLKibSOpsg==";
 
     expect(wrapper.vm.cookie).toEqual(expectedCookie);
   });
@@ -64,6 +61,6 @@ describe('useCookie tests', () => {
     const wrapper = mount(Component);
 
     wrapper.vm.deleteCookie('guest_id');
-    expect(wrapper.vm.cookie).toBe('guest_id=; expires=Thu Jan 01 1970 00:00:00 GMT"');
+    expect(wrapper.vm.cookie).toBe('guest_id=;expires=Thu Jan 01 1970 00:00:00 GMT"');
   });
 });
