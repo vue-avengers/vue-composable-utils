@@ -15,11 +15,10 @@ const { copy } = useClipboard();
 
 `useClipboard` fonksiyonu `copy` özelliğine sahiptir. `copy` Özelliği iki adet parametre alır.
 
-| Parametreler |      Açıklama      | 
-| :-----       | :------------------|
-| `value`      | Kopyalanacak değer.|
-| `ref`        | Kopyalamak istediğimiz verinin kapsayıcı class'ına erişmek için kullanılır.|
-
+| Parametreler | Açıklama                                                                    |
+| :----------- | :-------------------------------------------------------------------------- |
+| `value`      | Kopyalanacak değer.                                                         |
+| `ref`        | Kopyalamak istediğimiz verinin kapsayıcı class'ına erişmek için kullanılır. |
 
 ## :computer: Uygulama
 
@@ -31,19 +30,19 @@ Aşağıdaki örneği kullanarak nasıl değiştiğini görebilirsiniz.
 <template>
   <div class="clipboard" ref="clipboardRef">
     <div>
-      <p> {{ copyText }} </p>
-      <button class="btn" @click="onCopy"> Copy </button>
+      <p>{{ copyText }}</p>
+      <button class="btn" @click="onCopy">Copy</button>
     </div>
     <div>
       <input type="text" v-model="clipboardModel" />
-      <button class="btn" @click="onCopyInput"> Copy </button>
+      <button class="btn" @click="onCopyInput">Copy</button>
       <p>{{ clipboardModel }}</p>
     </div>
   </div>
 </template>
 
 <script>
-import { ref } from '@vue/composition-api'
+import { ref } from '@vue/composition-api';
 import { useClipboard } from 'vue-composable-utils';
 
 export default {
@@ -51,7 +50,7 @@ export default {
   setup() {
     const clipboardRef = ref(null);
     const clipboardModel = ref(null);
-    const copyText = ref("Kopyalanmak istenilen veri...");
+    const copyText = ref('Kopyalanmak istenilen veri...');
 
     const { copy } = useClipboard();
 
@@ -69,7 +68,7 @@ export default {
       copyText,
       onCopyInput,
       clipboardRef,
-      clipboardModel
+      clipboardModel,
     };
   },
 };

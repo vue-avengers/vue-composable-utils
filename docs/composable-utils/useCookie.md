@@ -3,6 +3,7 @@
 ## :rocket: Features
 
 ### Getter/Setter
+
 You can set a new cookie easily.
 
 `setCookie([key], [value]);`
@@ -14,8 +15,8 @@ export default {
     const { setCookie } = useCookie();
 
     setCookie('cookie', 'triple-chocolate cookie');
-  }
-}
+  },
+};
 </script>
 ```
 
@@ -30,10 +31,11 @@ export default {
     const { getCookie } = useCookie();
 
     console.log(getCookie('cookie')); // triple-chocole cookie
-  }
-}
+  },
+};
 </script>
 ```
+
 ### Parse
 
 Parse cookie string to an object.
@@ -47,10 +49,11 @@ export default {
     const cookieObject = parseCookie();
 
     console.log(cookieObject); // { cookie: 'triple-chocolate cookie' }
-  }
-}
+  },
+};
 </script>
 ```
+
 ### Append
 
 You can append new value to an existing cookie value.
@@ -68,13 +71,14 @@ export default {
     appendCookie('cookie', 'hot');
 
     console.log(cookie); // cookie=triple-chocolate cookie, hot
-  }
-}
+  },
+};
 </script>
 ```
+
 ### Delete
 
-Remove  easily a key value pair from cookie.
+Remove easily a key value pair from cookie.
 
 ```vue
 <script>
@@ -86,8 +90,7 @@ export default {
     deleteCookie('cookie');
 
     console.log(cookie); // cookie=; expires=Thu Jan 01 1970 00:00:00 GMT"
-  }
-}
+  },
+};
 </script>
 ```
-

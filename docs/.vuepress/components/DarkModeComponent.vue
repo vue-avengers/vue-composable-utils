@@ -21,7 +21,7 @@ export default {
 
 <style lang="scss" scoped>
 .darkMode {
-    font-weight: 700;
+  font-weight: 700;
   font-size: 1.2em;
   border: 1px solid #ddd;
   border-left: 4px solid #c9c9c9;

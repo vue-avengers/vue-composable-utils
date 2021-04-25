@@ -51,14 +51,14 @@ import { useStringCase } from 'vue-composable-utils';
 export default {
   setup() {
     const state = reactive({
-    name: "imelda white",
-    gender: "female",
-    company: "NEUROCELL",
-    email: "Imeldawhite@nr.com",
-    balance: "3,814.49",
-    about: "Veniam fugiat pariatur adipisicing do consequat.",
-    address: "bulwer place, lemoyne, district of columbia, 5597",
-    })
+      name: 'imelda white',
+      gender: 'female',
+      company: 'NEUROCELL',
+      email: 'Imeldawhite@nr.com',
+      balance: '3,814.49',
+      about: 'Veniam fugiat pariatur adipisicing do consequat.',
+      address: 'bulwer place, lemoyne, district of columbia, 5597',
+    });
 
     const { camelCase, kebabCase, pascalCase, upperCase, lowerCase, sentenceCase, capitalizeCase } = useStringCase();
 

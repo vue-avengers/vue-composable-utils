@@ -23,7 +23,7 @@ const useCookie = (cookieArg = document.cookie) => {
 
   const appendCookie = (key, value, specialCharacter = ',') => {
     const parsedCookie = parseCookie();
-    parsedCookie[key] = `${parsedCookie[key]}${specialCharacter}${value}`
+    parsedCookie[key] = `${parsedCookie[key]}${specialCharacter}${value}`;
 
     cookie.value = stringifyObject(parsedCookie);
   };

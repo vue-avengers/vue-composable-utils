@@ -36,7 +36,7 @@ describe('useCookie tests', () => {
     const wrapper = mount(Component);
 
     wrapper.vm.setCookie('personalization_id', 'v1_CTbsFzQ90GViyLKibSOpsg==');
-    const expectedCookie = "guest_id=v1%3A160098099617459776;personalization_id=v1_CTbsFzQ90GViyLKibSOpsg==";
+    const expectedCookie = 'guest_id=v1%3A160098099617459776;personalization_id=v1_CTbsFzQ90GViyLKibSOpsg==';
 
     expect(wrapper.vm.cookie).toEqual(expectedCookie);
   });

@@ -25,9 +25,7 @@ export default {
 
     console.log(cookie.value);
   },
-}
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
