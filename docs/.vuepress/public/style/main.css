@@ -74,3 +74,21 @@ img.logo {
   background-color: #000;
 
 }
+
+
+.home .hero img {
+  max-height: 250px !important;
+  margin: 2rem auto -1.0rem !important;
+}
+
+.home .hero h1 {
+  font-size: 2.2rem !important;
+}
+
+.home .hero .description {
+  font-size: 1.3rem !important;
+}
+
+.home .hero .action-button {
+  padding: 0.2rem 0.9em !important;
+}

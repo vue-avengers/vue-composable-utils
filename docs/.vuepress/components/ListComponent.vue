@@ -90,7 +90,7 @@ p {
   font-size: 1.1em;
   background-color: #f4f4f4;
   border: 1px solid #ddd;
-  border-left: 4px solid #c9c9c9;
+  border-left: 0.3rem solid #42b983;
   color: #666;
   font-family: monospace;
   padding: 1em 1.5em;

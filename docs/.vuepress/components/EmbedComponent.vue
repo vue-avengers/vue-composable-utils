@@ -40,10 +40,7 @@ $white: #fff;
     textarea {
       border: 2px solid #8e44ad;
       padding: 0.8em 0.8em;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: #8e44ad;
+      font-weight: 600;
     }
 
     .clear-button {
@@ -51,6 +48,7 @@ $white: #fff;
       border-radius: 0.5em;
       color: $grey;
       background: none;
+      font-weight: 600;
       padding: 0.5em 0.8em;
       margin-left: 0.5em;
       transition: 0.2s;

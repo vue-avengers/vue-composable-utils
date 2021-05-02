@@ -54,13 +54,13 @@ module.exports = {
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'vue-composable-utils',
-      description: 'Vue composable utils functions',
+      title: 'Vue Composable Utils',
+      description: 'Vue Composable Utils Functions',
     },
     '/tr/': {
       lang: 'tr-Tr',
-      title: 'vue-composable-utils',
-      description: 'Vue composable fonksiyonlar',
+      title: 'Vue Composable Utils',
+      description: 'Vue Composable Fonksiyonlar',
     },
   },
   themeConfig: {
