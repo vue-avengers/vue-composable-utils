@@ -7,11 +7,8 @@ const useCookie = (cookieArg = document.cookie) => {
   const parseCookie = () => {
     return cookie.value.split(';').reduce((object, cookieString) => {
       const splitCookie = cookieString.trim().split('=');
-      try {
-        return { ...object, [splitCookie[0]]: JSON.parse(splitCookie[1]) };
-      } catch (error) {
-        return { ...object, [splitCookie[0]]: splitCookie[1] };
-      }
+
+      return { ...object, [splitCookie[0]]: splitCookie[1] };
     }, {});
   };
 
