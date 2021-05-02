@@ -2,7 +2,7 @@
 
 > `useState` is a function that allows you to have state variables in functional components. You pass the initial state to this function and it returns a variable with the current state value (not necessarily the initial state) and another function to update this value.
 
-## :sparkles: State
+## :maple_leaf: Usage
 
 The `useState` function is used as the following reactive state:
 
@@ -19,20 +19,28 @@ const [count, setCount] = useState();
 
 - useState: use `ref` and `readonly` from `@vue/composition-api`
 
-## :computer: Example
+## :bouquet: Example
 
 You can see how it changes reactively using the example below.
 
 <StateComponent />
 
-```vue
+:::: tabs type:border-card
+::: tab template lazy
+
+```html
 <template>
   <p>{{ count }}</p>
   <button @click="setCount(count - 1)">Decrement</button>
   <button @click="setCount(count + 1)">Increment</button>
 </template>
 
-<script>
+```
+
+:::
+::: tab javascript lazy
+
+```js
 import { useState } from 'vue-composable-utils';
 
 export default {
@@ -45,7 +53,9 @@ export default {
     };
   },
 };
-</script>
 ```
+
+:::
+::::
 
 <ToggleDarkMode/>

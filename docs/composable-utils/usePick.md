@@ -2,7 +2,7 @@
 
 > The `usePick ()` function is used to return a copy of the filtered object using the given `key` value. This function provides the desired condition by specifying which properties are selected from the object.
 
-## :sparkles: Usage
+## :maple_leaf: Usage
 
 The example usage of `usePick` function is shown below.
 
@@ -20,18 +20,25 @@ const pick = usePick({ a: 1, b: 2, c: 3, d: 4 }, ['a', 'd']);
 | `Object`  | The object to be processed.                        |
 | `Keys`    | Optional. The `key` value that should be selected. |
 
-## :computer: Example
+## :bouquet: Example
 
 You can see how it changes reactively using the example below.
 
 <PickComponent />
 
-```vue
+:::: tabs type:border-card
+::: tab template lazy
+
+```html
 <template>
   <p>{{ JSON.stringify(pick) }}</p>
 </template>
+```
 
-<script>
+:::
+::: tab javascript lazy
+
+```js
 import { usePick } from 'vue-composable-utils';
 
 export default {
@@ -51,9 +58,12 @@ export default {
     };
   },
 };
-</script>
+```
 
-<style lang="scss" scoped>
+:::
+::: tab scss lazy
+
+```scss
 p {
   text-decoration: none;
   text-align: center;
@@ -62,7 +72,8 @@ p {
   font-weight: 700;
   font-size: 1.5em;
 }
-</style>
 ```
 
+:::
+::::
 <ToggleDarkMode/>

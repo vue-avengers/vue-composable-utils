@@ -2,7 +2,7 @@
 
 > `useDebounceFn` function is used to wait for the given period of time before the next operation is run again. Limits the number of requests for the next operation.(eg. The operation is run after the given period of time regardless how many times the user clicks the button.)
 
-## :convenience_store: Usage
+## :maple_leaf: Usage
 
 The example usage of `useDebounceFn` function is shown below.
 
@@ -24,13 +24,16 @@ The `useDebounceFn` function takes two parameters, first one is an object `{dela
 
 `fn` --> The callback function that is executed after the debounce time.
 
-## :computer: Example
+## :bouquet: Example
 
 You can see how it changes reactively using the example below.
 
 <DebouncedFnComponent />
 
-```vue
+:::: tabs type:border-card
+::: tab template lazy
+
+```html
 <template>
   <div>
     <p>Event handler : {{ updated }}</p>
@@ -39,8 +42,12 @@ You can see how it changes reactively using the example below.
     <small>Delay is set to 1000ms.</small>
   </div>
 </template>
+```
 
-<script>
+:::
+::: tab javascript lazy
+
+```js
 import { ref } from 'vue';
 import { useDebounceFn } from 'vue-composable-utils';
 
@@ -54,14 +61,19 @@ export default {
     return { updated, debouncedFn };
   },
 };
-</script>
+```
 
-<style scoped>
+:::
+::: tab scss lazy
+
+```scss
 input {
   margin: 0.5em;
   padding: 0.8em;
 }
-</style>
 ```
+
+:::
+::::
 
 <ToggleDarkMode/>

@@ -2,7 +2,7 @@
 
 > The `useDarkMode ()` function is used to return a copy of the filtered object using the given `key` value. This function provides the desired condition by specifying which properties are selected from the object.
 
-## :sparkles: Usage
+## :maple_leaf: Usage
 
 The example usage of `useDarkMode` function is shown below.
 
@@ -20,13 +20,17 @@ const { darkMode, setDarkMode } = useDarkMode();
 | `darkMode`    | The object to be processed.                        |
 | `setDarkMode` | Optional. The `key` value that should be selected. |
 
-## :computer: Example
+## :bouquet: Example
 
 You can see how it changes reactively using the example below.
 
 <DarkModeComponent />
 
-```vue
+
+:::: tabs type:border-card
+::: tab template lazy
+
+```html
 <template>
   <div>
     <a @click="setDarkMode((darkMode = !darkMode))">
@@ -35,8 +39,12 @@ You can see how it changes reactively using the example below.
     </a>
   </div>
 </template>
+```
 
-<script>
+:::
+::: tab javascript lazy
+
+```js
 import { useDarkMode } from 'vue-composable-utils';
 
 export default {
@@ -45,9 +53,12 @@ export default {
     return { darkMode, setDarkMode };
   },
 };
-</script>
+```
 
-<style lang="scss" scoped>
+:::
+::: tab scss lazy
+
+```scss
 .theme-dark {
   background: black;
   color: white;
@@ -61,7 +72,10 @@ a {
 p {
   font-size: 1.5em;
 }
-</style>
 ```
+
+:::
+::::
+
 
 <ToggleDarkMode/>

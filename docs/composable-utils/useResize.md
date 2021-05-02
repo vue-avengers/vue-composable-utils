@@ -2,7 +2,7 @@
 
 > The `useResize ()` function is used to return a copy of the filtered object using the given `key` value. This function provides the desired condition by specifying which properties are selected from the object.
 
-## :sparkles: Usage
+## :maple_leaf: Usage
 
 The example usage of `useResize` function is shown below.
 
@@ -20,20 +20,28 @@ const { screenWidth, screenHeight, ratiowh, ratiohw, rect } = useResize(resizeRe
 | `screenWidth`  | The object to be processed.                        |
 | `screenHeight` | Optional. The `key` value that should be selected. |
 
-## :computer: Example
+## :bouquet: Example
 
 You can see how it changes reactively using the example below.
 
 <ResizeComponent />
 
-```vue
+:::: tabs type:border-card
+::: tab template lazy
+
+```html
 <template>
   <div ref="resizeRef">
     <pre class="resize">{{ JSON.stringify({ screenWidth, screenHeight, ratiowh, ratiohw, rect }, undefined, 2) }}</pre>
   </div>
 </template>
 
-<script>
+```
+
+:::
+::: tab javascript lazy
+
+```js
 import { ref } from 'vue';
 import { useResize } from 'vue-composable-utils';
 
@@ -45,9 +53,13 @@ export default {
     return { screenWidth, screenHeight, ratiowh, ratiohw, rect, resizeRef };
   },
 };
-</script>
+```
 
-<style lang="scss">
+:::
+::: tab scss lazy
+
+```scss
+
 .resize {
   background-color: #f4f4f4;
   border: 1px solid #ddd;
@@ -57,7 +69,9 @@ export default {
   padding: 1em 1.5em;
   display: block;
 }
-</style>
 ```
+
+:::
+::::
 
 <ToggleDarkMode/>

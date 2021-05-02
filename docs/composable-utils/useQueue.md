@@ -2,7 +2,7 @@
 
 > The `useQueue()` function determines how data is applied to the queue using data structures and array type methods. FIFO (first-in, first-out) and LIFO (last-in, first-out) data structures are used.
 
-## :sparkles: Usage
+## :maple_leaf: Usage
 
 The example usage of `useQueue` function is shown below.
 
@@ -33,13 +33,16 @@ const { set, state, remove, first, last, size } = useQueue([
 | `last`     | Gives the last value                                      |
 | `size`     | Gives the size of the array                               |
 
-## :computer: Example
+## :bouquet: Example
 
 You can see how it changes reactively using the example below.
 
 <QueueComponent />
 
-```vue
+:::: tabs type:border-card
+::: tab template lazy
+
+```html
 <template>
   <div>
     <p>First: {{ first }}</p>
@@ -49,8 +52,12 @@ You can see how it changes reactively using the example below.
     <button @click="remove()">Remove</button>
   </div>
 </template>
+```
 
-<script>
+:::
+::: tab javascript lazy
+
+```js
 import { useQueue } from 'vue-composable-utils';
 
 export default {
@@ -73,14 +80,19 @@ export default {
     return { data, set, state, remove, first, last, size };
   },
 };
-</script>
 ```
+
+:::
+::::
 
 You can see how it changes reactively using the example below.
 
 <QueueComponentTwo />
 
-```vue
+:::: tabs type:border-card
+::: tab template lazy
+
+```html
 <template>
   <div>
     <p>First: {{ first }}</p>
@@ -90,8 +102,12 @@ You can see how it changes reactively using the example below.
     <button @click="remove()">Remove</button>
   </div>
 </template>
+```
 
-<script>
+:::
+::: tab javascript lazy
+
+```js
 import { useQueue } from 'vue-composable-utils';
 
 export default {
@@ -101,7 +117,9 @@ export default {
     return { set, state, remove, first, last, size };
   },
 };
-</script>
 ```
+
+:::
+::::
 
 <ToggleDarkMode/>

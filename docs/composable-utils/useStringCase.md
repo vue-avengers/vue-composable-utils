@@ -2,7 +2,7 @@
 
 > `useStringCase` is a function that alters string predetermined cases of strings
 
-## :convenience_store: State
+## :maple_leaf: State
 
 The `useStringCase` function is used as the following reactive state:
 
@@ -17,21 +17,21 @@ The initial value is sent to the function `useStringCase()`.
 
 `useStringCase` has 4 reactive properties
 
-1 - `this section will be update` --> The value that is going to be binded.
+| Name               |                                                  Description |
+| :----------------- | -----------------------------------------------------------: |
+| `this section will be update`      |        The value that is going to be binded. |
 
-2 - `this section will be update` --> The value that is going to be changed.
 
-3 - `this section will be update` --> The value that is going to be changed.
-
-4 - `this section will be update` --> The value that is going to be changed.
-
-## :computer: Example
+## :bouquet: Example
 
 You can see how it changes reactively using the example below.
 
 <CaseComponent />
 
-```vue
+:::: tabs type:border-card
+::: tab template lazy
+
+```html
 <template>
   <div>
     <p><b>CamelCase: </b>{{ camelCase(state.about) }}</p>
@@ -43,8 +43,12 @@ You can see how it changes reactively using the example below.
     <p><b>UpperCase: </b>{{ upperCase(state.gender) }}</p>
   </div>
 </template>
+```
 
-<script>
+:::
+::: tab javascript lazy
+
+```js
 import { reactive } from '@vue/composition-api';
 import { useStringCase } from 'vue-composable-utils';
 
@@ -74,7 +78,9 @@ export default {
     };
   },
 };
-</script>
 ```
+
+:::
+::::
 
 <ToggleDarkMode/>
