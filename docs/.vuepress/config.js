@@ -50,6 +50,8 @@ module.exports = {
         updatePopup: true,
       },
     ],
+    ['vuepress-plugin-code-copy', true],
+    'vuepress-plugin-element-tabs',
   ],
   locales: {
     '/': {

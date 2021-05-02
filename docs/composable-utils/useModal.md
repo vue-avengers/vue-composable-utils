@@ -2,7 +2,7 @@
 
 > The `useModal ()` function is used to return a copy of the filtered object using the given `key` value. This function provides the desired condition by specifying which properties are selected from the object.
 
-## :sparkles: Usage
+## :maple_leaf: Usage
 
 The example usage of `useModal` function is shown below.
 
@@ -20,13 +20,16 @@ const { visible, setVisible, current, openModal, closeModal } = useModal();
 | `Object`  | The object to be processed.                        |
 | `Keys`    | Optional. The `key` value that should be selected. |
 
-## :computer: Example
+## :bouquet: Example
 
 You can see how it changes reactively using the example below.
 
 <ModalComponent />
 
-```vue
+:::: tabs type:border-card
+::: tab template lazy
+
+```html
 <template>
   <div class="modal-vue">
     <!-- button show -->
@@ -52,6 +55,12 @@ You can see how it changes reactively using the example below.
     </div>
   </div>
 </template>
+```
+
+:::
+::: tab javascript lazy
+
+```js
 
 <script>
 import { useModal } from 'vue-composable-utils';
@@ -89,6 +98,13 @@ export default {
   },
 };
 </script>
+
+```
+
+:::
+::: tab scss lazy
+
+```scss
 
 <style lang="scss">
 .btn {
@@ -230,5 +246,8 @@ export default {
 }
 </style>
 ```
+
+:::
+::::
 
 <ToggleDarkMode/>

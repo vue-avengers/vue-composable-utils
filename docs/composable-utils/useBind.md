@@ -2,7 +2,7 @@
 
 > `useBind` is a function that binds data into component
 
-## :convenience_store: State
+## :maple_leaf: Usage
 
 The `useBind` function is used as the following reactive state:
 
@@ -17,19 +17,22 @@ The initial value is sent to the function `useBind()`.
 
 `useBind` has 3 reactive properties
 
-1 - `value` --> The value that is going to be binded.
+| Name      |                                Description |
+| :-------- | -----------------------------------------: |
+| `value`   |      The value that is going to be binded. |
+| `changed` |     The value that is going to be changed. |
+| `reset`   | The method that returns to initial values. |
 
-2 - `changed` --> The value that is going to be changed.
-
-3 - `reset` --> The method that returns to initial values.
-
-## :computer: Example
+## :bouquet: Example
 
 You can see how it changes reactively using the example below.
 
 <BindInputComponent />
 
-```vue
+:::: tabs type:border-card
+::: tab template lazy
+
+```html
 <template>
   <div>
     <p>Input : {{ value }}</p>
@@ -37,8 +40,12 @@ You can see how it changes reactively using the example below.
     <button @click="reset">Reset</button>
   </div>
 </template>
+```
 
-<script>
+:::
+::: tab javascript lazy
+
+```js
 import { useBind } from 'vue-composable-utils';
 
 export default {
@@ -47,12 +54,17 @@ export default {
     return { value, changed, reset };
   },
 };
-</script>
 ```
+
+:::
+::::
 
 <BindSelectComponent />
 
-```vue
+:::: tabs type:border-card
+::: tab template lazy
+
+```html
 <template>
   <div>
     <p>Select : {{ value }}</p>
@@ -66,8 +78,12 @@ export default {
     </div>
   </div>
 </template>
+```
 
-<script>
+:::
+::: tab javascript lazy
+
+```js
 import { useBind } from 'vue-composable-utils';
 
 export default {
@@ -76,7 +92,9 @@ export default {
     return { value, changed, reset };
   },
 };
-</script>
 ```
+
+:::
+::::
 
 <ToggleDarkMode/>
