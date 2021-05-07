@@ -34,7 +34,6 @@ You can see how it changes reactively using the example below.
   <button @click="setCount(count - 1)">Decrement</button>
   <button @click="setCount(count + 1)">Increment</button>
 </template>
-
 ```
 
 :::

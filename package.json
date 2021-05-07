@@ -32,17 +32,6 @@
     "snapshot:update:all": "yarn test -u",
     "snapshot:update:one": "yarn test -i"
   },
-  "lint-staged": {
-    "*.{js,vue,md}": [
-      "yarn lint:eslint",
-      "yarn prettier",
-      "jest --maxWorkers=1 --bail --findRelatedTests"
-    ],
-    "*.{json}": [
-      "yarn lint",
-      "yarn prettier"
-    ]
-  },
   "files": [
     "dist/*.js"
   ],
@@ -97,5 +86,16 @@
   ],
   "peerDependencies": {
     "@vue/composition-api": "^1.0.0-rc.6"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "yarn lint:eslint",
+      "yarn prettier",
+      "jest --maxWorkers=1 --bail --findRelatedTests"
+    ],
+    "*.{json}": [
+      "yarn lint",
+      "yarn prettier"
+    ]
   }
 }

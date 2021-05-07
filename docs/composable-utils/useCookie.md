@@ -8,7 +8,7 @@ You can set a new cookie easily.
 
 `setCookie([key], [value], [options]);`
 
-`options`: optional object argument. It can contain properties such as `expires` `path` `domain` `size`  etc. related to cookie.
+`options`: optional object argument. It can contain properties such as `expires` `path` `domain` `size` etc. related to cookie.
 
 ```vue
 <script>
@@ -96,9 +96,11 @@ export default {
 };
 </script>
 ```
+
 ### usage with ssr
 
 You can also use all methods with ssr.
+
 ```vue
 <script>
 export default {
@@ -106,7 +108,7 @@ export default {
     const serverSideCookie = req.cookie;
 
     const { setCookie, getCookie } = useCookie(serverSideCookie);
-    // 
+    //
   }
 }
 </script>

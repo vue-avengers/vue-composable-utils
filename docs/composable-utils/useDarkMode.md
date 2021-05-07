@@ -26,7 +26,6 @@ You can see how it changes reactively using the example below.
 
 <DarkModeComponent />
 
-
 :::: tabs type:border-card
 ::: tab template lazy
 
@@ -76,6 +75,5 @@ p {
 
 :::
 ::::
-
 
 <ToggleDarkMode/>

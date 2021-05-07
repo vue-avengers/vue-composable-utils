@@ -21,7 +21,6 @@ import { ref, computed, watch } from '@vue/composition-api';
 const useEmbed = (code = null) => {
   const embedCode = ref(code);
   const injectedScripts = ref([]);
-
   const isEmbedBlock = computed(
     () =>
       /(?:<iframe[^>]*)(?:(?:\/>)|(?:>.*?<\/iframe>))/.test(embedCode.value) ||

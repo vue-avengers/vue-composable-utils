@@ -17,10 +17,9 @@ The initial value is sent to the function `useStringCase()`.
 
 `useStringCase` has 4 reactive properties
 
-| Name               |                                                  Description |
-| :----------------- | -----------------------------------------------------------: |
-| `this section will be update`      |        The value that is going to be binded. |
-
+| Name                          |                           Description |
+| :---------------------------- | ------------------------------------: |
+| `this section will be update` | The value that is going to be binded. |
 
 ## :bouquet: Example
 

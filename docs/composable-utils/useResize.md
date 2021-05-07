@@ -35,7 +35,6 @@ You can see how it changes reactively using the example below.
     <pre class="resize">{{ JSON.stringify({ screenWidth, screenHeight, ratiowh, ratiohw, rect }, undefined, 2) }}</pre>
   </div>
 </template>
-
 ```
 
 :::
@@ -59,7 +58,6 @@ export default {
 ::: tab scss lazy
 
 ```scss
-
 .resize {
   background-color: #f4f4f4;
   border: 1px solid #ddd;
