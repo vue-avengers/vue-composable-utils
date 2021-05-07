@@ -91,6 +91,7 @@
     "*.{js,vue}": [
       "yarn lint:eslint",
       "yarn prettier",
+      "git add",
       "jest --maxWorkers=1 --bail --findRelatedTests"
     ],
     "*.{json}": [
