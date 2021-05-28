@@ -1,19 +1,23 @@
 {
-  "name": "vue-use-embed",
-  "description": "Vue use embed that have been brought together for you to use in all your components.",
+  "name": "vue-composable-utils",
+  "description": "Vue composable utils that have been brought together for you to use in all your components.",
+  "author": "Abdulnasır olcan",
   "version": "0.1.0",
-  "module": "dist/vue-use-embed.esm.js",
-  "unpkg": "dist/vue-use-embed.js",
-  "main": "dist/vue-use-embed.js",
+  "module": "dist/vue-composable-utils.esm.js",
+  "unpkg": "dist/vue-composable-utils.js",
+  "main": "dist/vue-composable-utils.js",
   "license": "MIT",
   "keywords": [
     "vue",
-    "vue-use-embed",
-    "embed"
+    "vue-composition-api",
+    "vue-composable-utils",
+    "composable",
+    "composition functions",
+    "reusability"
   ],
   "scripts": {
     "dev": "cross-env NODE_ENV=development && vuepress dev docs",
-    "build:docs": "cross-env NODE_ENV=production && vuepress build docs",
+    "build": "cross-env NODE_ENV=production && vuepress build docs",
     "prod": "cross-env NODE_ENV=production && vuepress dev docs",
     "pre:build": "cross-env NODE_ENV=production && node ./scripts/build",
     "serve": "vuepress serve docs",
@@ -24,11 +28,16 @@
     "test:cover": "jest --coverage",
     "test:watch": "jest --coverage --watch",
     "test:prod": "npm run lint:eslint && npm run test -- --no-cache",
-    "publish": "npm run build"
+    "publish": "npm run build",
+    "snapshot:update:all": "yarn test -u",
+    "snapshot:update:one": "yarn test -i"
   },
   "files": [
     "dist/*.js"
   ],
+  "dependencies": {
+    "dayjs": "^1.10.4"
+  },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
@@ -82,7 +91,12 @@
     "*.{js,vue}": [
       "yarn lint:eslint",
       "yarn prettier",
+      "git add",
       "jest --maxWorkers=1 --bail --findRelatedTests"
+    ],
+    "*.{json}": [
+      "yarn lint",
+      "yarn prettier"
     ]
   }
 }

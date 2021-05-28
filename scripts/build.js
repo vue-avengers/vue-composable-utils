@@ -9,13 +9,13 @@ async function build() {
   await mkdir(paths.dist, { recursive: true });
   // eslint-disable-next-line
   console.log(chalk.cyan('Generating ESM build...'));
-  await utils.writeBundle(configs.esm, 'vue-use-embed.esm.js');
+  await utils.writeBundle(configs.esm, 'vue-composable-utils.esm.js');
   // eslint-disable-next-line
   console.log(chalk.cyan('Done!'));
 
   // eslint-disable-next-line
   console.log(chalk.cyan('Generating UMD build...'));
-  await utils.writeBundle(configs.umd, 'vue-use-embed.js', true);
+  await utils.writeBundle(configs.umd, 'vue-composable-utils.js', true);
   // eslint-disable-next-line
   console.log(chalk.cyan('Done!'));
 }

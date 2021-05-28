@@ -64,9 +64,10 @@ body.theme-dark button {
 
 img.logo {
   height: 2.2rem !important;
-  min-width: 15.2rem !important;
+  min-width: 2.2rem !important;
   margin-right: 0.8rem !important;
   vertical-align: top !important;
+  margin-top: -2px;
 }
 
 .theme-dark .modal {
@@ -90,8 +91,4 @@ img.logo {
 
 .home .hero .action-button {
   padding: 0.2rem 0.9em !important;
-}
-
-.site-name, #main-title {
-  display: none !important;
 }
