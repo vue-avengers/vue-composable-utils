@@ -1,13 +1,9 @@
 <p align="center"><a href="/"><img src="https://vue-use-embed.netlify.app/assets/vue-use-embed.png" alt="Vue Use Embed logo"></a></p>
 <p align="center">Vue Use Embed implemented as vue composition functions.</p>
 
-# :sparkles: useEmbed
+## :sunny: Introduction
 
-> `useEmbed` It is a function that we have completed embed operations in functions.
-
-## :scroll: Documentation
-
-<a href="https://vue-use-embed.netlify.app" target="_blank" rel="noopener noreferrer">vue-use-embed documentation</a>
+`vue-use-embed` and [@vue/composition-api](https://github.com/vuejs/composition-api)
 
 ## :rocket: Features
 
@@ -23,7 +19,7 @@ yarn add vue-use-embed or yarn add @vue/composition-api vue-use-embed
 npm install vue-use-embed or npm install @vue/composition-api vue-use-embed
 ```
 
-## :bulb: Composable Utils
+## :star: Usage
 
 | Name                        | Arguments           | Returns |
 | --------------------------- | ------------------- | ------- |

@@ -1,37 +1,30 @@
 ---
-title: Vue Composable Utils
+title: Vue Use Embed
 lang: en-US
 home: true
-heroImage: assets/vue-composable-utils-logo.svg
+heroImage: assets/vue-use-embed.png
 actionText: Get Started →
-actionLink: /composable-utils/
-features:
-  - title: 🌴 Composable functions
-    details: Composable functions that have been brought together for you to use in all your components.
-  - title: 🌿 Function Based
-    details: Function-based APIs that facilitate flexible composition and maintenance of component logic as it get larger.
-  - title: 🍀 Reactive
-    details: Every time your component's render function changes, we have the full reactivity system.
-footer: 🍁 MIT Licensed | Copyright © 2021-present Abdulnasır Olcan and @VueComposableUtils contributors
-description: Reusability and Composition functions.
+actionLink: /vue-use-embed/
+footer: MIT Licensed | Copyright © 2021-present @VueUseEmbed contributors
+description: Vue Use Embed implemented as vue composition functions.
 meta:
   - name: og:title
-    content: VueComposableUtils
+    content: VueUseEmbed
   - name: og:description
-    content: Vue Composable Utils implemented as vue composition functions.
+    content: Vue Use Embed implemented as vue composition functions.
 ---
 
-## :sunflower: Introduction
+## :sunny: Introduction
 
-Vue Composable Utils implemented as vue composition functions. currently usable with the `@vue/composition-api`.
+Vue use embed implemented as vue composition functions. currently usable with the `@vue/composition-api`.
 
 ## :package: Installation
 
 ```bash
 # install with yarn
-yarn add @vue/composition-api vue-composable-utils
+yarn add vue-use-embed or yarn add @vue/composition-api vue-use-embed
 # install with npm
-npm install @vue/composition-api vue-composable-utils
+npm install vue-use-embed or npm install @vue/composition-api vue-use-embed
 ```
 
 <ToggleDarkMode/>
