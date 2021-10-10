@@ -1,5 +1,6 @@
 # :cookie: useCookie
-useCookie provides you a number of methods to make easier browser cookie management. It uses `document.cookie` by default but any cookie string can be managed. It also supports ssr. 
+
+useCookie provides you a number of methods to make easier browser cookie management. It uses `document.cookie` by default but any cookie string can be managed. It also supports ssr.
 
 Using with `document.cookie`, it must be called on the `onMounted` hook because the `setup` method is run around `beforeCreate` and `created` lifecycle hooks where the document object does not exist yet.
 
@@ -21,7 +22,7 @@ export default {
   setup() {
     onMounted(() => {
       const { setCookie } = useCookie();
-  
+
       setCookie('cookie', 'triple-chocolate cookie');
     });
   },
@@ -41,7 +42,7 @@ export default {
   setup() {
     onMounted(() => {
       const { getCookie } = useCookie();
-  
+
       console.log(getCookie('cookie')); // triple-chocole cookie
     });
   },
@@ -61,9 +62,9 @@ export default {
   setup() {
     onMounted(() => {
       const { parseCookie } = useCookie();
-  
+
       const cookieObject = parseCookie();
-  
+
       console.log(cookieObject); // { cookie: 'triple-chocolate cookie' }
     });
   },
@@ -87,9 +88,9 @@ export default {
   setup() {
     onMounted(() => {
       const { cookie, appendCookie } = useCookie();
-  
+
       appendCookie('cookie', 'hot');
-  
+
       console.log(cookie); // cookie=triple-chocolate cookie, hot
     });
   },
@@ -109,10 +110,10 @@ export default {
   setup() {
     onMounted(() => {
       const { cookie, deleteCookie } = useCookie();
-  
+
       // assigns cookie an expiration date and browsers deletes cookies expired
       deleteCookie('cookie');
-  
+
       console.log(cookie); // cookie=; expires=Thu Jan 01 1970 00:00:00 GMT"
     });
   },

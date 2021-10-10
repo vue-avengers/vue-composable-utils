@@ -21,17 +21,17 @@ Check our [documentation](https://vue-composable-utils.netlify.app/)
 
 ## :rocket: Composable Utils
 
-| Name                    | Arguments | Returns                                                                           |
-| ----------------------- | --------- | --------------------------------------------------------------------------------- |
-| [`UseBind`](#useBind)   | initial   | value, changed, reset                                                             |
-| [`UseEmbed`](#useEmbed) | f         | -                                                                                 |
-| [`UseState`](#useState) | initial   | value, set                                                                        |
-| [`UseList`](#UseList)   | initial   | list, set, reduce, sort, first, deleteFirst, deleteLast, last,filter, push, reset |
+| Name                                                                                  | Arguments | Returns                                                                           |
+| ------------------------------------------------------------------------------------- | --------- | --------------------------------------------------------------------------------- |
+| [`UseBind`](https://vue-composable-utils.netlify.app/composable-utils/useBind.html)   | initial   | value, changed, reset                                                             |
+| [`UseEmbed`](https://vue-composable-utils.netlify.app/composable-utils/useEmbed.html) | f         | -                                                                                 |
+| [`UseState`](https://vue-composable-utils.netlify.app/composable-utils/useState.html) | initial   | value, set                                                                        |
+| [`UseList`](https://vue-composable-utils.netlify.app/composable-utils/useList.html)   | initial   | list, set, reduce, sort, first, deleteFirst, deleteLast, last,filter, push, reset |
 
-- [UseBind](./composable-utils/bind.md).
-- [UseEmbed](./composable-utils/embed.md).
-- [UseState](./composable-utils/state.md).
-- [UseList](./composable-utils/list.md).
+- [UseBind](https://vue-composable-utils.netlify.app/composable-utils/useBind.html).
+- [UseEmbed](https://vue-composable-utils.netlify.app/composable-utils/useEmbed.html).
+- [UseState](https://vue-composable-utils.netlify.app/composable-utils/useState.html).
+- [UseList](https://vue-composable-utils.netlify.app/composable-utils/useList.html).
 
 ## :computer: Usage
 
