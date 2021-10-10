@@ -22,8 +22,8 @@ npm install @vue/composition-api vue-composable-utils
 
 ## :bulb: Composable Utils
 
-| Name                                                                                                | Arguments | Returns                                                                                     |
-| --------------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------------------------------------- |
+| Name                                        | Arguments | Returns                                                                                     |
+| ------------------------------------------- | --------- | ------------------------------------------------------------------------------------------- |
 | [`UseBind`](./useBind.html)                 | initial   | value, changed, reset                                                                       |
 | [`UseEmbed`](./useEmbed.html)               | initial   | isEmbedBlock, clear                                                                         |
 | [`UseState`](./useState.html)               | initial   | value, set                                                                                  |
