@@ -44,11 +44,24 @@ Check our [documentation](https://vue-composable-utils.netlify.app/)
 - [UseBind](https://vue-composable-utils.netlify.app/composable-utils/useBind.html).
 - [UseEmbed](https://vue-composable-utils.netlify.app/composable-utils/useEmbed.html).
 - [UseState](https://vue-composable-utils.netlify.app/composable-utils/useState.html).
+- [UseDebounce](https://vue-composable-utils.netlify.app/composable-utils/useDebounce.html).
+- [UseDebounceFn](https://vue-composable-utils.netlify.app/composable-utils/useDebounceFn.html).
+- [UsePick](https://vue-composable-utils.netlify.app/composable-utils/usePick.html).
+- [UseResize](https://vue-composable-utils.netlify.app/composable-utils/useResize.html).
+- [UseLocalStorage](https://vue-composable-utils.netlify.app/composable-utils/useLocalStorage.html).
+- [UseQuene](https://vue-composable-utils.netlify.app/composable-utils/useQuene.html).
+- [UseModal](https://vue-composable-utils.netlify.app/composable-utils/useModal.html).
+- [UseDarkMode](https://vue-composable-utils.netlify.app/composable-utils/useDarkMode.html).
+- [UseStringCase](https://vue-composable-utils.netlify.app/composable-utils/useStringCase.html).
+- [UseDate](https://vue-composable-utils.netlify.app/composable-utils/useDate.html).
+- [Usei18nDate](https://vue-composable-utils.netlify.app/composable-utils/usei18nDate.html).
+- [UseCookie](https://vue-composable-utils.netlify.app/composable-utils/useCookie.html).
+- [UseClipboard](https://vue-composable-utils.netlify.app/composable-utils/useClipboard.html).
 - [UseList](https://vue-composable-utils.netlify.app/composable-utils/useList.html).
 
-## :computer: Usage
+## :bulb: Usage
 
-# :sparkles: useBind
+## :sparkles: useBind
 
 ```vue
 <template>
@@ -98,7 +111,7 @@ export default {
 </script>
 ```
 
-# :sparkles: useModal
+## :sparkles: useModal
 
 ```vue
 <template>
@@ -165,7 +178,7 @@ export default {
 </script>
 ```
 
-# :sparkles: usePick
+## :sparkles: usePick
 
 ```vue
 <template>
@@ -195,7 +208,7 @@ export default {
 </script>
 ```
 
-# :sparkles: useResize
+## :sparkles: useResize
 
 ```vue
 <template>
@@ -219,7 +232,7 @@ export default {
 </script>
 ```
 
-# :sparkles: useState
+## :sparkles: useState
 
 ```vue
 <template>
@@ -244,7 +257,7 @@ export default {
 </script>
 ```
 
-# :sparkles: useStringCase
+## :sparkles: useStringCase
 
 ```vue
 <template>
@@ -292,7 +305,7 @@ export default {
 </script>
 ```
 
-# :sparkles: useQueue
+## :sparkles: useQueue
 
 ```vue
 <template>
@@ -331,7 +344,7 @@ export default {
 </script>
 ```
 
-# :sparkles: useClipboard
+## :sparkles: useClipboard
 
 ```vue
 <template>
@@ -382,7 +395,7 @@ export default {
 </script>
 ```
 
-# :sparkles: useDarkMode
+## :sparkles: useDarkMode
 
 ```vue
 <template>
@@ -406,7 +419,7 @@ export default {
 </script>
 ```
 
-# :sparkles: useDate
+## :sparkles: useDate
 
 ```vue
 <template>
@@ -449,7 +462,7 @@ export default {
 </script>
 ```
 
-# :sparkles: useDebounce
+## :sparkles: useDebounce
 
 ```vue
 <template>
@@ -477,7 +490,7 @@ export default {
 </script>
 ```
 
-# :sparkles: useDebounceFn
+## :sparkles: useDebounceFn
 
 ```vue
 <template>
@@ -506,7 +519,7 @@ export default {
 </script>
 ```
 
-# :sparkles: usei18nDate
+## :sparkles: usei18nDate
 
 ```vue
 <template>
@@ -553,7 +566,7 @@ export default {
 </script>
 ```
 
-# :sparkles: useEmbed
+## :sparkles: useEmbed
 
 ```vue
 <template>
@@ -586,7 +599,7 @@ export default {
 </script>
 ```
 
-# :sparkles: useLocalStorage
+## :sparkles: useLocalStorage
 
 ```vue
 <template>
@@ -609,7 +622,7 @@ export default {
 </script>
 ```
 
-# :sparkles: useList
+## :sparkles: useList
 
 ```vue
 <template>
