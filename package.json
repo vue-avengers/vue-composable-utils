@@ -28,7 +28,7 @@
     "test:cover": "jest --coverage",
     "test:watch": "jest --coverage --watch",
     "test:prod": "npm run lint:eslint && npm run test -- --no-cache",
-    "publish": "npm run build",
+    "publish": "npm run pre:build",
     "snapshot:update:all": "yarn test -u",
     "snapshot:update:one": "yarn test -i"
   },

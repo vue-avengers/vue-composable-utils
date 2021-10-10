@@ -57,7 +57,7 @@ export default {
   setup() {
     const clipboardRef = ref(null);
     const clipboardModel = ref(null);
-    const copyText = ref('Kopyalanmak istenilen veri...');
+    const copyText = ref('Data to be copied...');
 
     const { copy } = useClipboard();
 
