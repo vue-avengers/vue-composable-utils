@@ -1,28 +1,28 @@
 # :sparkles: useClipboard
 
-> `useClipboard()` fonksiyonu web sitenizde veya uygulamanızda panoya kopyalama işlevini yapmanıza için kullanılır.
+> `useClipboard()` function is used to make the clipboard copy function on your website or application.
 
-## :maple_leaf: Kullanım
+## :maple_leaf: Usage
 
-`useClipboard` fonksiyonunun kullanım şekli aşağıdaki gibidir.
+The `useClipboard` function is used as the following reactive state:
 
 ```js
 import { useClipboard } from 'vue-composable-utils';
 const { copy } = useClipboard();
 ```
 
-## :rocket: Özellikler
+## :rocket: Features
 
-`useClipboard` fonksiyonu `copy` özelliğine sahiptir. `copy` Özelliği iki adet parametre alır.
+The `useClipboard` function has the `copy` feature. The `copy` property takes two parameters.
 
-| Parametreler | Açıklama                                                                    |
-| :----------- | :-------------------------------------------------------------------------- |
-| `value`      | Kopyalanacak değer.                                                         |
-| `ref`        | Kopyalamak istediğimiz verinin kapsayıcı class'ına erişmek için kullanılır. |
+| Name    | Description                                                           |
+| :------ | :-------------------------------------------------------------------- |
+| `value` | The value to copy.                                                    |
+| `ref`   | It is used to access the container class of the data we want to copy. |
 
-## :bouquet: Uygulama
+## :bouquet: Example
 
-Aşağıdaki örneği kullanarak nasıl değiştiğini görebilirsiniz.
+You can see how it changes reactively using the example below.
 
 <ClipboardComponent />
 
