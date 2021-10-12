@@ -19,6 +19,7 @@ import ClipboardComponent from './components/ClipboardComponent.vue';
 import DarkModeComponent from './components/DarkModeComponent.vue';
 import ToggleDarkMode from './components/ToggleDarkMode.vue';
 import CookieComponent from './components/CookieComponent.vue';
+import ProvideComponent from './components/ProvideComponent.vue';
 import './public/style/main.css';
 import './plugins/dayjs.js';
 
@@ -44,4 +45,5 @@ export default ({ Vue }) => {
   Vue.component('ModalComponent', ModalComponent);
   Vue.component('ToggleDarkMode', ToggleDarkMode);
   Vue.component('CookieComponent', CookieComponent);
+  Vue.component('ProvideComponent', ProvideComponent);
 };

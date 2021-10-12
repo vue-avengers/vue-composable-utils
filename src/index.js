@@ -16,3 +16,4 @@ export { default as useDebounceFn } from './useDebounceFn';
 export { default as useLocalStorage } from './useLocalStorage';
 export { default as useCookie } from './useCookie';
 export { default as useClipboard } from './useClipboard';
+export { default as useProvideInject } from './useProvideInject';

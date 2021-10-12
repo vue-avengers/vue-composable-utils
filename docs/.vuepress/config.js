@@ -181,6 +181,10 @@ function getSidebar() {
           title: 'useClipboard',
           path: '/composable-utils/useClipboard',
         },
+        {
+          title: 'useProvideInject',
+          path: '/composable-utils/useProvideInject',
+        },
       ],
     },
   ];
@@ -255,6 +259,10 @@ function getSidebarTR() {
         {
           title: 'useClipboard',
           path: '/tr/composable-utils/useClipboard',
+        },
+        {
+          title: 'useProvideInject',
+          path: '/composable-utils/useProvide',
         },
       ],
     },
