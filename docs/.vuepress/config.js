@@ -262,7 +262,7 @@ function getSidebarTR() {
         },
         {
           title: 'useProvideInject',
-          path: '/composable-utils/useProvide',
+          path: '/tr/composable-utils/useProvideInject',
         },
       ],
     },
