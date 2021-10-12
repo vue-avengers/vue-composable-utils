@@ -1,5 +1,15 @@
 <p align="center"><a href="https://vue-composable-utils.netlify.app" target="_blank" rel="noopener noreferrer"><img width="250" src="https://vue-composable-utils.netlify.app/assets/vue-composable-utils-logo.svg" alt="Vue Composable Utils logo"></a></p>
 <h1 align="center">Vue Composable Utils</h1>
+
+<div align="center">
+
+[![npm](https://img.shields.io/npm/v/vue-composable-utils?style=flat-square)](https://www.npmjs.com/package/vue-composable-utils)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/vue-composable-utils?style=flat-square)
+![npm](https://img.shields.io/npm/dm/vue-composable-utils?style=flat-square)
+![GitHub license](https://img.shields.io/npm/l/vue-composable-utils?style=flat-square)
+
+</div>
+
 <p align="center">Reusability and Composition functions.</p>
 
 ## :sunflower: Introduction

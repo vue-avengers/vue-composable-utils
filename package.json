@@ -2,19 +2,11 @@
   "name": "vue-composable-utils",
   "description": "Vue composable utils that have been brought together for you to use in all your components.",
   "author": "Abdulnasır olcan",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "module": "dist/vue-composable-utils.esm.js",
   "unpkg": "dist/vue-composable-utils.js",
   "main": "dist/vue-composable-utils.js",
   "license": "MIT",
-  "keywords": [
-    "vue",
-    "vue-composition-api",
-    "vue-composable-utils",
-    "composable",
-    "composition functions",
-    "reusability"
-  ],
   "scripts": {
     "dev": "cross-env NODE_ENV=development && vuepress dev docs",
     "build": "cross-env NODE_ENV=production && vuepress build docs",
@@ -87,6 +79,11 @@
   "peerDependencies": {
     "@vue/composition-api": "^1.0.0-rc.6"
   },
+  "homepage": "https://vue-composable-utils.netlify.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vue-avengers/vue-composable-utils"
+  },
   "lint-staged": {
     "*.{js,vue}": [
       "yarn lint:eslint",
@@ -103,5 +100,13 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  }
+  },
+  "keywords": [
+    "vue",
+    "vue-composition-api",
+    "vue-composable-utils",
+    "composable",
+    "composition functions",
+    "reusability"
+  ]
 }
