@@ -1,11 +1,11 @@
 # :sparkles: useProvideInject
 
-> `useProvideInject` allows you to use vue 3/composition-api' s provide - inject feature in a handy way. You can use reactivity api refs for values with unique Symbol keys.
+> `useProvideInject`, vue 3/composition-api ile birlikte gelen provide - inject özelliğinin kolay şekilde kullanılmasını amaçlayarak geliştirilmiştir. Javascript object, array ve primitive veri tiplerinin yanısıra Vue Reactivity Api kullanan verilerinizi global olarak erişilebilir kılabilirsiniz.
 
-## :maple_leaf: Usage
-Provide a key value pair in parent component, then it will be available for all child components.
+## :maple_leaf: Kullanım
+Provide ile yayınladığınız tüm `key - value` ikilileri bütün alt komponentler tarafından erişilebilir hale gelir.
 
-#### Usage with a regular javascript object
+#### Normal bir javascript object ile kullanım
 
 ```js
 // Parent.vue
@@ -40,7 +40,7 @@ export default {
 }
 ```
 
-#### Usage with Vue Reactivity Api
+#### Vue Reactivity Api ile kullanım
 
 ```js
 useProvide(
@@ -54,8 +54,8 @@ useProvide(
 );
 ```
 
-## :bouquet: Example
+## :bouquet: Uygulama
 
-The changes that you made in the parent component can seen immediately in the child components using `ref()`.
+Üst komponentte, veride (provide) yaptığınız değişiklikler `ref()` kullanıldığı durumlarda alt komponentlerde de görülür.
 
 <ProvideComponent />

@@ -16,7 +16,7 @@ const { isEmbedBlock, clear } = useEmbed(code);
 
 `useEmbed` provides you `"reactive"` properties that allows you to manage your embed blocks.
 
-- useEmbed: give as argument a reactive string that contains embed block code.
+- useEmbed: give as argument a reactive string that contains embed code.
 
 ```js
 const code = ref(null);
