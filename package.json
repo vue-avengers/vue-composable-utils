@@ -96,11 +96,6 @@
       "yarn prettier"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "keywords": [
     "vue",
     "vue-composition-api",
